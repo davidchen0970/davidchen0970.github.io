@@ -16,7 +16,7 @@ languages:
   en:
     languageName: English
     title: This is my house
-    weight: 1
+    weight: 2
     params:
       sidebar:
         subtitle: Hello
@@ -30,7 +30,7 @@ languages:
   zh-tw:
     languageName: 正體中文
     title: 這是我家啊!
-    weight: 2
+    weight: 1
     params:
       sidebar:
         subtitle: 我家在施工...

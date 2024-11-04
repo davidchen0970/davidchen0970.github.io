@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="My Introduction">
-<title>About</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
+<title>P4_symbolic_setting</title>
 
-<link rel='canonical' href='https://example.com/about/'>
+<link rel='canonical' href='https://example.com/p/p4_symbolic_setting/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="About">
-<meta property='og:description' content="My Introduction">
-<meta property='og:url' content='https://example.com/about/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="P4_symbolic_setting">
+<meta property='og:description' content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
+<meta property='og:url' content='https://example.com/p/p4_symbolic_setting/'>
 <meta property='og:site_name' content='This is my house'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2024-11-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-04T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="My Introduction">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-05T02:35:09&#43;08:00'/><meta property='article:modified_time' content='2024-11-05T02:35:09&#43;08:00'/>
+<meta name="twitter:title" content="P4_symbolic_setting">
+<meta name="twitter:description" content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
     </head>
     <body class="
     article-page
@@ -157,7 +157,7 @@
         </li>
         
         
-        <li  class='current' >
+        <li >
             <a href='/about/' >
                 
                 
@@ -251,13 +251,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#使用-symbolic-link-解決-makefile-缺失問題">使用 Symbolic Link 解決 Makefile 缺失問題</a>
       <ol>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#education-background">Education Background</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#project-experience">Project Experience</a></li>
-        <li><a href="#contact-information">Contact Information</a></li>
+        <li><a href="#步驟">步驟</a></li>
       </ol>
     </li>
   </ol>
@@ -279,13 +275,9 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/about/">About</a>
+            <a href="/p/p4_symbolic_setting/">P4_symbolic_setting</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            My Introduction
-        </h3>
         
     </div>
 
@@ -305,7 +297,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 04, 2024</time>
+                <time class="article-time--published">Nov 05, 2024</time>
             </div>
         
 
@@ -328,27 +320,6 @@
     
 
     
-        <footer class="article-translations">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-            <div>
-                
-                    <a href="https://example.com/zh-tw/%E9%97%9C%E6%96%BC/" class="link">正體中文</a>
-                
-                    <a href="https://example.com/zh-cn/%E9%97%9C%E6%96%BC/" class="link">简体中文</a>
-                
-            </div>
-        </footer>
-    
 </div>
 
 </header>
@@ -356,38 +327,63 @@
     <section class="article-content">
     
     
-    <h3 id="about-me">About Me
-</h3><p>Hello! I am a student majoring in Computer Science. I am passionate about programming and technology, especially in the fields of artificial intelligence and web development. I believe that technology can change the world, so I often enhance my skills to be able to make an impact in my future work.</p>
-<h3 id="education-background">Education Background
-</h3><ul>
-<li><strong>School Name</strong>: Currently attending [School Name]</li>
-<li><strong>Degree</strong>: Master&rsquo;s in Computer Science</li>
-<li><strong>Achievements</strong>:
-<ul>
-<li>[Scholarships or Honors Received]</li>
-<li>[Competitions or Projects Participated In, e.g., ACM Competition, Hackathon, etc.]</li>
-</ul>
+    <h1 id="p4-超搞剛---symbolic-link">P4 超搞剛 - Symbolic Link
+</h1><p>在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 <code>make run</code> 這個指令，但當我們離開這個資料夾之後，會發現這個 <code>make run</code> 這個指令會變得沒有用，原因通常都是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Makefile:4: ../../utils/Makefile: No such file or directory
+</span></span><span class="line"><span class="cl">make: *** No rule to make target &#39;../../utils/Makefile&#39;.  Stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這個問題代表 MakeFile 找不到，所以無法執行 <code>make run</code> ，因此我們要想個辦法。
+解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 <code>Makefile</code>，而無需修改現有的專案結構。</p>
+<h2 id="使用-symbolic-link-解決-makefile-缺失問題">使用 Symbolic Link 解決 Makefile 缺失問題
+</h2><p>透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。</p>
+<h3 id="步驟">步驟
+</h3><ol>
+<li>
+<p><strong>確認有效的 Makefile 路徑</strong>：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。</p>
 </li>
-</ul>
-<h3 id="skills">Skills
-</h3><p>I possess the following skills:</p>
-<ul>
-<li><strong>Programming Languages</strong>: Proficient in C++, beginner in Python, JavaScript, etc.</li>
-<li><strong>Web Development</strong>: Basic knowledge of HTML, CSS, and JavaScript</li>
-</ul>
-<h3 id="project-experience">Project Experience
-</h3><p>(Under Construction&hellip;)</p>
-<ul>
-<li><strong>Project Name 1</strong>: Describe the goals of this project, the technologies used, and your contributions.</li>
-<li><strong>Project Name 2</strong>: Describe the goals of this project, the technologies used, and your contributions.</li>
-<li><strong>Project Name 3</strong>: Describe the goals of this project, the technologies used, and your contributions.</li>
-</ul>
-<h3 id="contact-information">Contact Information
-</h3><p>If you have any questions or want to know more about me, feel free to contact me! You can reach me through the following means:</p>
-<ul>
-<li><strong>Email</strong>: <a class="link" href="mailto:apple1051629@gmail.com" >apple1051629@gmail.com</a></li>
-</ul>
-<p>Thank you for taking the time to learn about me!</p>
+<li>
+<p><strong>切換到預期目錄</strong>：進入 <code>make</code> 指令所期望的目錄，例如 <code>../../utils/</code></p>
+</li>
+<li>
+<p><strong>建立符號連結</strong>：使用 <code>ln -s</code> 指令來建立符號連結，語法如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/existing/Makefile Makefile
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如，如果你的有效 Makefile 位於 <code>/home/p4/tutorials/utils</code>，可以執行以下指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/project/utils ../../utils
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>確認符號連結</strong>：創建連結後，使用以下指令檢查是否指向正確的 Makefile：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l ../../utils/Makefile
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果有的話，會看到 Linux 回覆一個 <code>w-r-- 1</code> &hellip; 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 <code>make run</code> 了</p>
+</li>
+</ol>
 
 </section>
 
@@ -405,7 +401,7 @@
 
 
 
-        <span>CC BY-NC-ND</span>
+        <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
     </footer>
 

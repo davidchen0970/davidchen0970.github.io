@@ -5,13 +5,13 @@
     <loc>https://example.com/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://example.com/"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/"
+                hreflang="en"
+                href="https://example.com/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -22,13 +22,13 @@
     <loc>https://example.com/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://example.com/categories/"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/categories/"
+                hreflang="en"
+                href="https://example.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -39,13 +39,13 @@
     <loc>https://example.com/zh-cn/page/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://example.com/page/"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/page/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/page/"
+                hreflang="en"
+                href="https://example.com/page/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -56,13 +56,13 @@
     <loc>https://example.com/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://example.com/tags/"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/tags/"
+                hreflang="en"
+                href="https://example.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -73,13 +73,13 @@
     <loc>https://example.com/zh-cn/%E9%97%9C%E6%96%BC/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://example.com/about/"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/%E9%97%9C%E6%96%BC/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/%E9%97%9C%E6%96%BC/"
+                hreflang="en"
+                href="https://example.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
