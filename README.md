@@ -1,10 +1,8 @@
 ## 👋 About Me
 
-Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaScript and Python. I love contributing to open-source projects and building solutions that make a difference.
+Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaScript and Python. 
 
-- 🌱 Currently learning: Machine Learning, Cloud Computing
-- 👯 Open to collaborate on: Web Development, Python projects
-- 💬 Ask me about: Frontend development, REST APIs
+- 🌱 Currently learning: Machine Learning, P4, SDN
 
 ## 🛠 Tech Stack
 
@@ -26,7 +24,3 @@ Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaSc
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=davidchen0970&repo=P4&theme=radical)](https://github.com/davidchen0970/P4)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=davidchen0970&repo=wordConverter&theme=radical)](https://github.com/davidchen0970/wordConverter)
 
-## 📬 Connect with Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/davidchen0970/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourusername)
