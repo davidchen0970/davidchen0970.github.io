@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 03 Nov 2024 22:42:42 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+    <channel>
+        <title>This is my house</title>
+        <link>http://localhost:1313/</link>
+        <description>Recent content on This is my house</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>http://localhost:1313/about/</link>
+        <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/about/</guid>
+        <description>&lt;h3 id=&#34;about-me&#34;&gt;About Me
+&lt;/h3&gt;&lt;p&gt;Hello! I am a student majoring in Computer Science. I am passionate about programming and technology, especially in the fields of artificial intelligence and web development. I believe that technology can change the world, so I often enhance my skills to be able to make an impact in my future work.&lt;/p&gt;
+&lt;h3 id=&#34;education-background&#34;&gt;Education Background
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;School Name&lt;/strong&gt;: Currently attending [School Name]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt;: Master&amp;rsquo;s in Computer Science&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Achievements&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;[Scholarships or Honors Received]&lt;/li&gt;
+&lt;li&gt;[Competitions or Projects Participated In, e.g., ACM Competition, Hackathon, etc.]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;skills&#34;&gt;Skills
+&lt;/h3&gt;&lt;p&gt;I possess the following skills:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Programming Languages&lt;/strong&gt;: Proficient in C++, beginner in Python, JavaScript, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Development&lt;/strong&gt;: Basic knowledge of HTML, CSS, and JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;project-experience&#34;&gt;Project Experience
+&lt;/h3&gt;&lt;p&gt;(Under Construction&amp;hellip;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project Name 1&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Name 2&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Name 3&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;contact-information&#34;&gt;Contact Information
+&lt;/h3&gt;&lt;p&gt;If you have any questions or want to know more about me, feel free to contact me! You can reach me through the following means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;mailto:apple1051629@gmail.com&#34; &gt;apple1051629@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you for taking the time to learn about me!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
