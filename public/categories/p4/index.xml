@@ -13,7 +13,7 @@
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
         <guid>https://example.com/p/p4-troubleshooting-symbolic-link/</guid>
-        <description>&lt;h1 id=&#34;p4-troubleshooting---symbolic-link&#34;&gt;P4 Troubleshooting - Symbolic Link
+        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-troubleshooting---symbolic-link&#34;&gt;P4 Troubleshooting - Symbolic Link
 &lt;/h1&gt;&lt;p&gt;When working with the P4 tutorials, we can typically run the &lt;code&gt;make run&lt;/code&gt; command without issues. However, if we move outside of the tutorial directory, we might find that the &lt;code&gt;make run&lt;/code&gt; command stops working, usually due to an error like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

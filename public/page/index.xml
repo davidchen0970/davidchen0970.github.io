@@ -47,6 +47,14 @@
 &lt;p&gt;Thank you for taking the time to learn about me!&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>Archives</title>
+        <link>https://example.com/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/archives/</guid>
+        <description></description>
+        </item>
         
     </channel>
 </rss>

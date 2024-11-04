@@ -47,6 +47,14 @@
 &lt;p&gt;謝謝你花時間了解我！&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>檔案</title>
+        <link>https://example.com/zh-tw/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/zh-tw/archives/</guid>
+        <description></description>
+        </item>
         
     </channel>
 </rss>

@@ -13,7 +13,7 @@
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
         <guid>https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/</guid>
-        <description>&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
+        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
 &lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -157,6 +157,14 @@
 &lt;/ul&gt;
 &lt;p&gt;謝謝你花時間了解我！&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>檔案</title>
+        <link>https://example.com/zh-tw/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/zh-tw/archives/</guid>
+        <description></description>
         </item>
         
     </channel>

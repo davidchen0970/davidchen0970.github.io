@@ -113,6 +113,19 @@
                 href="https://example.com/page/"
                 />
   </url><url>
+    <loc>https://example.com/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/archives/"
+                />
+  </url><url>
     <loc>https://example.com/tags/</loc>
     <xhtml:link
                 rel="alternate"

@@ -1,6 +1,7 @@
 +++
 date = '2024-11-05T02:35:09+08:00'
 title = 'P4 Troubleshooting - Symbolic Link'
+image = "pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg"
 categories = [
     "P4"
 ]
