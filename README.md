@@ -1,6 +1,6 @@
 ## 👋 About Me
 
-Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaScript and Python.
+Hi! I'm David Chen, a passionate developer with experience in JavaScript and Python.
 
 - 🌱 Currently learning: Machine Learning, P4, SDN
 
