@@ -8,11 +8,11 @@
         <language>en</language>
         <copyright>Example Person</copyright>
         <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>P4_symbolic_setting</title>
-        <link>https://example.com/p/p4_symbolic_setting/</link>
+        <title>P4 超搞剛 - Symbolic Link</title>
+        <link>https://example.com/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/</link>
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
-        <guid>https://example.com/p/p4_symbolic_setting/</guid>
+        <guid>https://example.com/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/</guid>
         <description>&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
 &lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
