@@ -8,13 +8,13 @@
         <language>en</language>
         <copyright>Example Person</copyright>
         <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>P4 超搞剛 - Symbolic Link</title>
-        <link>https://example.com/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/</link>
+        <title>P4 Troubleshooting - Symbolic Link</title>
+        <link>https://example.com/p/p4-troubleshooting-symbolic-link/</link>
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
-        <guid>https://example.com/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/</guid>
-        <description>&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
-&lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
+        <guid>https://example.com/p/p4-troubleshooting-symbolic-link/</guid>
+        <description>&lt;h1 id=&#34;p4-troubleshooting---symbolic-link&#34;&gt;P4 Troubleshooting - Symbolic Link
+&lt;/h1&gt;&lt;p&gt;When working with the P4 tutorials, we can typically run the &lt;code&gt;make run&lt;/code&gt; command without issues. However, if we move outside of the tutorial directory, we might find that the &lt;code&gt;make run&lt;/code&gt; command stops working, usually due to an error like this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -25,20 +25,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make: *** No rule to make target &amp;#39;../../utils/Makefile&amp;#39;.  Stop
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;這個問題代表 MakeFile 找不到，所以無法執行 &lt;code&gt;make run&lt;/code&gt; ，因此我們要想個辦法。
-解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 &lt;code&gt;Makefile&lt;/code&gt;，而無需修改現有的專案結構。&lt;/p&gt;
-&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-缺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 缺失問題
-&lt;/h2&gt;&lt;p&gt;透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。&lt;/p&gt;
-&lt;h3 id=&#34;步驟&#34;&gt;步驟
+&lt;/div&gt;&lt;p&gt;This error indicates that the &lt;code&gt;Makefile&lt;/code&gt; cannot be found, so &lt;code&gt;make run&lt;/code&gt; fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required &lt;code&gt;Makefile&lt;/code&gt; without altering the existing project structure.&lt;/p&gt;
+&lt;h2 id=&#34;using-symbolic-links-to-fix-makefile-path-issues&#34;&gt;Using Symbolic Links to Fix Makefile Path Issues
+&lt;/h2&gt;&lt;p&gt;By creating a symbolic link, you can point to an existing &lt;code&gt;Makefile&lt;/code&gt; and resolve the “file not found” issue. This method is flexible, allowing you to fix path issues while keeping the original project structure intact.&lt;/p&gt;
+&lt;h3 id=&#34;steps&#34;&gt;Steps
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;確認有效的 Makefile 路徑&lt;/strong&gt;：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Identify a Valid Makefile Path&lt;/strong&gt;: First, locate a usable &lt;code&gt;Makefile&lt;/code&gt;, typically in a different project directory or a related folder.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;切換到預期目錄&lt;/strong&gt;：進入 &lt;code&gt;make&lt;/code&gt; 指令所期望的目錄，例如 &lt;code&gt;../../utils/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Navigate to the Target Directory&lt;/strong&gt;: Enter the directory where the &lt;code&gt;make&lt;/code&gt; command expects the file, such as &lt;code&gt;../../utils/&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;建立符號連結&lt;/strong&gt;：使用 &lt;code&gt;ln -s&lt;/code&gt; 指令來建立符號連結，語法如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Create the Symbolic Link&lt;/strong&gt;: Use the &lt;code&gt;ln -s&lt;/code&gt; command to create the symbolic link. Here’s the syntax:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -47,18 +46,18 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /path/to/existing/Makefile Makefile
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;例如，如果你的有效 Makefile 位於 &lt;code&gt;/home/p4/tutorials/utils&lt;/code&gt;，可以執行以下指令：&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;For example, if the valid &lt;code&gt;Makefile&lt;/code&gt; is located at &lt;code&gt;/home/p4/tutorials/utils&lt;/code&gt;, you would run:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /path/to/project/utils ../../utils
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /home/p4/tutorials/utils ../../utils
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;確認符號連結&lt;/strong&gt;：創建連結後，使用以下指令檢查是否指向正確的 Makefile：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verify the Symbolic Link&lt;/strong&gt;: After creating the link, use this command to check that it correctly points to the &lt;code&gt;Makefile&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -67,10 +66,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -l ../../utils/Makefile
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果有的話，會看到 Linux 回覆一個 &lt;code&gt;w-r-- 1&lt;/code&gt; &amp;hellip; 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 &lt;code&gt;make run&lt;/code&gt; 了&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;If successful, Linux will return something like &lt;code&gt;w-r-- 1 ...&lt;/code&gt;, confirming that the system has located the file, and you should be able to use &lt;code&gt;make run&lt;/code&gt; again.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;額外問題&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Additional Errors&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -79,7 +78,6 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
@@ -88,12 +86,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This error might stem from a file name or path configuration issue. Here are some solutions to resolve it:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)&lt;/li&gt;
+&lt;li&gt;Check and retry the compilation parameters (adjust for your specific P4 program as needed):&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -105,18 +102,24 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
-&lt;p&gt;更新配置文件使用 &lt;code&gt;.txt&lt;/code&gt; 格式
-確保所有指向 &lt;code&gt;p4info&lt;/code&gt; 文件的配置文件都使用 &lt;code&gt;.txt&lt;/code&gt; 後綴，例如 &lt;code&gt;pod-topo/s1-runtime.json&lt;/code&gt; 中的路徑更新為 &lt;code&gt;build/basic.p4.p4info.txt&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Update Configuration Files to Use &lt;code&gt;.txt&lt;/code&gt; Format:
+Ensure that all configuration files referencing the &lt;code&gt;p4info&lt;/code&gt; file use the &lt;code&gt;.txt&lt;/code&gt; extension, updating paths in files like &lt;code&gt;pod-topo/s1-runtime.json&lt;/code&gt; to &lt;code&gt;build/basic.p4.p4info.txt&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;再次運行 &lt;code&gt;make run&lt;/code&gt;
-當文件生成後，請再次執行 &lt;code&gt;make run&lt;/code&gt;，以檢查是否可以順利運行並成功配置交換機。&lt;/p&gt;
+&lt;p&gt;Rerun &lt;code&gt;make run&lt;/code&gt;:
+Once files are generated, try running &lt;code&gt;make run&lt;/code&gt; again to see if the switches configure correctly.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;這些步驟應該可以解決 &lt;code&gt;.txtpb&lt;/code&gt; 格式無法識別的問題，並讓編譯器成功生成 &lt;code&gt;p4runtime&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;p&gt;These steps should address the &lt;code&gt;.txtpb&lt;/code&gt; format issues, allowing the compiler to generate the &lt;code&gt;p4runtime&lt;/code&gt; files successfully.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>About</title>

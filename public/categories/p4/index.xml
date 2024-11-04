@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on This is my house</title>
-        <link>https://example.com/post/</link>
-        <description>Recent content in Posts on This is my house</description>
+        <title>P4 on This is my house</title>
+        <link>https://example.com/categories/p4/</link>
+        <description>Recent content in P4 on This is my house</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/categories/p4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>P4 Troubleshooting - Symbolic Link</title>
         <link>https://example.com/p/p4-troubleshooting-symbolic-link/</link>
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>

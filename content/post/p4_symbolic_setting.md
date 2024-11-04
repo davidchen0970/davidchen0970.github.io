@@ -1,51 +1,53 @@
 +++
 date = '2024-11-05T02:35:09+08:00'
-title = 'P4 超搞剛 - Symbolic Link'
+title = 'P4 Troubleshooting - Symbolic Link'
+categories = [
+    "P4"
+]
 +++
 
-# P4 超搞剛 - Symbolic Link
+# P4 Troubleshooting - Symbolic Link
 
-在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 `make run` 這個指令，但當我們離開這個資料夾之後，會發現這個 `make run` 這個指令會變得沒有用，原因通常都是:
+When working with the P4 tutorials, we can typically run the `make run` command without issues. However, if we move outside of the tutorial directory, we might find that the `make run` command stops working, usually due to an error like this:
 
 ```bash!=
 Makefile:4: ../../utils/Makefile: No such file or directory
 make: *** No rule to make target '../../utils/Makefile'.  Stop
 ```
 
-這個問題代表 MakeFile 找不到，所以無法執行 `make run` ，因此我們要想個辦法。
-解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 `Makefile`，而無需修改現有的專案結構。
+This error indicates that the `Makefile` cannot be found, so `make run` fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required `Makefile` without altering the existing project structure.
 
-## 使用 Symbolic Link 解決 Makefile 缺失問題
+## Using Symbolic Links to Fix Makefile Path Issues
 
-透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。
+By creating a symbolic link, you can point to an existing `Makefile` and resolve the “file not found” issue. This method is flexible, allowing you to fix path issues while keeping the original project structure intact.
 
-### 步驟
+### Steps
 
-1. **確認有效的 Makefile 路徑**：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。
+1. **Identify a Valid Makefile Path**: First, locate a usable `Makefile`, typically in a different project directory or a related folder.
 
-2. **切換到預期目錄**：進入 `make` 指令所期望的目錄，例如 `../../utils/`
+2. **Navigate to the Target Directory**: Enter the directory where the `make` command expects the file, such as `../../utils/`.
 
-3. **建立符號連結**：使用 `ln -s` 指令來建立符號連結，語法如下：
+3. **Create the Symbolic Link**: Use the `ln -s` command to create the symbolic link. Here’s the syntax:
 
    ```bash
    ln -s /path/to/existing/Makefile Makefile
    ```
 
-   例如，如果你的有效 Makefile 位於 `/home/p4/tutorials/utils`，可以執行以下指令：
+   For example, if the valid `Makefile` is located at `/home/p4/tutorials/utils`, you would run:
 
    ```bash
-   ln -s /path/to/project/utils ../../utils
+   ln -s /home/p4/tutorials/utils ../../utils
    ```
 
-4. **確認符號連結**：創建連結後，使用以下指令檢查是否指向正確的 Makefile：
+4. **Verify the Symbolic Link**: After creating the link, use this command to check that it correctly points to the `Makefile`:
 
    ```bash
    ls -l ../../utils/Makefile
    ```
 
-   如果有的話，會看到 Linux 回覆一個 `w-r-- 1` ... 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 `make run` 了
+   If successful, Linux will return something like `w-r-- 1 ...`, confirming that the system has located the file, and you should be able to use `make run` again.
 
-5. **額外問題**
+5. **Additional Errors**
 
    ```bash!=
    - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
@@ -54,21 +56,24 @@ make: *** No rule to make target '../../utils/Makefile'.  Stop
    Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
    - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
    Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
-   - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
    ```
 
-   這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：
+   This error might stem from a file name or path configuration issue. Here are some solutions to resolve it:
 
-   1. 檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)
+   1. Check and retry the compilation parameters (adjust for your specific P4 program as needed):
 
    ```bash!=
    p4c-bm2-ss --p4v 16 --p4runtime-files build/basic.p4.p4info.txt -o build/basic.json basic.p4
    ```
 
-   2. 更新配置文件使用 `.txt` 格式
-      確保所有指向 `p4info` 文件的配置文件都使用 `.txt` 後綴，例如 `pod-topo/s1-runtime.json` 中的路徑更新為 `build/basic.p4.p4info.txt`。
+   2. Update Configuration Files to Use `.txt` Format:
+      Ensure that all configuration files referencing the `p4info` file use the `.txt` extension, updating paths in files like `pod-topo/s1-runtime.json` to `build/basic.p4.p4info.txt`.
 
-   3. 再次運行 `make run`
-      當文件生成後，請再次執行 `make run`，以檢查是否可以順利運行並成功配置交換機。
+   3. Rerun `make run`:
+      Once files are generated, try running `make run` again to see if the switches configure correctly.
 
-   這些步驟應該可以解決 `.txtpb` 格式無法識別的問題，並讓編譯器成功生成 `p4runtime` 文件。
+   These steps should address the `.txtpb` format issues, allowing the compiler to generate the `p4runtime` files successfully.
+
+```
+
+```

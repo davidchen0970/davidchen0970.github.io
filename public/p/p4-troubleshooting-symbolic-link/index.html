@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
-<title>P4 超搞剛 - Symbolic Link</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n">
+<title>P4 Troubleshooting - Symbolic Link</title>
 
-<link rel='canonical' href='http://localhost:1313/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/'>
+<link rel='canonical' href='https://example.com/p/p4-troubleshooting-symbolic-link/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="P4 超搞剛 - Symbolic Link">
-<meta property='og:description' content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
-<meta property='og:url' content='http://localhost:1313/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="P4 Troubleshooting - Symbolic Link">
+<meta property='og:description' content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n">
+<meta property='og:url' content='https://example.com/p/p4-troubleshooting-symbolic-link/'>
 <meta property='og:site_name' content='This is my house'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-05T02:35:09&#43;08:00'/><meta property='article:modified_time' content='2024-11-05T02:35:09&#43;08:00'/>
-<meta name="twitter:title" content="P4 超搞剛 - Symbolic Link">
-<meta name="twitter:description" content="P4 超搞剛 - Symbolic Link\r在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 缺失問題\r透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟\r確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
+<meta name="twitter:title" content="P4 Troubleshooting - Symbolic Link">
+<meta name="twitter:description" content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n">
     </head>
     <body class="
     article-page
@@ -192,11 +192,11 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="http://localhost:1313/zh-tw/" >正體中文</option>
+                                    <option value="https://example.com/zh-tw/" >正體中文</option>
                                 
-                                    <option value="http://localhost:1313/" selected>English</option>
+                                    <option value="https://example.com/" selected>English</option>
                                 
-                                    <option value="http://localhost:1313/zh-cn/" >简体中文</option>
+                                    <option value="https://example.com/zh-cn/" >简体中文</option>
                                 
                             </select>
                         </li>
@@ -251,9 +251,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#使用-symbolic-link-解決-makefile-缺失問題">使用 Symbolic Link 解決 Makefile 缺失問題</a>
+    <li><a href="#using-symbolic-links-to-fix-makefile-path-issues">Using Symbolic Links to Fix Makefile Path Issues</a>
       <ol>
-        <li><a href="#步驟">步驟</a></li>
+        <li><a href="#steps">Steps</a></li>
       </ol>
     </li>
   </ol>
@@ -272,10 +272,18 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/p4/" >
+                P4
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/">P4 超搞剛 - Symbolic Link</a>
+            <a href="/p/p4-troubleshooting-symbolic-link/">P4 Troubleshooting - Symbolic Link</a>
         </h2>
     
         
@@ -312,7 +320,7 @@
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -334,7 +342,7 @@
 
             <div>
                 
-                    <a href="http://localhost:1313/zh-tw/p/p4-%E8%B6%85%E6%90%9E%E5%89%9B-symbolic-link/" class="link">正體中文</a>
+                    <a href="https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/" class="link">正體中文</a>
                 
             </div>
         </footer>
@@ -346,8 +354,8 @@
     <section class="article-content">
     
     
-    <h1 id="p4-超搞剛---symbolic-link">P4 超搞剛 - Symbolic Link
-</h1><p>在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 <code>make run</code> 這個指令，但當我們離開這個資料夾之後，會發現這個 <code>make run</code> 這個指令會變得沒有用，原因通常都是:</p>
+    <h1 id="p4-troubleshooting---symbolic-link">P4 Troubleshooting - Symbolic Link
+</h1><p>When working with the P4 tutorials, we can typically run the <code>make run</code> command without issues. However, if we move outside of the tutorial directory, we might find that the <code>make run</code> command stops working, usually due to an error like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -358,20 +366,19 @@
 </span></span><span class="line"><span class="cl">make: *** No rule to make target &#39;../../utils/Makefile&#39;.  Stop
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>這個問題代表 MakeFile 找不到，所以無法執行 <code>make run</code> ，因此我們要想個辦法。
-解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 <code>Makefile</code>，而無需修改現有的專案結構。</p>
-<h2 id="使用-symbolic-link-解決-makefile-缺失問題">使用 Symbolic Link 解決 Makefile 缺失問題
-</h2><p>透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。</p>
-<h3 id="步驟">步驟
+</div><p>This error indicates that the <code>Makefile</code> cannot be found, so <code>make run</code> fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required <code>Makefile</code> without altering the existing project structure.</p>
+<h2 id="using-symbolic-links-to-fix-makefile-path-issues">Using Symbolic Links to Fix Makefile Path Issues
+</h2><p>By creating a symbolic link, you can point to an existing <code>Makefile</code> and resolve the “file not found” issue. This method is flexible, allowing you to fix path issues while keeping the original project structure intact.</p>
+<h3 id="steps">Steps
 </h3><ol>
 <li>
-<p><strong>確認有效的 Makefile 路徑</strong>：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。</p>
+<p><strong>Identify a Valid Makefile Path</strong>: First, locate a usable <code>Makefile</code>, typically in a different project directory or a related folder.</p>
 </li>
 <li>
-<p><strong>切換到預期目錄</strong>：進入 <code>make</code> 指令所期望的目錄，例如 <code>../../utils/</code></p>
+<p><strong>Navigate to the Target Directory</strong>: Enter the directory where the <code>make</code> command expects the file, such as <code>../../utils/</code>.</p>
 </li>
 <li>
-<p><strong>建立符號連結</strong>：使用 <code>ln -s</code> 指令來建立符號連結，語法如下：</p>
+<p><strong>Create the Symbolic Link</strong>: Use the <code>ln -s</code> command to create the symbolic link. Here’s the syntax:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -380,18 +387,18 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/existing/Makefile Makefile
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>例如，如果你的有效 Makefile 位於 <code>/home/p4/tutorials/utils</code>，可以執行以下指令：</p>
+</div><p>For example, if the valid <code>Makefile</code> is located at <code>/home/p4/tutorials/utils</code>, you would run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/project/utils ../../utils
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /home/p4/tutorials/utils ../../utils
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p><strong>確認符號連結</strong>：創建連結後，使用以下指令檢查是否指向正確的 Makefile：</p>
+<p><strong>Verify the Symbolic Link</strong>: After creating the link, use this command to check that it correctly points to the <code>Makefile</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -400,10 +407,10 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l ../../utils/Makefile
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>如果有的話，會看到 Linux 回覆一個 <code>w-r-- 1</code> &hellip; 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 <code>make run</code> 了</p>
+</div><p>If successful, Linux will return something like <code>w-r-- 1 ...</code>, confirming that the system has located the file, and you should be able to use <code>make run</code> again.</p>
 </li>
 <li>
-<p><strong>額外問題</strong></p>
+<p><strong>Additional Errors</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -412,7 +419,6 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
@@ -421,12 +427,11 @@
 </span></span><span class="line"><span class="cl">Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
 </span></span><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 </span></span><span class="line"><span class="cl">Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
-</span></span><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：</p>
+</div><p>This error might stem from a file name or path configuration issue. Here are some solutions to resolve it:</p>
 <ol>
-<li>檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)</li>
+<li>Check and retry the compilation parameters (adjust for your specific P4 program as needed):</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -438,18 +443,24 @@
 </div>
 </div><ol start="2">
 <li>
-<p>更新配置文件使用 <code>.txt</code> 格式
-確保所有指向 <code>p4info</code> 文件的配置文件都使用 <code>.txt</code> 後綴，例如 <code>pod-topo/s1-runtime.json</code> 中的路徑更新為 <code>build/basic.p4.p4info.txt</code>。</p>
+<p>Update Configuration Files to Use <code>.txt</code> Format:
+Ensure that all configuration files referencing the <code>p4info</code> file use the <code>.txt</code> extension, updating paths in files like <code>pod-topo/s1-runtime.json</code> to <code>build/basic.p4.p4info.txt</code>.</p>
 </li>
 <li>
-<p>再次運行 <code>make run</code>
-當文件生成後，請再次執行 <code>make run</code>，以檢查是否可以順利運行並成功配置交換機。</p>
+<p>Rerun <code>make run</code>:
+Once files are generated, try running <code>make run</code> again to see if the switches configure correctly.</p>
 </li>
 </ol>
-<p>這些步驟應該可以解決 <code>.txtpb</code> 格式無法識別的問題，並讓編譯器成功生成 <code>p4runtime</code> 文件。</p>
+<p>These steps should address the <code>.txtpb</code> format issues, allowing the compiler to generate the <code>p4runtime</code> files successfully.</p>
 </li>
 </ol>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -625,7 +636,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.9f2f28b602bb690758f98010bdfbc7ca8829484398ec4b071fec423dd41e1686.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

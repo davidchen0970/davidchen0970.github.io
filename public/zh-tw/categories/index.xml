@@ -6,6 +6,15 @@
         <description>Recent content in Categories on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <copyright>Example Person</copyright><atom:link href="https://example.com/zh-tw/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/zh-tw/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>P4</title>
+        <link>https://example.com/zh-tw/categories/p4/</link>
+        <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
+        
+        <guid>https://example.com/zh-tw/categories/p4/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
