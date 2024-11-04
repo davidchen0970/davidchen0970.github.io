@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>這是我家啊!</title>
-        <link>http://localhost:1313/zh-tw/</link>
+        <link>https://example.com/zh-tw/</link>
         <description>Recent content on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/zh-tw/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/zh-tw/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>關於</title>
-        <link>http://localhost:1313/zh-tw/%E9%97%9C%E6%96%BC/</link>
+        <link>https://example.com/zh-tw/%E9%97%9C%E6%96%BC/</link>
         <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/zh-tw/%E9%97%9C%E6%96%BC/</guid>
+        <guid>https://example.com/zh-tw/%E9%97%9C%E6%96%BC/</guid>
         <description>&lt;h3 id=&#34;關於我&#34;&gt;關於我
 &lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
 &lt;h3 id=&#34;教育背景&#34;&gt;教育背景
