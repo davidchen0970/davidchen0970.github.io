@@ -312,7 +312,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -382,6 +382,52 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果有的話，會看到 Linux 回覆一個 <code>w-r-- 1</code> &hellip; 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 <code>make run</code> 了</p>
+</li>
+<li>
+<p><strong>額外問題</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+</span></span><span class="line"><span class="cl">Configuring switch s2 using P4Runtime with file pod-topo/s2-runtime.json
+</span></span><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+</span></span><span class="line"><span class="cl">Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
+</span></span><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+</span></span><span class="line"><span class="cl">Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
+</span></span><span class="line"><span class="cl">- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：</p>
+<ol>
+<li>檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">p4c-bm2-ss --p4v 16 --p4runtime-files build/basic.p4.p4info.txt -o build/basic.json basic.p4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>
+<p>更新配置文件使用 <code>.txt</code> 格式
+確保所有指向 <code>p4info</code> 文件的配置文件都使用 <code>.txt</code> 後綴，例如 <code>pod-topo/s1-runtime.json</code> 中的路徑更新為 <code>build/basic.p4.p4info.txt</code>。</p>
+</li>
+<li>
+<p>再次運行 <code>make run</code>
+當文件生成後，請再次執行 <code>make run</code>，以檢查是否可以順利運行並成功配置交換機。</p>
+</li>
+</ol>
+<p>這些步驟應該可以解決 <code>.txtpb</code> 格式無法識別的問題，並讓編譯器成功生成 <code>p4runtime</code> 文件。</p>
 </li>
 </ol>
 

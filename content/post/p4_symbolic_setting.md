@@ -44,3 +44,31 @@ make: *** No rule to make target '../../utils/Makefile'.  Stop
    ```
 
    如果有的話，會看到 Linux 回覆一個 `w-r-- 1` ... 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 `make run` 了
+
+5. **額外問題**
+
+   ```bash!=
+   - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+   Configuring switch s2 using P4Runtime with file pod-topo/s2-runtime.json
+   - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+   Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
+   - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+   Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
+   - ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
+   ```
+
+   這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：
+
+   1. 檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)
+
+   ```bash!=
+   p4c-bm2-ss --p4v 16 --p4runtime-files build/basic.p4.p4info.txt -o build/basic.json basic.p4
+   ```
+
+   2. 更新配置文件使用 `.txt` 格式
+      確保所有指向 `p4info` 文件的配置文件都使用 `.txt` 後綴，例如 `pod-topo/s1-runtime.json` 中的路徑更新為 `build/basic.p4.p4info.txt`。
+
+   3. 再次運行 `make run`
+      當文件生成後，請再次執行 `make run`，以檢查是否可以順利運行並成功配置交換機。
+
+   這些步驟應該可以解決 `.txtpb` 格式無法識別的問題，並讓編譯器成功生成 `p4runtime` 文件。
