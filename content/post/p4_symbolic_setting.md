@@ -1,6 +1,8 @@
 +++
 date = '2024-11-05T02:35:09+08:00'
 title = 'P4_symbolic_setting'
+categories:
+    - P4
 +++
 
 # P4 超搞剛 - Symbolic Link
