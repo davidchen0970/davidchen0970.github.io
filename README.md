@@ -1,6 +1,6 @@
 ## 👋 About Me
 
-Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaScript and Python. 
+Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaScript and Python.
 
 - 🌱 Currently learning: Machine Learning, P4, SDN
 
@@ -15,7 +15,11 @@ Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaSc
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=davidchen0970&show_icons=true&theme=radical" alt="GitHub Stats" />
+</div>
+<div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=davidchen0970&theme=radical" alt="GitHub Streak" />
+</div>
+<div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=davidchen0970&layout=compact&theme=radical" alt="Top Languages" />
 </div>
 
@@ -23,4 +27,3 @@ Hi! I'm David Chen, a passionate developer from Taiwan with experience in JavaSc
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=davidchen0970&repo=P4&theme=radical)](https://github.com/davidchen0970/P4)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=davidchen0970&repo=wordConverter&theme=radical)](https://github.com/davidchen0970/wordConverter)
-
