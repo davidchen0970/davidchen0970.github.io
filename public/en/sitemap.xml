@@ -122,6 +122,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://example.com/zh-cn/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://example.com/archives/"
                 />
