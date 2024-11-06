@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Test on This is my house</title>
+        <title>Test on 這是我家啊!</title>
         <link>https://example.com/categories/test/</link>
-        <description>Recent content in Test on This is my house</description>
+        <description>Recent content in Test on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>Example Person</copyright><atom:link href="https://example.com/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <language>zh-tw</language>
+        <copyright>David Chen</copyright><atom:link href="https://example.com/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

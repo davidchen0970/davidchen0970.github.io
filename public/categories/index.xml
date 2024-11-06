@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on This is my house</title>
+        <title>Categories on 這是我家啊!</title>
         <link>https://example.com/categories/</link>
-        <description>Recent content in Categories on This is my house</description>
+        <description>Recent content in Categories on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>Example Person</copyright>
+        <language>zh-tw</language>
+        <copyright>David Chen</copyright>
         <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>P4</title>
         <link>https://example.com/categories/p4/</link>

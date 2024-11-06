@@ -6,6 +6,6 @@
         <description>Recent content in Tags on 这是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Example Person</copyright><atom:link href="https://example.com/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>David Chen</copyright><atom:link href="https://example.com/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

@@ -7,12 +7,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/"
+                href="https://example.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://example.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -25,11 +25,6 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/page/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="https://example.com/page/"
                 />
     <xhtml:link
@@ -43,11 +38,6 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/archives/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="https://example.com/archives/"
                 />
     <xhtml:link
@@ -60,12 +50,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/categories/"
+                href="https://example.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://example.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -77,12 +67,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/tags/"
+                href="https://example.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://example.com/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -94,12 +84,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://example.com/zh-tw/%E9%97%9C%E6%96%BC/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/about/"
+                href="https://example.com/%E9%97%9C%E6%96%BC/"
                 />
     <xhtml:link
                 rel="alternate"

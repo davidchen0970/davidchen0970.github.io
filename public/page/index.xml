@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Pages on This is my house</title>
+        <title>Pages on 這是我家啊!</title>
         <link>https://example.com/page/</link>
-        <description>Recent content in Pages on This is my house</description>
+        <description>Recent content in Pages on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>Example Person</copyright>
+        <language>zh-tw</language>
+        <copyright>David Chen</copyright>
         <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>About</title>
-        <link>https://example.com/about/</link>
+        <title>關於</title>
+        <link>https://example.com/%E9%97%9C%E6%96%BC/</link>
         <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/about/</guid>
-        <description>&lt;h3 id=&#34;about-me&#34;&gt;About Me
-&lt;/h3&gt;&lt;p&gt;Hello! I am a student majoring in Computer Science. I am passionate about programming and technology, especially in the fields of artificial intelligence and web development. I believe that technology can change the world, so I often enhance my skills to be able to make an impact in my future work.&lt;/p&gt;
-&lt;h3 id=&#34;education-background&#34;&gt;Education Background
+        <guid>https://example.com/%E9%97%9C%E6%96%BC/</guid>
+        <description>&lt;h3 id=&#34;關於我&#34;&gt;關於我
+&lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
+&lt;h3 id=&#34;教育背景&#34;&gt;教育背景
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;School Name&lt;/strong&gt;: Currently attending [School Name]&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt;: Master&amp;rsquo;s in Computer Science&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Achievements&lt;/strong&gt;:
+&lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於 [學校名稱]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在校成就&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;[Scholarships or Honors Received]&lt;/li&gt;
-&lt;li&gt;[Competitions or Projects Participated In, e.g., ACM Competition, Hackathon, etc.]&lt;/li&gt;
+&lt;li&gt;[獲得的獎學金或榮譽]&lt;/li&gt;
+&lt;li&gt;[參加的競賽或專案，例如：ACM 競賽、Hackathon 等]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;skills&#34;&gt;Skills
-&lt;/h3&gt;&lt;p&gt;I possess the following skills:&lt;/p&gt;
+&lt;h3 id=&#34;技能&#34;&gt;技能
+&lt;/h3&gt;&lt;p&gt;我具備以下技能：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Programming Languages&lt;/strong&gt;: Proficient in C++, beginner in Python, JavaScript, etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Web Development&lt;/strong&gt;: Basic knowledge of HTML, CSS, and JavaScript&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;程式語言&lt;/strong&gt;：熟悉 C++ ，初學 Python、JavaScript 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁開發&lt;/strong&gt;：具備 HTML、CSS 和 JavaScript 的基礎知識&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;project-experience&#34;&gt;Project Experience
-&lt;/h3&gt;&lt;p&gt;(Under Construction&amp;hellip;)&lt;/p&gt;
+&lt;h3 id=&#34;專案經驗&#34;&gt;專案經驗
+&lt;/h3&gt;&lt;p&gt;(施工中&amp;hellip; )&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 1&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 2&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 3&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 1&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 2&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 3&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;contact-information&#34;&gt;Contact Information
-&lt;/h3&gt;&lt;p&gt;If you have any questions or want to know more about me, feel free to contact me! You can reach me through the following means:&lt;/p&gt;
+&lt;h3 id=&#34;聯絡方式&#34;&gt;聯絡方式
+&lt;/h3&gt;&lt;p&gt;如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;mailto:apple1051629@gmail.com&#34; &gt;apple1051629@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;電子郵件&lt;/strong&gt;：apple1051629@gmail.com&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thank you for taking the time to learn about me!&lt;/p&gt;
+&lt;p&gt;謝謝你花時間了解我！&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Archives</title>
+        <title>檔案</title>
         <link>https://example.com/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         

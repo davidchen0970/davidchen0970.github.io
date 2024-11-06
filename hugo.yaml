@@ -2,11 +2,11 @@ baseurl: https://example.com/
 languageCode: en-us
 theme: hugo-theme-stack
 title: Example Site
-copyright: Example Person
+copyright: David Chen
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: en
+DefaultContentLanguage: zh-tw
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
@@ -57,7 +57,7 @@ params:
   favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
   footer:
-    since: 2020
+    since: 2024
     customText:
 
   dateFormat:

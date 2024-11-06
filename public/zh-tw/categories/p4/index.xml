@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>P4 on 這是我家啊!</title>
-        <link>https://example.com/zh-tw/categories/p4/</link>
+        <link>http://localhost:1313/zh-tw/categories/p4/</link>
         <description>Recent content in P4 on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="https://example.com/zh-tw/categories/p4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>David Chen</copyright>
+        <lastBuildDate>Tue, 05 Nov 2024 02:35:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/zh-tw/categories/p4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>P4 Troubleshooting - Symbolic Link</title>
-        <link>https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/</link>
+        <link>http://localhost:1313/zh-tw/p/p4-troubleshooting-symbolic-link/</link>
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
-        <guid>https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/</guid>
-        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
+        <guid>http://localhost:1313/zh-tw/p/p4-troubleshooting-symbolic-link/</guid>
+        <description>&lt;img src="http://localhost:1313/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
 &lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

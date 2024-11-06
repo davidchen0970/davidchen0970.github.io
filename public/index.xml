@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>This is my house</title>
+        <title>這是我家啊!</title>
         <link>https://example.com/</link>
-        <description>Recent content on This is my house</description>
+        <description>Recent content on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>Example Person</copyright>
+        <language>zh-tw</language>
+        <copyright>David Chen</copyright>
         <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Sierpinski_Gasket</title>
         <link>https://example.com/p/sierpinski_gasket/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>
         
         <guid>https://example.com/p/sierpinski_gasket/</guid>
-        <description>&lt;img src="https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;exploring-the-sierpinski-gasket&#34;&gt;Exploring the Sierpinski Gasket
-&lt;/h1&gt;&lt;p&gt;In the vast field of mathematics, fractal geometry has attracted countless people&amp;rsquo;s attention with its unique self-similarity and infinite complexity. Among them, the &lt;strong&gt;Sierpinski Gasket&lt;/strong&gt; (also known as the Sierpinski Triangle) stands as a classic representative of fractal geometry, showcasing the infinite beauty hidden within simple rules. Today, we will dive deep into the Sierpinski Gasket, exploring its construction methods, mathematical properties, and real-world applications.&lt;/p&gt;
+        <description>&lt;img src="https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;探索-sierpinski-gasket&#34;&gt;探索 Sierpinski Gasket
+&lt;/h1&gt;&lt;p&gt;在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，&lt;strong&gt;Sierpinski Gasket（謝爾賓斯基三角形）&lt;/strong&gt; 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket.png&#34;
 	width=&#34;592&#34;
 	height=&#34;583&#34;
@@ -29,35 +29,35 @@
 		data-flex-basis=&#34;243px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;what-is-the-sierpinski-gasket&#34;&gt;What is the Sierpinski Gasket?
-&lt;/h2&gt;&lt;p&gt;The Sierpinski Gasket, also known as the Sierpinski Triangle, is a fractal structure proposed by Polish mathematician Wacław Sierpiński in 1915.&lt;/p&gt;
-&lt;h2 id=&#34;methods-for-constructing-the-sierpinski-gasket&#34;&gt;Methods for Constructing the Sierpinski Gasket
-&lt;/h2&gt;&lt;p&gt;There are several methods to construct the Sierpinski Gasket, with the most intuitive being the iterative approach. Below are two common construction methods:&lt;/p&gt;
-&lt;h3 id=&#34;1-removing-the-central-triangle&#34;&gt;1. Removing the Central Triangle
+&lt;h2 id=&#34;什麼是-sierpinski-gasket&#34;&gt;什麼是 Sierpinski Gasket？
+&lt;/h2&gt;&lt;p&gt;Sierpinski Gasket，又稱謝爾賓斯基三角形，是由波蘭數學家瓦茨瓦夫·謝爾賓斯基（Wacław Sierpiński）在 1915 年提出的分形結構。&lt;/p&gt;
+&lt;h2 id=&#34;sierpinski-gasket-的建立方法&#34;&gt;Sierpinski Gasket 的建立方法
+&lt;/h2&gt;&lt;p&gt;建立 Sierpinski Gasket 的方法有多種，其中最直觀的是迭代法。以下是常見的兩種構造方式：&lt;/p&gt;
+&lt;h3 id=&#34;1-移除中間三角形法&#34;&gt;1. 移除中間三角形法
 &lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Initial Shape&lt;/strong&gt;: Start with an equilateral triangle.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;First Iteration&lt;/strong&gt;: Divide the initial triangle into four smaller equilateral triangles and remove the central one.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Subsequent Iterations&lt;/strong&gt;: Repeat the above step for each remaining smaller triangle, progressively removing the middle part of each triangle.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;初始形狀&lt;/strong&gt;：從一個等邊三角形開始。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第一次迭代&lt;/strong&gt;：將初始三角形分割成四個小的等邊三角形，移除中間的那個。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;後續迭代&lt;/strong&gt;：對剩下的每一個小三角形重複上述步驟，逐步移除每個小三角形的中間部分。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;As the number of iterations increases, the remaining shape gets closer and closer to the Sierpinski Gasket, revealing its unique honeycomb-like structure.&lt;/p&gt;
-&lt;h3 id=&#34;2-recursive-definition&#34;&gt;2. Recursive Definition
-&lt;/h3&gt;&lt;p&gt;The Sierpinski Gasket can also be defined using recursive functions, where each level&amp;rsquo;s shape is a self-similar scaled-down version of the previous level. This method is particularly useful in computer graphics to efficiently generate complex fractal patterns.&lt;/p&gt;
-&lt;h2 id=&#34;mathematical-properties-of-the-sierpinski-gasket&#34;&gt;Mathematical Properties of the Sierpinski Gasket
-&lt;/h2&gt;&lt;p&gt;The Sierpinski Gasket is not only visually striking but also possesses fascinating mathematical properties:&lt;/p&gt;
+&lt;p&gt;隨著迭代次數的增加，剩餘的圖形越來越接近 Sierpinski Gasket，展示出其獨特的蜂窩狀結構。&lt;/p&gt;
+&lt;h3 id=&#34;2-遞迴定義法&#34;&gt;2. 遞迴定義法
+&lt;/h3&gt;&lt;p&gt;Sierpinski Gasket 也可以透過遞迴函數來定義，每一層的圖形都是前一層的自相似縮小版本。這種方法在電腦繪圖中特別常用，能夠高效地生成複雜的分形圖案。&lt;/p&gt;
+&lt;h2 id=&#34;sierpinski-gasket-的數學性質&#34;&gt;Sierpinski Gasket 的數學性質
+&lt;/h2&gt;&lt;p&gt;Sierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Self-Similarity&lt;/strong&gt;: No matter the scale at which it is observed, the Sierpinski Gasket shows a similar structure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fractal Dimension&lt;/strong&gt;: The fractal dimension of the Sierpinski Gasket is approximately 1.585, which is larger than a one-dimensional line segment but smaller than a two-dimensional plane, reflecting its complex geometric structure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Infinite Detail&lt;/strong&gt;: As the number of iterations increases, the details of the shape become infinitely rich and cannot be fully described by finite geometric figures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自相似性&lt;/strong&gt;：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分形維數&lt;/strong&gt;：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;無窮細節&lt;/strong&gt;：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;applications-of-the-sierpinski-gasket&#34;&gt;Applications of the Sierpinski Gasket
-&lt;/h2&gt;&lt;p&gt;Although the Sierpinski Gasket originated from pure mathematical research, its unique structure has found applications in several fields:&lt;/p&gt;
+&lt;h2 id=&#34;sierpinski-gasket-的應用&#34;&gt;Sierpinski Gasket 的應用
+&lt;/h2&gt;&lt;p&gt;儘管 Sierpinski Gasket 起源於純數學研究，但其獨特的結構在多個領域中找到了應用：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Computer Graphics&lt;/strong&gt;: It is used to generate complex patterns and textures, enhancing the detail and realism of graphics.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Art and Design&lt;/strong&gt;: Its distinct visual effect is often applied in decorative art, architectural design, and other fields to create captivating visual works.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Similar Structures in Nature&lt;/strong&gt;: Fractal-like structures can be found in nature, such as the vein structure of some plants and the shape of snowflakes, demonstrating the universality of fractal geometry in the natural world.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;電腦圖形學&lt;/strong&gt;：用於生成複雜的圖案和紋理，提升圖形的細節和真實感。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;藝術與設計&lt;/strong&gt;：其獨特的視覺效果常被應用於裝飾藝術、建築設計等領域，創造出引人入勝的視覺作品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自然界中的類似結構&lt;/strong&gt;：類似的分形結構在自然界中也屢見不鮮，如某些植物的葉脈結構、雪花的形態等，展示了分形幾何在自然界中的普遍性。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;how-to-draw-the-sierpinski-gasket&#34;&gt;How to Draw the Sierpinski Gasket
-&lt;/h2&gt;&lt;p&gt;Drawing the Sierpinski Gasket not only helps us better understand its construction principles but also exercises programming and mathematical thinking. Below is an example code for drawing the Sierpinski Gasket using Python&amp;rsquo;s Turtle module:&lt;/p&gt;
+&lt;h2 id=&#34;如何繪製-sierpinski-gasket&#34;&gt;如何繪製 Sierpinski Gasket
+&lt;/h2&gt;&lt;p&gt;繪製 Sierpinski Gasket 的過程不僅能幫助我們更好地理解其構造原理，還能鍛鍊程式設計和數學思維。以下是使用 Python 的 Turtle 模組繪製 Sierpinski Gasket 的範例程式碼：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -146,7 +146,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;my_turtle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;turtle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bgcolor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;black&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;vertices&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;level&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Adjust the iteration depth&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;level&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 調整迭代層數&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;sierpinski&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vertices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;my_turtle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;turtle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -165,8 +165,8 @@
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
         <guid>https://example.com/p/p4-troubleshooting-symbolic-link/</guid>
-        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-troubleshooting---symbolic-link&#34;&gt;P4 Troubleshooting - Symbolic Link
-&lt;/h1&gt;&lt;p&gt;When working with the P4 tutorials, we can typically run the &lt;code&gt;make run&lt;/code&gt; command without issues. However, if we move outside of the tutorial directory, we might find that the &lt;code&gt;make run&lt;/code&gt; command stops working, usually due to an error like this:&lt;/p&gt;
+        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
+&lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -177,19 +177,20 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make: *** No rule to make target &amp;#39;../../utils/Makefile&amp;#39;.  Stop
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This error indicates that the &lt;code&gt;Makefile&lt;/code&gt; cannot be found, so &lt;code&gt;make run&lt;/code&gt; fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required &lt;code&gt;Makefile&lt;/code&gt; without altering the existing project structure.&lt;/p&gt;
-&lt;h2 id=&#34;using-symbolic-links-to-fix-makefile-path-issues&#34;&gt;Using Symbolic Links to Fix Makefile Path Issues
-&lt;/h2&gt;&lt;p&gt;By creating a symbolic link, you can point to an existing &lt;code&gt;Makefile&lt;/code&gt; and resolve the “file not found” issue. This method is flexible, allowing you to fix path issues while keeping the original project structure intact.&lt;/p&gt;
-&lt;h3 id=&#34;steps&#34;&gt;Steps
+&lt;/div&gt;&lt;p&gt;這個問題代表 MakeFile 找不到，所以無法執行 &lt;code&gt;make run&lt;/code&gt; ，因此我們要想個辦法。
+解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 &lt;code&gt;Makefile&lt;/code&gt;，而無需修改現有的專案結構。&lt;/p&gt;
+&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-缺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 缺失問題
+&lt;/h2&gt;&lt;p&gt;透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。&lt;/p&gt;
+&lt;h3 id=&#34;步驟&#34;&gt;步驟
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Identify a Valid Makefile Path&lt;/strong&gt;: First, locate a usable &lt;code&gt;Makefile&lt;/code&gt;, typically in a different project directory or a related folder.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;確認有效的 Makefile 路徑&lt;/strong&gt;：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Navigate to the Target Directory&lt;/strong&gt;: Enter the directory where the &lt;code&gt;make&lt;/code&gt; command expects the file, such as &lt;code&gt;../../utils/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;切換到預期目錄&lt;/strong&gt;：進入 &lt;code&gt;make&lt;/code&gt; 指令所期望的目錄，例如 &lt;code&gt;../../utils/&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Create the Symbolic Link&lt;/strong&gt;: Use the &lt;code&gt;ln -s&lt;/code&gt; command to create the symbolic link. Here’s the syntax:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;建立符號連結&lt;/strong&gt;：使用 &lt;code&gt;ln -s&lt;/code&gt; 指令來建立符號連結，語法如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -198,18 +199,18 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /path/to/existing/Makefile Makefile
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For example, if the valid &lt;code&gt;Makefile&lt;/code&gt; is located at &lt;code&gt;/home/p4/tutorials/utils&lt;/code&gt;, you would run:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;例如，如果你的有效 Makefile 位於 &lt;code&gt;/home/p4/tutorials/utils&lt;/code&gt;，可以執行以下指令：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /home/p4/tutorials/utils ../../utils
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /path/to/project/utils ../../utils
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Verify the Symbolic Link&lt;/strong&gt;: After creating the link, use this command to check that it correctly points to the &lt;code&gt;Makefile&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;確認符號連結&lt;/strong&gt;：創建連結後，使用以下指令檢查是否指向正確的 Makefile：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -218,10 +219,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -l ../../utils/Makefile
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If successful, Linux will return something like &lt;code&gt;w-r-- 1 ...&lt;/code&gt;, confirming that the system has located the file, and you should be able to use &lt;code&gt;make run&lt;/code&gt; again.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;如果有的話，會看到 Linux 回覆一個 &lt;code&gt;w-r-- 1&lt;/code&gt; &amp;hellip; 或類似的回應，代表 Linux 有找到這個檔案，這樣就可以繼續使用 &lt;code&gt;make run&lt;/code&gt; 了&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Additional Errors&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;額外問題&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -230,6 +231,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
@@ -238,11 +240,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuring switch s3 using P4Runtime with file pod-topo/s3-runtime.json
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuring switch s4 using P4Runtime with file pod-topo/s4-runtime.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- ERROR! While parsing input runtime configuration: file does not exist /home/p4/Desktop/tutorials/basic/build/basic.p4.p4info.txtpb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This error might stem from a file name or path configuration issue. Here are some solutions to resolve it:&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;這個問題可能由於檔案名稱或路徑配置錯誤。以下是幾個解決方法來修正這個錯誤：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Check and retry the compilation parameters (adjust for your specific P4 program as needed):&lt;/li&gt;
+&lt;li&gt;檢查並重試編譯參數 (打底下參數就對了，p4 叫啥名字就自己改名)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -254,67 +257,61 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
-&lt;p&gt;Update Configuration Files to Use &lt;code&gt;.txt&lt;/code&gt; Format:
-Ensure that all configuration files referencing the &lt;code&gt;p4info&lt;/code&gt; file use the &lt;code&gt;.txt&lt;/code&gt; extension, updating paths in files like &lt;code&gt;pod-topo/s1-runtime.json&lt;/code&gt; to &lt;code&gt;build/basic.p4.p4info.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;更新配置文件使用 &lt;code&gt;.txt&lt;/code&gt; 格式
+確保所有指向 &lt;code&gt;p4info&lt;/code&gt; 文件的配置文件都使用 &lt;code&gt;.txt&lt;/code&gt; 後綴，例如 &lt;code&gt;pod-topo/s1-runtime.json&lt;/code&gt; 中的路徑更新為 &lt;code&gt;build/basic.p4.p4info.txt&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Rerun &lt;code&gt;make run&lt;/code&gt;:
-Once files are generated, try running &lt;code&gt;make run&lt;/code&gt; again to see if the switches configure correctly.&lt;/p&gt;
+&lt;p&gt;再次運行 &lt;code&gt;make run&lt;/code&gt;
+當文件生成後，請再次執行 &lt;code&gt;make run&lt;/code&gt;，以檢查是否可以順利運行並成功配置交換機。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;These steps should address the &lt;code&gt;.txtpb&lt;/code&gt; format issues, allowing the compiler to generate the &lt;code&gt;p4runtime&lt;/code&gt; files successfully.&lt;/p&gt;
+&lt;p&gt;這些步驟應該可以解決 &lt;code&gt;.txtpb&lt;/code&gt; 格式無法識別的問題，並讓編譯器成功生成 &lt;code&gt;p4runtime&lt;/code&gt; 文件。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://example.com/about/</link>
-        <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/about/</guid>
-        <description>&lt;h3 id=&#34;about-me&#34;&gt;About Me
-&lt;/h3&gt;&lt;p&gt;Hello! I am a student majoring in Computer Science. I am passionate about programming and technology, especially in the fields of artificial intelligence and web development. I believe that technology can change the world, so I often enhance my skills to be able to make an impact in my future work.&lt;/p&gt;
-&lt;h3 id=&#34;education-background&#34;&gt;Education Background
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;School Name&lt;/strong&gt;: Currently attending [School Name]&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt;: Master&amp;rsquo;s in Computer Science&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Achievements&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;[Scholarships or Honors Received]&lt;/li&gt;
-&lt;li&gt;[Competitions or Projects Participated In, e.g., ACM Competition, Hackathon, etc.]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;skills&#34;&gt;Skills
-&lt;/h3&gt;&lt;p&gt;I possess the following skills:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Programming Languages&lt;/strong&gt;: Proficient in C++, beginner in Python, JavaScript, etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Web Development&lt;/strong&gt;: Basic knowledge of HTML, CSS, and JavaScript&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;project-experience&#34;&gt;Project Experience
-&lt;/h3&gt;&lt;p&gt;(Under Construction&amp;hellip;)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 1&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 2&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Project Name 3&lt;/strong&gt;: Describe the goals of this project, the technologies used, and your contributions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;contact-information&#34;&gt;Contact Information
-&lt;/h3&gt;&lt;p&gt;If you have any questions or want to know more about me, feel free to contact me! You can reach me through the following means:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;mailto:apple1051629@gmail.com&#34; &gt;apple1051629@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thank you for taking the time to learn about me!&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Archives</title>
+        <title>關於</title>
+        <link>https://example.com/%E9%97%9C%E6%96%BC/</link>
+        <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E9%97%9C%E6%96%BC/</guid>
+        <description>&lt;h3 id=&#34;關於我&#34;&gt;關於我
+&lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
+&lt;h3 id=&#34;教育背景&#34;&gt;教育背景
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於 [學校名稱]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在校成就&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;[獲得的獎學金或榮譽]&lt;/li&gt;
+&lt;li&gt;[參加的競賽或專案，例如：ACM 競賽、Hackathon 等]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技能&#34;&gt;技能
+&lt;/h3&gt;&lt;p&gt;我具備以下技能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;程式語言&lt;/strong&gt;：熟悉 C++ ，初學 Python、JavaScript 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;網頁開發&lt;/strong&gt;：具備 HTML、CSS 和 JavaScript 的基礎知識&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;專案經驗&#34;&gt;專案經驗
+&lt;/h3&gt;&lt;p&gt;(施工中&amp;hellip; )&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 1&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 2&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案名稱 3&lt;/strong&gt;：描述這個專案的目標、使用的技術和你的貢獻。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;聯絡方式&#34;&gt;聯絡方式
+&lt;/h3&gt;&lt;p&gt;如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;電子郵件&lt;/strong&gt;：apple1051629@gmail.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;謝謝你花時間了解我！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>檔案</title>
         <link>https://example.com/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         

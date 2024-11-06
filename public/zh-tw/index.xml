@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>這是我家啊!</title>
-        <link>https://example.com/zh-tw/</link>
+        <link>http://localhost:1313/zh-tw/</link>
         <description>Recent content on 這是我家啊!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/zh-tw/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>David Chen</copyright>
+        <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="http://localhost:1313/zh-tw/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Sierpinski_Gasket</title>
-        <link>https://example.com/zh-tw/p/sierpinski_gasket/</link>
+        <link>http://localhost:1313/zh-tw/p/sierpinski_gasket/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>
         
-        <guid>https://example.com/zh-tw/p/sierpinski_gasket/</guid>
-        <description>&lt;img src="https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;探索-sierpinski-gasket&#34;&gt;探索 Sierpinski Gasket
+        <guid>http://localhost:1313/zh-tw/p/sierpinski_gasket/</guid>
+        <description>&lt;img src="http://localhost:1313/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;探索-sierpinski-gasket&#34;&gt;探索 Sierpinski Gasket
 &lt;/h1&gt;&lt;p&gt;在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，&lt;strong&gt;Sierpinski Gasket（謝爾賓斯基三角形）&lt;/strong&gt; 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/sierpinski_gasket/Sierpinski_Gasket.png&#34;
 	width=&#34;592&#34;
 	height=&#34;583&#34;
-	srcset=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/sierpinski_gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, http://localhost:1313/p/sierpinski_gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Sierpinski Gasket Triangle&#34;
@@ -161,11 +161,11 @@
         </item>
         <item>
         <title>P4 Troubleshooting - Symbolic Link</title>
-        <link>https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/</link>
+        <link>http://localhost:1313/zh-tw/p/p4-troubleshooting-symbolic-link/</link>
         <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
         
-        <guid>https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/</guid>
-        <description>&lt;img src="https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
+        <guid>http://localhost:1313/zh-tw/p/p4-troubleshooting-symbolic-link/</guid>
+        <description>&lt;img src="http://localhost:1313/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post P4 Troubleshooting - Symbolic Link" /&gt;&lt;h1 id=&#34;p4-超搞剛---symbolic-link&#34;&gt;P4 超搞剛 - Symbolic Link
 &lt;/h1&gt;&lt;p&gt;在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 &lt;code&gt;make run&lt;/code&gt; 這個指令，但當我們離開這個資料夾之後，會發現這個 &lt;code&gt;make run&lt;/code&gt; 這個指令會變得沒有用，原因通常都是:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -272,10 +272,10 @@
         </item>
         <item>
         <title>關於</title>
-        <link>https://example.com/zh-tw/%E9%97%9C%E6%96%BC/</link>
+        <link>http://localhost:1313/zh-tw/%E9%97%9C%E6%96%BC/</link>
         <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/zh-tw/%E9%97%9C%E6%96%BC/</guid>
+        <guid>http://localhost:1313/zh-tw/%E9%97%9C%E6%96%BC/</guid>
         <description>&lt;h3 id=&#34;關於我&#34;&gt;關於我
 &lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
 &lt;h3 id=&#34;教育背景&#34;&gt;教育背景
@@ -312,10 +312,10 @@
         </item>
         <item>
         <title>檔案</title>
-        <link>https://example.com/zh-tw/archives/</link>
+        <link>http://localhost:1313/zh-tw/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/zh-tw/archives/</guid>
+        <guid>http://localhost:1313/zh-tw/archives/</guid>
         <description></description>
         </item>
         
