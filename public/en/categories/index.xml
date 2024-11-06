@@ -6,6 +6,23 @@
         <description>Recent content in Categories on This is my house</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>David Chen</copyright><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>David Chen</copyright>
+        <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Graphic Programming</title>
+        <link>https://example.com/en/categories/graphic-programming/</link>
+        <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/graphic-programming/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>P4</title>
+        <link>https://example.com/en/categories/p4/</link>
+        <pubDate>Tue, 05 Nov 2024 02:35:09 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/p4/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

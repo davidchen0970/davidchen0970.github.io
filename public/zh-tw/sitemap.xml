@@ -20,14 +20,8 @@
                 href="https://example.com/"
                 />
   </url><url>
-    <loc>https://example.com/post/</loc>
-    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/p/sierpinski_gasket/</loc>
-    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
-  </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2024-11-05T02:35:09+08:00</lastmod>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,14 +38,78 @@
                 href="https://example.com/categories/"
                 />
   </url><url>
+    <loc>https://example.com/categories/graphic-programming/</loc>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/graphic-programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/graphic-programming/"
+                />
+  </url><url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/post/"
+                />
+  </url><url>
+    <loc>https://example.com/p/sierpinski_gasket/</loc>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/p/sierpinski_gasket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/p/sierpinski_gasket/"
+                />
+  </url><url>
     <loc>https://example.com/categories/p4/</loc>
     <lastmod>2024-11-05T02:35:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/p4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/p4/"
+                />
   </url><url>
     <loc>https://example.com/p/p4-troubleshooting-symbolic-link/</loc>
     <lastmod>2024-11-05T02:35:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/p/p4-troubleshooting-symbolic-link/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/p/p4-troubleshooting-symbolic-link/"
+                />
   </url><url>
     <loc>https://example.com/page/</loc>
     <lastmod>2024-11-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/page/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -67,6 +125,11 @@
     <lastmod>2024-11-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh-cn"
                 href="https://example.com/zh-cn/%E9%97%9C%E6%96%BC/"
                 />
@@ -78,6 +141,11 @@
   </url><url>
     <loc>https://example.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/archives/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"

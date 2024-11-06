@@ -29,6 +29,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/page/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh-cn"
                 href="https://example.com/zh-cn/page/"
                 />
@@ -39,6 +44,11 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://example.com/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -85,6 +95,11 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://example.com/%E9%97%9C%E6%96%BC/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
