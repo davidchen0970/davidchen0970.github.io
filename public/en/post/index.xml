@@ -46,7 +46,8 @@
 &lt;/h2&gt;&lt;p&gt;The Sierpinski Gasket is not only visually striking but also possesses fascinating mathematical properties:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Self-Similarity&lt;/strong&gt;: No matter the scale at which it is observed, the Sierpinski Gasket shows a similar structure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Fractal Dimension&lt;/strong&gt;: The fractal dimension of the Sierpinski Gasket is approximately 1.585, which is larger than a one-dimensional line segment but smaller than a two-dimensional plane, reflecting its complex geometric structure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fractal Dimension&lt;/strong&gt;: The &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Fractal_dimension&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fractal dimension&lt;/a&gt; of the Sierpinski Gasket is approximately 1.585, which is larger than a one-dimensional line segment but smaller than a two-dimensional plane, reflecting its complex geometric structure.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Infinite Detail&lt;/strong&gt;: As the number of iterations increases, the details of the shape become infinitely rich and cannot be fully described by finite geometric figures.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;applications-of-the-sierpinski-gasket&#34;&gt;Applications of the Sierpinski Gasket

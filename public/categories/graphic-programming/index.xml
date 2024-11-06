@@ -46,7 +46,8 @@
 &lt;/h2&gt;&lt;p&gt;Sierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;自相似性&lt;/strong&gt;：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分形維數&lt;/strong&gt;：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分形維數&lt;/strong&gt;：Sierpinski Gasket 的&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Fractal_dimension&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;分形維數&lt;/a&gt;約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;無窮細節&lt;/strong&gt;：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;sierpinski-gasket-的應用&#34;&gt;Sierpinski Gasket 的應用
