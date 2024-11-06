@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/zh-tw/</loc>
-    <lastmod>2024-11-05T02:35:09+08:00</lastmod>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,6 +18,32 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://example.com/zh-tw/"
+                />
+  </url><url>
+    <loc>https://example.com/zh-tw/post/</loc>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/post/"
+                />
+  </url><url>
+    <loc>https://example.com/zh-tw/p/sierpinski_gasket/</loc>
+    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/p/sierpinski_gasket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/zh-tw/p/sierpinski_gasket/"
                 />
   </url><url>
     <loc>https://example.com/zh-tw/categories/</loc>
@@ -62,19 +88,6 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://example.com/zh-tw/p/p4-troubleshooting-symbolic-link/"
-                />
-  </url><url>
-    <loc>https://example.com/zh-tw/post/</loc>
-    <lastmod>2024-11-05T02:35:09+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/zh-tw/post/"
                 />
   </url><url>
     <loc>https://example.com/zh-tw/page/</loc>
