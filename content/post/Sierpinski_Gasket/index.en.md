@@ -38,7 +38,7 @@ The Sierpinski Gasket can also be defined using recursive functions, where each 
 The Sierpinski Gasket is not only visually striking but also possesses fascinating mathematical properties:
 
 - **Self-Similarity**: No matter the scale at which it is observed, the Sierpinski Gasket shows a similar structure.
-- **Fractal Dimension**: The fractal dimension of the Sierpinski Gasket is approximately 1.585, which is larger than a one-dimensional line segment but smaller than a two-dimensional plane, reflecting its complex geometric structure.
+- **Fractal Dimension**: The [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) of the Sierpinski Gasket is approximately 1.585, which is larger than a one-dimensional line segment but smaller than a two-dimensional plane, reflecting its complex geometric structure.
 - **Infinite Detail**: As the number of iterations increases, the details of the shape become infinitely rich and cannot be fully described by finite geometric figures.
 
 ## Applications of the Sierpinski Gasket

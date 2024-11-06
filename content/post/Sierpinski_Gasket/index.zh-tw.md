@@ -38,7 +38,7 @@ Sierpinski Gasket 也可以透過遞迴函數來定義，每一層的圖形都�
 Sierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：
 
 - **自相似性**：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。
-- **分形維數**：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。
+- **分形維數**：Sierpinski Gasket 的[分形維數](https://en.wikipedia.org/wiki/Fractal_dimension)約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。
 - **無窮細節**：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。
 
 ## Sierpinski Gasket 的應用
