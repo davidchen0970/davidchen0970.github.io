@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="探索 Sierpinski Gasket\r在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，Sierpinski Gasket（謝爾賓斯基三角形） 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。\n什麼是 Sierpinski Gasket？\rSierpinski Gasket，又稱謝爾賓斯基三角形，是由波蘭數學家瓦茨瓦夫·謝爾賓斯基（Wacław Sierpiński）在 1915 年提出的分形結構。\nSierpinski Gasket 的建立方法\r建立 Sierpinski Gasket 的方法有多種，其中最直觀的是迭代法。以下是常見的兩種構造方式：\n1. 移除中間三角形法\r初始形狀：從一個等邊三角形開始。 第一次迭代：將初始三角形分割成四個小的等邊三角形，移除中間的那個。 後續迭代：對剩下的每一個小三角形重複上述步驟，逐步移除每個小三角形的中間部分。 隨著迭代次數的增加，剩餘的圖形越來越接近 Sierpinski Gasket，展示出其獨特的蜂窩狀結構。\n2. 遞迴定義法\rSierpinski Gasket 也可以透過遞迴函數來定義，每一層的圖形都是前一層的自相似縮小版本。這種方法在電腦繪圖中特別常用，能夠高效地生成複雜的分形圖案。\nSierpinski Gasket 的數學性質\rSierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：\n自相似性：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。 分形維數：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。 無窮細節：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。 Sierpinski Gasket 的應用\r儘管 Sierpinski Gasket 起源於純數學研究，但其獨特的結構在多個領域中找到了應用：\n電腦圖形學：用於生成複雜的圖案和紋理，提升圖形的細節和真實感。 藝術與設計：其獨特的視覺效果常被應用於裝飾藝術、建築設計等領域，創造出引人入勝的視覺作品。 自然界中的類似結構：類似的分形結構在自然界中也屢見不鮮，如某些植物的葉脈結構、雪花的形態等，展示了分形幾何在自然界中的普遍性。 如何繪製 Sierpinski Gasket\r繪製 Sierpinski Gasket 的過程不僅能幫助我們更好地理解其構造原理，還能鍛鍊程式設計和數學思維。以下是使用 Python 的 Turtle 模組繪製 Sierpinski Gasket 的範例程式碼：\n">
 <title>Sierpinski_Gasket</title>
 
-<link rel='canonical' href='https://example.com/p/sierpinski_gasket/'>
+<link rel='canonical' href='http://localhost:1313/p/sierpinski_gasket/'>
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Sierpinski_Gasket">
 <meta property='og:description' content="探索 Sierpinski Gasket\r在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，Sierpinski Gasket（謝爾賓斯基三角形） 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。\n什麼是 Sierpinski Gasket？\rSierpinski Gasket，又稱謝爾賓斯基三角形，是由波蘭數學家瓦茨瓦夫·謝爾賓斯基（Wacław Sierpiński）在 1915 年提出的分形結構。\nSierpinski Gasket 的建立方法\r建立 Sierpinski Gasket 的方法有多種，其中最直觀的是迭代法。以下是常見的兩種構造方式：\n1. 移除中間三角形法\r初始形狀：從一個等邊三角形開始。 第一次迭代：將初始三角形分割成四個小的等邊三角形，移除中間的那個。 後續迭代：對剩下的每一個小三角形重複上述步驟，逐步移除每個小三角形的中間部分。 隨著迭代次數的增加，剩餘的圖形越來越接近 Sierpinski Gasket，展示出其獨特的蜂窩狀結構。\n2. 遞迴定義法\rSierpinski Gasket 也可以透過遞迴函數來定義，每一層的圖形都是前一層的自相似縮小版本。這種方法在電腦繪圖中特別常用，能夠高效地生成複雜的分形圖案。\nSierpinski Gasket 的數學性質\rSierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：\n自相似性：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。 分形維數：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。 無窮細節：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。 Sierpinski Gasket 的應用\r儘管 Sierpinski Gasket 起源於純數學研究，但其獨特的結構在多個領域中找到了應用：\n電腦圖形學：用於生成複雜的圖案和紋理，提升圖形的細節和真實感。 藝術與設計：其獨特的視覺效果常被應用於裝飾藝術、建築設計等領域，創造出引人入勝的視覺作品。 自然界中的類似結構：類似的分形結構在自然界中也屢見不鮮，如某些植物的葉脈結構、雪花的形態等，展示了分形幾何在自然界中的普遍性。 如何繪製 Sierpinski Gasket\r繪製 Sierpinski Gasket 的過程不僅能幫助我們更好地理解其構造原理，還能鍛鍊程式設計和數學思維。以下是使用 Python 的 Turtle 模組繪製 Sierpinski Gasket 的範例程式碼：\n">
-<meta property='og:url' content='https://example.com/p/sierpinski_gasket/'>
+<meta property='og:url' content='http://localhost:1313/p/sierpinski_gasket/'>
 <meta property='og:site_name' content='這是我家啊!'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-06T12:39:48&#43;08:00'/><meta property='article:modified_time' content='2024-11-06T12:39:48&#43;08:00'/><meta property='og:image' content='https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-06T12:39:48&#43;08:00'/><meta property='article:modified_time' content='2024-11-06T12:39:48&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg' />
 <meta name="twitter:title" content="Sierpinski_Gasket">
 <meta name="twitter:description" content="探索 Sierpinski Gasket\r在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，Sierpinski Gasket（謝爾賓斯基三角形） 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。\n什麼是 Sierpinski Gasket？\rSierpinski Gasket，又稱謝爾賓斯基三角形，是由波蘭數學家瓦茨瓦夫·謝爾賓斯基（Wacław Sierpiński）在 1915 年提出的分形結構。\nSierpinski Gasket 的建立方法\r建立 Sierpinski Gasket 的方法有多種，其中最直觀的是迭代法。以下是常見的兩種構造方式：\n1. 移除中間三角形法\r初始形狀：從一個等邊三角形開始。 第一次迭代：將初始三角形分割成四個小的等邊三角形，移除中間的那個。 後續迭代：對剩下的每一個小三角形重複上述步驟，逐步移除每個小三角形的中間部分。 隨著迭代次數的增加，剩餘的圖形越來越接近 Sierpinski Gasket，展示出其獨特的蜂窩狀結構。\n2. 遞迴定義法\rSierpinski Gasket 也可以透過遞迴函數來定義，每一層的圖形都是前一層的自相似縮小版本。這種方法在電腦繪圖中特別常用，能夠高效地生成複雜的分形圖案。\nSierpinski Gasket 的數學性質\rSierpinski Gasket 不僅在視覺上令人嘆為觀止，其數學性質也同樣令人著迷：\n自相似性：無論從哪個尺度觀察，Sierpinski Gasket 都呈現出相似的結構。 分形維數：Sierpinski Gasket 的分形維數約為 1.585，比一維線段大，但小於二維平面，反映出其複雜的幾何結構。 無窮細節：隨著迭代次數的增加，圖形的細節變得無限豐富，無法用有限的幾何圖形完全描述。 Sierpinski Gasket 的應用\r儘管 Sierpinski Gasket 起源於純數學研究，但其獨特的結構在多個領域中找到了應用：\n電腦圖形學：用於生成複雜的圖案和紋理，提升圖形的細節和真實感。 藝術與設計：其獨特的視覺效果常被應用於裝飾藝術、建築設計等領域，創造出引人入勝的視覺作品。 自然界中的類似結構：類似的分形結構在自然界中也屢見不鮮，如某些植物的葉脈結構、雪花的形態等，展示了分形幾何在自然界中的普遍性。 如何繪製 Sierpinski Gasket\r繪製 Sierpinski Gasket 的過程不僅能幫助我們更好地理解其構造原理，還能鍛鍊程式設計和數學思維。以下是使用 Python 的 Turtle 模組繪製 Sierpinski Gasket 的範例程式碼：\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg' />
+    <meta name="twitter:image" content='http://localhost:1313/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg' />
     </head>
     <body class="
     article-page
@@ -213,11 +213,11 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://example.com/" selected>正體中文</option>
+                                    <option value="http://localhost:1313/" selected>正體中文</option>
                                 
-                                    <option value="https://example.com/en/" >English</option>
+                                    <option value="http://localhost:1313/en/" >English</option>
                                 
-                                    <option value="https://example.com/zh-cn/" >简体中文</option>
+                                    <option value="http://localhost:1313/zh-cn/" >简体中文</option>
                                 
                             </select>
                         </li>
@@ -381,7 +381,7 @@
 
             <div>
                 
-                    <a href="https://example.com/en/p/sierpinski_gasket/" class="link">English</a>
+                    <a href="http://localhost:1313/en/p/sierpinski-gasket/" class="link">English</a>
                 
             </div>
         </footer>
@@ -711,7 +711,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.9f2f28b602bb690758f98010bdfbc7ca8829484398ec4b071fec423dd41e1686.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

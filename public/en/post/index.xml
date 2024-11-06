@@ -8,17 +8,17 @@
         <language>en</language>
         <copyright>David Chen</copyright>
         <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/en/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Sierpinski_Gasket</title>
-        <link>https://example.com/en/p/sierpinski_gasket/</link>
+        <title>Sierpinski Gasket</title>
+        <link>https://example.com/en/p/sierpinski-gasket/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>
         
-        <guid>https://example.com/en/p/sierpinski_gasket/</guid>
-        <description>&lt;img src="https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;exploring-the-sierpinski-gasket&#34;&gt;Exploring the Sierpinski Gasket
+        <guid>https://example.com/en/p/sierpinski-gasket/</guid>
+        <description>&lt;img src="https://example.com/p/sierpinski-gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski Gasket" /&gt;&lt;h1 id=&#34;exploring-the-sierpinski-gasket&#34;&gt;Exploring the Sierpinski Gasket
 &lt;/h1&gt;&lt;p&gt;In the vast field of mathematics, fractal geometry has attracted countless people&amp;rsquo;s attention with its unique self-similarity and infinite complexity. Among them, the &lt;strong&gt;Sierpinski Gasket&lt;/strong&gt; (also known as the Sierpinski Triangle) stands as a classic representative of fractal geometry, showcasing the infinite beauty hidden within simple rules. Today, we will dive deep into the Sierpinski Gasket, exploring its construction methods, mathematical properties, and real-world applications.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket.png&#34;
 	width=&#34;592&#34;
 	height=&#34;583&#34;
-	srcset=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
+	srcset=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Sierpinski Gasket Triangle&#34;

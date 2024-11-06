@@ -8,17 +8,17 @@
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
         <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Sierpinski_Gasket</title>
-        <link>https://example.com/p/sierpinski_gasket/</link>
+        <title>Sierpinski Gasket</title>
+        <link>https://example.com/p/sierpinski-gasket/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>
         
-        <guid>https://example.com/p/sierpinski_gasket/</guid>
-        <description>&lt;img src="https://example.com/p/sierpinski_gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski_Gasket" /&gt;&lt;h1 id=&#34;探索-sierpinski-gasket&#34;&gt;探索 Sierpinski Gasket
+        <guid>https://example.com/p/sierpinski-gasket/</guid>
+        <description>&lt;img src="https://example.com/p/sierpinski-gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski Gasket" /&gt;&lt;h1 id=&#34;探索-sierpinski-gasket&#34;&gt;探索 Sierpinski Gasket
 &lt;/h1&gt;&lt;p&gt;在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，&lt;strong&gt;Sierpinski Gasket（謝爾賓斯基三角形）&lt;/strong&gt; 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket.png&#34;
 	width=&#34;592&#34;
 	height=&#34;583&#34;
-	srcset=&#34;https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski_gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
+	srcset=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Sierpinski Gasket Triangle&#34;

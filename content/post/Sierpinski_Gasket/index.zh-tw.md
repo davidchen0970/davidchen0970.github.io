@@ -1,6 +1,6 @@
 +++
 date = '2024-11-06T12:39:48+08:00'
-title = 'Sierpinski_Gasket'
+title = 'Sierpinski Gasket'
 image = "pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg"
 categories = [
     "Graphic Programming"
