@@ -7,7 +7,176 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 07 Nov 2024 17:38:34 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>What is p4</title>
+        <link>https://example.com/p/what-is-p4/</link>
+        <pubDate>Thu, 07 Nov 2024 17:38:34 +0800</pubDate>
+        
+        <guid>https://example.com/p/what-is-p4/</guid>
+        <description>&lt;img src="https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg" alt="Featured image of post What is p4" /&gt;&lt;h2 id=&#34;p4-網路的介紹與應用&#34;&gt;P4 網路的介紹與應用
+&lt;/h2&gt;&lt;p&gt;隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 &lt;strong&gt;P4 (Programming Protocol-independent Packet Processors)&lt;/strong&gt; 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。&lt;/p&gt;
+&lt;h2 id=&#34;什麼是-p4&#34;&gt;&lt;strong&gt;什麼是 P4？&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。&lt;/p&gt;
+&lt;p&gt;P4 具有以下特點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;協定無關性 (Protocol Independence) ：&lt;/strong&gt; 可以處理任意協定封包，而不受傳統協定限制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;靈活性高：&lt;/strong&gt; 支援使用者定義 Field 和使用，可以適應不斷變化的需求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬體抽象性：&lt;/strong&gt; 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;openflow-與-p4-的相同和差別&#34;&gt;OpenFlow 與 P4 的相同和差別
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;OpenFlow&lt;/strong&gt; 和 &lt;strong&gt;P4&lt;/strong&gt; 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:&lt;/p&gt;
+&lt;h3 id=&#34;相關性&#34;&gt;&lt;strong&gt;相關性&lt;/strong&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;同屬 SDN 範疇：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenFlow&lt;/strong&gt; 和 &lt;strong&gt;P4&lt;/strong&gt; 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。&lt;/li&gt;
+&lt;li&gt;二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Plane 與 Control Plane 的互動：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenFlow 定義了一個 Data Plane 與 Control Plane 之間的通訊標準。&lt;/li&gt;
+&lt;li&gt;P4 則專注在 Data Plane 的可程式化，但可以與 OpenFlow 結合使用，透過 Control Plane 管理 P4 的行為。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;軟硬體之間的獨立性：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;二者都把網路的功能從依賴於硬體，轉變成獨立於硬體，使網路的功能可在不同平台上運行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;差異性&#34;&gt;&lt;strong&gt;差異性&lt;/strong&gt;
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;項目&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;OpenFlow&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;P4&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;主要目標&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;標準化 Data Plane 與 Control Plane 之間的通訊協定。&lt;/td&gt;
+          &lt;td&gt;提供 Data Plane 完全的可程式化，定義如何處理封包。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;控制範圍&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;針對 Flow Table 的 Match，僅能處理特定協定 (如 IPv4、IPv6、VLAN 等) 。(如圖 1/2)&lt;/td&gt;
+          &lt;td&gt;可自行定義 Protocol Fields、封包處理邏輯和新協定，具有更高的靈活性。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;層次分工&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;重點在控制平面， Data Plane 的行為相對固定，由硬體自行設定。&lt;/td&gt;
+          &lt;td&gt;聚焦於 Data Plane ，可自行設計封包解析、處理和轉發行為。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;適用範圍&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;適合標準網路設備，用於流量工程、網路優化等控制層面的應用。&lt;/td&gt;
+          &lt;td&gt;更適合需要高度自定義的場景，如研究新協定、特殊安全需求或新型封包格式的處理。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;語言與標準&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;使用固定的 OpenFlow 協定標準，無法靈活定義封包的處理行為。&lt;/td&gt;
+          &lt;td&gt;使用 P4 程式語言，允許完全自定義處理邏輯，支援多種 Data Plane 硬體和平台。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;硬體支援&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;必須使用支援 OpenFlow 協定的硬體設備。&lt;/td&gt;
+          &lt;td&gt;支援多種硬體平台，包括 ASIC、FPGA、網路處理器 (NPU) 或者網路模擬器等等。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;協定依賴性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;固定支援已知協定，無法輕易新增新協定的功能。&lt;/td&gt;
+          &lt;td&gt;完全協定無關，可自由設計支援任何協定的封包處理。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/what-is-p4/p4-09.png&#34;
+	width=&#34;2845&#34;
+	height=&#34;2134&#34;
+	srcset=&#34;https://example.com/p/what-is-p4/p4-09_hu6171328622038328369.png 480w, https://example.com/p/what-is-p4/p4-09_hu10979434447022775760.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;圖1：OpenFlow 的 Match 和 Action&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/what-is-p4/Abuynwi.png&#34;
+	width=&#34;527&#34;
+	height=&#34;186&#34;
+	srcset=&#34;https://example.com/p/what-is-p4/Abuynwi_hu3894902318755102197.png 480w, https://example.com/p/what-is-p4/Abuynwi_hu12692879872724982288.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;圖2：OpenFlow 的 Header Fields 數量變化&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/what-is-p4/1UMaVhT.png&#34;
+	width=&#34;506&#34;
+	height=&#34;347&#34;
+	srcset=&#34;https://example.com/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, https://example.com/p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;圖3: OpenFlow 和 P4 所運作的位置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;p4-的核心結構&#34;&gt;&lt;strong&gt;P4 的核心結構&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;P4 程式的基本組成包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;封包解析器 (Parser) ：&lt;/strong&gt; 定義如何解析進入的封包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;封包處理邏輯 (Control Block) ：&lt;/strong&gt; 指定處理封包的規則，例如轉發、丟棄或修改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;封包去解析器 (Deparser) ：&lt;/strong&gt; 定義如何重建封包以便發送。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;p4-的應用場景&#34;&gt;&lt;strong&gt;P4 的應用場景&lt;/strong&gt;
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;網路監控：&lt;/strong&gt;
+P4 可自定義封包處理行為，監控對特定流量。例如，通過執行延遲測量和流量計數來改善網路性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;流量工程：&lt;/strong&gt;
+網路工程師可以設計自定義轉發邏輯，改善流量路徑，實作負載均衡或快速故障恢復。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安全防護：&lt;/strong&gt;
+使用 P4 構建動態訪問控制列表 (ACL) 和封包篩選功能，增強網路安全性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;創新協定實驗：&lt;/strong&gt;
+研究人員可快速設計並測試新協定，不須等待硬體製造商支援。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;reference&#34;&gt;&lt;strong&gt;reference&lt;/strong&gt;
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;P4 - tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://olivermichel.github.io/doc/p4.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;P4: Programming Protocol-independent Packet Processors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ithelp.ithome.com.tw/articles/10243915?sc=rss.qu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;P4 paper (cont.)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>Sierpinski Gasket</title>
         <link>https://example.com/p/sierpinski-gasket/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
+<title>What is p4</title>
+
+<link rel='canonical' href='https://example.com/p/what-is-p4/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="What is p4">
+<meta property='og:description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
+<meta property='og:url' content='https://example.com/p/what-is-p4/'>
+<meta property='og:site_name' content='這是我家啊!'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='article:modified_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='og:image' content='https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg' />
+<meta name="twitter:title" content="What is p4">
+<meta name="twitter:description" content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu8426949080533301442.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">這是我家啊!</a></h1>
+            <h2 class="site-description">我家在施工...</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/davidchen0970/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com'
+                        target="_blank"
+                        title="instagram"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="rgb(216, 220, 221)"  width="800px" height="800px" viewBox="16 16 224 224" id="Flat" xmlns="http://www.w3.org/2000/svg">
+  <path d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"/>
+</svg>
+
+<!-- reference : https://www.svgrepo.com/svg/365495/instagram-logo-thin -->
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首頁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%97%9C%E6%96%BC/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>關於</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>檔案</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://example.com/" selected>正體中文</option>
+                                
+                                    <option value="https://example.com/en/" >English</option>
+                                
+                                    <option value="https://example.com/zh-cn/" >简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>夜晚模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目錄</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#p4-網路的介紹與應用">P4 網路的介紹與應用</a></li>
+    <li><a href="#什麼是-p4"><strong>什麼是 P4？</strong></a></li>
+    <li><a href="#openflow-與-p4-的相同和差別">OpenFlow 與 P4 的相同和差別</a>
+      <ol>
+        <li><a href="#相關性"><strong>相關性</strong></a></li>
+        <li><a href="#差異性"><strong>差異性</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#p4-的核心結構"><strong>P4 的核心結構</strong></a></li>
+    <li><a href="#p4-的應用場景"><strong>P4 的應用場景</strong></a></li>
+    <li><a href="#reference"><strong>reference</strong></a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/what-is-p4/">
+                <img src="/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash_hu4375803404560972207.jpg"
+                        srcset="/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash_hu4375803404560972207.jpg 800w, /p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash_hu9582923960106229232.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post What is p4" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/p4/" style="background-color: #2a9d8f; color: #fff;">
+                P4
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/what-is-p4/">What is p4</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 07, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 1 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="p4-網路的介紹與應用">P4 網路的介紹與應用
+</h2><p>隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 <strong>P4 (Programming Protocol-independent Packet Processors)</strong> 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。</p>
+<h2 id="什麼是-p4"><strong>什麼是 P4？</strong>
+</h2><p>P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。</p>
+<p>P4 具有以下特點：</p>
+<ol>
+<li><strong>協定無關性 (Protocol Independence) ：</strong> 可以處理任意協定封包，而不受傳統協定限制。</li>
+<li><strong>靈活性高：</strong> 支援使用者定義 Field 和使用，可以適應不斷變化的需求。</li>
+<li><strong>硬體抽象性：</strong> 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。</li>
+</ol>
+<h2 id="openflow-與-p4-的相同和差別">OpenFlow 與 P4 的相同和差別
+</h2><p><strong>OpenFlow</strong> 和 <strong>P4</strong> 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:</p>
+<h3 id="相關性"><strong>相關性</strong>
+</h3><ol>
+<li>
+<p><strong>同屬 SDN 範疇：</strong></p>
+<ul>
+<li><strong>OpenFlow</strong> 和 <strong>P4</strong> 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。</li>
+<li>二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Plane 與 Control Plane 的互動：</strong></p>
+<ul>
+<li>OpenFlow 定義了一個 Data Plane 與 Control Plane 之間的通訊標準。</li>
+<li>P4 則專注在 Data Plane 的可程式化，但可以與 OpenFlow 結合使用，透過 Control Plane 管理 P4 的行為。</li>
+</ul>
+</li>
+<li>
+<p><strong>軟硬體之間的獨立性：</strong></p>
+<ul>
+<li>二者都把網路的功能從依賴於硬體，轉變成獨立於硬體，使網路的功能可在不同平台上運行。</li>
+</ul>
+</li>
+</ol>
+<h3 id="差異性"><strong>差異性</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>項目</strong></th>
+          <th><strong>OpenFlow</strong></th>
+          <th><strong>P4</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>主要目標</strong></td>
+          <td>標準化 Data Plane 與 Control Plane 之間的通訊協定。</td>
+          <td>提供 Data Plane 完全的可程式化，定義如何處理封包。</td>
+      </tr>
+      <tr>
+          <td><strong>控制範圍</strong></td>
+          <td>針對 Flow Table 的 Match，僅能處理特定協定 (如 IPv4、IPv6、VLAN 等) 。(如圖 1/2)</td>
+          <td>可自行定義 Protocol Fields、封包處理邏輯和新協定，具有更高的靈活性。</td>
+      </tr>
+      <tr>
+          <td><strong>層次分工</strong></td>
+          <td>重點在控制平面， Data Plane 的行為相對固定，由硬體自行設定。</td>
+          <td>聚焦於 Data Plane ，可自行設計封包解析、處理和轉發行為。</td>
+      </tr>
+      <tr>
+          <td><strong>適用範圍</strong></td>
+          <td>適合標準網路設備，用於流量工程、網路優化等控制層面的應用。</td>
+          <td>更適合需要高度自定義的場景，如研究新協定、特殊安全需求或新型封包格式的處理。</td>
+      </tr>
+      <tr>
+          <td><strong>語言與標準</strong></td>
+          <td>使用固定的 OpenFlow 協定標準，無法靈活定義封包的處理行為。</td>
+          <td>使用 P4 程式語言，允許完全自定義處理邏輯，支援多種 Data Plane 硬體和平台。</td>
+      </tr>
+      <tr>
+          <td><strong>硬體支援</strong></td>
+          <td>必須使用支援 OpenFlow 協定的硬體設備。</td>
+          <td>支援多種硬體平台，包括 ASIC、FPGA、網路處理器 (NPU) 或者網路模擬器等等。</td>
+      </tr>
+      <tr>
+          <td><strong>協定依賴性</strong></td>
+          <td>固定支援已知協定，無法輕易新增新協定的功能。</td>
+          <td>完全協定無關，可自由設計支援任何協定的封包處理。</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><img src="/p/what-is-p4/p4-09.png"
+	width="2845"
+	height="2134"
+	srcset="/p/what-is-p4/p4-09_hu6171328622038328369.png 480w, /p/what-is-p4/p4-09_hu10979434447022775760.png 1024w"
+	loading="lazy"
+	
+		alt="圖1：OpenFlow 的 Match 和 Action"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="319px"
+	
+></p>
+<hr>
+<p><img src="/p/what-is-p4/Abuynwi.png"
+	width="527"
+	height="186"
+	srcset="/p/what-is-p4/Abuynwi_hu3894902318755102197.png 480w, /p/what-is-p4/Abuynwi_hu12692879872724982288.png 1024w"
+	loading="lazy"
+	
+		alt="圖2：OpenFlow 的 Header Fields 數量變化"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="680px"
+	
+></p>
+<hr>
+<p><img src="/p/what-is-p4/1UMaVhT.png"
+	width="506"
+	height="347"
+	srcset="/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, /p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w"
+	loading="lazy"
+	
+		alt="圖3: OpenFlow 和 P4 所運作的位置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+></p>
+<h2 id="p4-的核心結構"><strong>P4 的核心結構</strong>
+</h2><p>P4 程式的基本組成包括：</p>
+<ul>
+<li><strong>封包解析器 (Parser) ：</strong> 定義如何解析進入的封包。</li>
+<li><strong>封包處理邏輯 (Control Block) ：</strong> 指定處理封包的規則，例如轉發、丟棄或修改。</li>
+<li><strong>封包去解析器 (Deparser) ：</strong> 定義如何重建封包以便發送。</li>
+</ul>
+<h2 id="p4-的應用場景"><strong>P4 的應用場景</strong>
+</h2><ol>
+<li>
+<p><strong>網路監控：</strong>
+P4 可自定義封包處理行為，監控對特定流量。例如，通過執行延遲測量和流量計數來改善網路性能。</p>
+</li>
+<li>
+<p><strong>流量工程：</strong>
+網路工程師可以設計自定義轉發邏輯，改善流量路徑，實作負載均衡或快速故障恢復。</p>
+</li>
+<li>
+<p><strong>安全防護：</strong>
+使用 P4 構建動態訪問控制列表 (ACL) 和封包篩選功能，增強網路安全性。</p>
+</li>
+<li>
+<p><strong>創新協定實驗：</strong>
+研究人員可快速設計並測試新協定，不須等待硬體製造商支援。</p>
+</li>
+</ol>
+<h2 id="reference"><strong>reference</strong>
+</h2><ol>
+<li><a class="link" href="https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf"  target="_blank" rel="noopener"
+    >P4 - tutorial</a></li>
+<li><a class="link" href="https://olivermichel.github.io/doc/p4.pdf"  target="_blank" rel="noopener"
+    >P4: Programming Protocol-independent Packet Processors</a></li>
+<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10243915?sc=rss.qu"  target="_blank" rel="noopener"
+    >P4 paper (cont.)</a></li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相關文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/p4-troubleshooting-symbolic-link/">
+        
+        
+            <div class="article-image">
+                <img src="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post P4 Troubleshooting - Symbolic Link"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">P4 Troubleshooting - Symbolic Link</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 David Chen
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 建立 <br />
+        主題 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 設計
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
