@@ -13,7 +13,7 @@
         <pubDate>Thu, 07 Nov 2024 18:51:21 +0800</pubDate>
         
         <guid>https://example.com/p/solve-hugo-push-issue/</guid>
-        <description>&lt;h1 id=&#34;解決-hugo-部署失敗的問題本機正常但-github-無法顯示&#34;&gt;解決 Hugo 部署失敗的問題：本機正常但 GitHub 無法顯示
+        <description>&lt;img src="https://example.com/p/solve-hugo-push-issue/pawel-czerwinski-xubOAAKUwXc-unsplash.jpg" alt="Featured image of post Solve hugo push issue" /&gt;&lt;h1 id=&#34;解決-hugo-部署失敗的問題本機正常但-github-無法顯示&#34;&gt;解決 Hugo 部署失敗的問題：本機正常但 GitHub 無法顯示
 &lt;/h1&gt;&lt;p&gt;使用 Hugo 建立靜態網站時，有時可能會遇到這樣的情況：在本機使用 &lt;code&gt;hugo server&lt;/code&gt; 測試時一切正常，但部署到 GitHub Pages 上後，網站卻出現錯誤或無法正確顯示。本文將說明這個問題的可能原因，並提供簡單的解決方法。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;問題表現方式&#34;&gt;問題表現方式

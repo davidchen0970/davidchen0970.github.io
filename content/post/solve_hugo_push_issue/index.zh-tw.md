@@ -1,6 +1,10 @@
 +++
 date = '2024-11-07T18:51:21+08:00'
 title = 'Solve hugo push issue'
+image = "pawel-czerwinski-xubOAAKUwXc-unsplash.jpg"
+categories = [
+    "Hugo"
+]
 +++
 
 # 解決 Hugo 部署失敗的問題：本機正常但 GitHub 無法顯示

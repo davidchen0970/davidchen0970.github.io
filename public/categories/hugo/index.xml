@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hugo on 這是我家啊!</title>
+        <link>https://example.com/categories/hugo/</link>
+        <description>Recent content in Hugo on 這是我家啊!</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>David Chen</copyright>
+        <lastBuildDate>Thu, 07 Nov 2024 18:51:21 +0800</lastBuildDate><atom:link href="https://example.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Solve hugo push issue</title>
+        <link>https://example.com/p/solve-hugo-push-issue/</link>
+        <pubDate>Thu, 07 Nov 2024 18:51:21 +0800</pubDate>
+        
+        <guid>https://example.com/p/solve-hugo-push-issue/</guid>
+        <description>&lt;img src="https://example.com/p/solve-hugo-push-issue/pawel-czerwinski-xubOAAKUwXc-unsplash.jpg" alt="Featured image of post Solve hugo push issue" /&gt;&lt;h1 id=&#34;解決-hugo-部署失敗的問題本機正常但-github-無法顯示&#34;&gt;解決 Hugo 部署失敗的問題：本機正常但 GitHub 無法顯示
+&lt;/h1&gt;&lt;p&gt;使用 Hugo 建立靜態網站時，有時可能會遇到這樣的情況：在本機使用 &lt;code&gt;hugo server&lt;/code&gt; 測試時一切正常，但部署到 GitHub Pages 上後，網站卻出現錯誤或無法正確顯示。本文將說明這個問題的可能原因，並提供簡單的解決方法。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;問題表現方式&#34;&gt;問題表現方式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在本機使用 &lt;code&gt;hugo server&lt;/code&gt; 指令時，網站可以正常運行，所有內容正確顯示。&lt;/li&gt;
+&lt;li&gt;將網站的內容推送（push）到 GitHub 後，部署的網站卻出現問題：
+&lt;ul&gt;
+&lt;li&gt;網頁完全無法出現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;問題原因分析&#34;&gt;問題原因分析
+&lt;/h2&gt;&lt;p&gt;這種情況可能與 Hugo 在生成靜態網站時未正確清理輸出目錄有關。Hugo 預設會將生成的檔案輸出到 &lt;code&gt;public&lt;/code&gt; 目錄，如果該目錄中存在殘留的舊檔案，這些檔案可能會被推送到 GitHub，導致部署的網站出現問題。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;p&gt;要解決這個問題，可以嘗試以下步驟：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;清理輸出目錄並重新生成網站&lt;/strong&gt;
+使用 &lt;code&gt;hugo --cleanDestinationDir&lt;/code&gt; 指令，這會在生成靜態網站時自動清理輸出目錄，確保僅保留最新的檔案。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo --cleanDestinationDir
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此指令確保 &lt;code&gt;public&lt;/code&gt; 目錄中的舊檔案被移除，避免部署過時或衝突的資源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重新部署到 GitHub&lt;/strong&gt;
+在執行清理和重新生成後，將更新後的檔案推送到 GitHub：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Fix deployment issue&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;檢查部署狀況&lt;/strong&gt;
+完成推送後，檢查 GitHub Pages 部署狀態，確認網站是否恢復正常。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;小結&#34;&gt;小結
+&lt;/h2&gt;&lt;p&gt;當你遇到 Hugo 部署失敗的情況時，使用 &lt;code&gt;hugo --cleanDestinationDir&lt;/code&gt; 清理輸出目錄是一個快速有效的解決方案。這能避免舊檔案干擾新內容的部署。如果問題仍然存在，建議檢查 GitHub Pages 的設定或 Hugo 配置檔案，確保兩者的相容性。&lt;/p&gt;
+&lt;p&gt;希望這篇文章能幫助你順利解決 Hugo 部署的問題，讓你的網站順利上線！🚀&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
