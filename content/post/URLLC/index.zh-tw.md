@@ -1,6 +1,6 @@
 +++
 date = '2024-11-08T16:32:43+08:00'
-title = 'URLLC'
+title = 'What is URLLC'
 categories = [
     "URLLC"
 ]
