@@ -7,7 +7,159 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Thu, 07 Nov 2024 18:51:21 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 08 Nov 2024 16:14:38 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PRP、HSR 與 FRER</title>
+        <link>https://example.com/p/prphsr-%E8%88%87-frer/</link>
+        <pubDate>Fri, 08 Nov 2024 16:14:38 +0800</pubDate>
+        
+        <guid>https://example.com/p/prphsr-%E8%88%87-frer/</guid>
+        <description>&lt;img src="https://example.com/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg" alt="Featured image of post PRP、HSR 與 FRER" /&gt;&lt;h1 id=&#34;深入淺出prphsr-與-frer--高可靠性網絡技術全面解析&#34;&gt;深入淺出：PRP、HSR 與 FRER —— 高可靠性網絡技術全面解析
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網絡是實現穩定運行的基石。針對這些需求，&lt;strong&gt;並行冗餘協議（PRP）&lt;/strong&gt;、&lt;strong&gt;高可用性無縫冗餘（HSR）&lt;/strong&gt; 和 &lt;strong&gt;幀複製與消除技術（FRER）&lt;/strong&gt; 成為不可或缺的技術工具。&lt;/p&gt;
+&lt;p&gt;這篇文章將深入探討這三種技術的核心機制、優勢、挑戰及應用場景，幫助您了解如何選擇適合您需求的高可靠性解決方案。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prp並行冗餘協議&#34;&gt;PRP：並行冗餘協議
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;PRP（Parallel Redundancy Protocol）&lt;/strong&gt; 是專為容錯而設計的高可靠性協議，定義於 &lt;strong&gt;IEC 62439-3 標準&lt;/strong&gt;。其主要特點是通過&lt;strong&gt;雙網並行數據傳輸&lt;/strong&gt;實現零數據丟包，確保在任意網絡故障情況下通信不中斷。&lt;/p&gt;
+&lt;h3 id=&#34;prp-的核心機制&#34;&gt;PRP 的核心機制
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;雙網絡冗餘&lt;/strong&gt;：數據包在兩個獨立網絡（LAN A 和 LAN B）上同步發送。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自動故障隔離&lt;/strong&gt;：接收端會選擇最先到達的數據包並丟棄重複數據。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即時切換&lt;/strong&gt;：在任何單網故障的情況下，通信無需等待恢復或切換時間。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;優勢與挑戰&#34;&gt;優勢與挑戰
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;優勢&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;零恢復時間，確保通信不中斷。&lt;/li&gt;
+&lt;li&gt;協議無關性，適用於多種高層協議（如 TCP/IP、Profinet）。&lt;/li&gt;
+&lt;li&gt;適合雙網結構的簡單拓撲。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;挑戰&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;硬件成本&lt;/strong&gt;：需要雙網絡接口和額外的網絡基礎設施。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;帶寬消耗&lt;/strong&gt;：同時傳輸兩份數據包增加了網絡負載。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;應用場景&#34;&gt;應用場景
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;工業自動化&lt;/strong&gt;：實時控制和 PLC 系統。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;能源系統&lt;/strong&gt;：變電站的 SCADA 通信。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;醫療設備&lt;/strong&gt;：患者監控和生命支持系統。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;hsr高可用性無縫冗餘&#34;&gt;HSR：高可用性無縫冗餘
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;HSR（High-Availability Seamless Redundancy）&lt;/strong&gt; 與 PRP 一樣，定義於 &lt;strong&gt;IEC 62439-3 標準&lt;/strong&gt;，但它採用&lt;strong&gt;環形網絡拓撲&lt;/strong&gt;，為節點提供更強的容錯能力。&lt;/p&gt;
+&lt;h3 id=&#34;hsr-的核心機制&#34;&gt;HSR 的核心機制
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;環網數據轉發&lt;/strong&gt;：數據包在環網中雙向傳輸，每個節點接收數據後再轉發。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冗餘數據處理&lt;/strong&gt;：接收端會消除重複數據，確保通信可靠。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即時恢復&lt;/strong&gt;：環網結構使得單一節點故障時，數據仍能通過另一方向繼續傳輸。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;優勢與挑戰-1&#34;&gt;優勢與挑戰
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;優勢&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;零恢復時間，無需等待故障修復。&lt;/li&gt;
+&lt;li&gt;每個節點既是通信設備也是轉發設備，增加靈活性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;挑戰&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;拓撲限制&lt;/strong&gt;：僅適用於環網結構。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;複雜性增加&lt;/strong&gt;：節點數量增多時，管理和排障更加困難。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;應用場景-1&#34;&gt;應用場景
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;交通運輸&lt;/strong&gt;：鐵路信號、航空管制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智慧城市&lt;/strong&gt;：智能路燈和監控系統。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;能源管理&lt;/strong&gt;：電網和可再生能源系統。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;frer幀複製與消除技術&#34;&gt;FRER：幀複製與消除技術
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;FRER（Frame Replication and Elimination for Reliability）&lt;/strong&gt; 是由 &lt;strong&gt;IEEE 802.1CB 標準&lt;/strong&gt;定義的技術，專注於數據的多路徑冗餘傳輸。與 PRP 和 HSR 不同，FRER 的設計更靈活，適用於複雜的網絡拓撲。&lt;/p&gt;
+&lt;h3 id=&#34;frer-的核心機制&#34;&gt;FRER 的核心機制
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;數據複製與消除&lt;/strong&gt;：在傳輸層上複製數據包，通過多條路徑發送，接收端根據序列號消除重複數據。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;與 TSN 集成&lt;/strong&gt;：FRER 可與時間敏感網絡（TSN）技術配合，實現更精確的延遲控制和可靠性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;優勢與挑戰-2&#34;&gt;優勢與挑戰
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;優勢&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;靈活性&lt;/strong&gt;：不依賴於特定拓撲，適用於多種網絡架構。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可擴展性&lt;/strong&gt;：可與其他 TSN 技術（如優先級調度）結合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;低延遲&lt;/strong&gt;：針對實時應用進行優化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;挑戰&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;實施門檻&lt;/strong&gt;：需支持 IEEE 802.1 標準的硬件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;數據包管理複雜性&lt;/strong&gt;：多路徑設計可能導致數據包處理負擔增加。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;應用場景-2&#34;&gt;應用場景
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;車載通信&lt;/strong&gt;：自動駕駛中的傳感器融合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智慧工廠&lt;/strong&gt;：工業 4.0 的實時控制網絡。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音視頻同步&lt;/strong&gt;：專業音頻和視頻傳輸系統。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prphsr-與-frer-的對比&#34;&gt;PRP、HSR 與 FRER 的對比
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;特性&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;PRP&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;HSR&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;FRER&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;標準&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;IEC 62439-3&lt;/td&gt;
+          &lt;td&gt;IEC 62439-3&lt;/td&gt;
+          &lt;td&gt;IEEE 802.1CB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;運作模式&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;雙網並行冗餘&lt;/td&gt;
+          &lt;td&gt;環網冗餘&lt;/td&gt;
+          &lt;td&gt;多路徑冗餘&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;拓撲要求&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;雙網絡&lt;/td&gt;
+          &lt;td&gt;環網&lt;/td&gt;
+          &lt;td&gt;支持任意拓撲&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;恢復時間&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;零恢復時間&lt;/td&gt;
+          &lt;td&gt;零恢復時間&lt;/td&gt;
+          &lt;td&gt;零恢復時間&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;適用場景&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;工業、能源、醫療&lt;/td&gt;
+          &lt;td&gt;交通、能源、城市基建&lt;/td&gt;
+          &lt;td&gt;車載通信、智慧工廠、音視頻傳輸&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;可擴展性&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;中等&lt;/td&gt;
+          &lt;td&gt;中等&lt;/td&gt;
+          &lt;td&gt;高&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;如何選擇適合的技術&#34;&gt;如何選擇適合的技術？
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;雙網冗餘場景&lt;/strong&gt;：選擇 PRP，適用於簡單雙網結構的應用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;環網拓撲場景&lt;/strong&gt;：選擇 HSR，適用於需要節點轉發的場景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;靈活多拓撲場景&lt;/strong&gt;：選擇 FRER，特別是在與 TSN 集成的應用中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;總結&#34;&gt;總結
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;PRP、HSR 和 FRER&lt;/strong&gt; 各有其適用範圍與特點，適合不同的高可靠性需求。PRP 和 HSR 在傳統工業和能源領域中具有穩定的應用，而 FRER 作為現代網絡的代表，將在自動駕駛、智慧工廠和音視頻領域發揮越來越重要的作用。&lt;/p&gt;
+&lt;p&gt;隨著技術的進步，這些解決方案將繼續演進，為我們構建更安全、可靠的未來網絡奠定基礎。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Solve hugo push issue</title>
         <link>https://example.com/p/solve-hugo-push-issue/</link>
         <pubDate>Thu, 07 Nov 2024 18:51:21 +0800</pubDate>

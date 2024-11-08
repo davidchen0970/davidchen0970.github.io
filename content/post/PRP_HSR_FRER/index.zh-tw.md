@@ -1,7 +1,10 @@
 +++
 date = '2024-11-08T16:14:38+08:00'
-draft = true
-title = 'PRP_HSR_FRER'
+title = 'PRP、HSR 與 FRER'
+image = "pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg"
+categories = [
+    "Protocol"
+]
 +++
 
 # 深入淺出：PRP、HSR 與 FRER —— 高可靠性網絡技術全面解析
