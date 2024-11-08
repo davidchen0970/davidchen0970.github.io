@@ -134,3 +134,8 @@ categories = [
 **PRP、HSR 和 FRER** 各有其適用範圍與特點，適合不同的高可靠性需求。PRP 和 HSR 在傳統工業和能源領域中具有穩定的應用，而 FRER 作為現代網絡的代表，將在自動駕駛、智慧工廠和音視頻領域發揮越來越重要的作用。
 
 隨著技術的進步，這些解決方案將繼續演進，為我們構建更安全、可靠的未來網絡奠定基礎。
+
+## reference
+
+1. [什麼是 HSR/PRP?](https://www.oringnet.com/zh/knowledge-base/what-is-hsr-prp-3)
+2. [甚麼是 HSR&PRP?FPGA 實現直通交換與存儲轉發的切換延遲](https://hongtronics.com/hsr-prp-cut-through-switching-store-and-forward/)
