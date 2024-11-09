@@ -33,6 +33,8 @@ menu:
 - **程式語言**：熟悉 C++ ，初學 Python、JavaScript 等
 - **網頁開發**：具備 HTML、CSS 和 JavaScript 的基礎知識
 
+[![Leetcode Stats](https://leetcard.jacoblin.cool/david0970?ext=contest)](https://leetcode.com/david0970)
+
 ### 專案經驗
 
 (施工中... )
