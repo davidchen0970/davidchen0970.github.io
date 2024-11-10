@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
 <title>What is p4</title>
 
 <link rel='canonical' href='https://example.com/p/what-is-p4/'>
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="What is p4">
-<meta property='og:description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
+<meta property='og:description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
 <meta property='og:url' content='https://example.com/p/what-is-p4/'>
 <meta property='og:site_name' content='這是我家啊!'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='article:modified_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='og:image' content='https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg' />
 <meta name="twitter:title" content="What is p4">
-<meta name="twitter:description" content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg' />
     </head>
     <body class="
@@ -377,11 +377,11 @@
     <h2 id="p4-網路的介紹與應用">P4 網路的介紹與應用
 </h2><p>隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 <strong>P4 (Programming Protocol-independent Packet Processors)</strong> 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。</p>
 <h2 id="什麼是-p4"><strong>什麼是 P4？</strong>
-</h2><p>P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。</p>
+</h2><p>P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。</p>
 <p>P4 具有以下特點：</p>
 <ol>
 <li><strong>協定無關性 (Protocol Independence) ：</strong> 可以處理任意協定封包，而不受傳統協定限制。</li>
-<li><strong>靈活性高：</strong> 支援使用者定義 Field 和使用，可以適應不斷變化的需求。</li>
+<li><strong>靈活性高：</strong> 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。</li>
 <li><strong>硬體抽象性：</strong> 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。</li>
 </ol>
 <h2 id="openflow-與-p4-的相同和差別">OpenFlow 與 P4 的相同和差別
@@ -392,7 +392,7 @@
 <p><strong>同屬 SDN 範疇：</strong></p>
 <ul>
 <li><strong>OpenFlow</strong> 和 <strong>P4</strong> 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。</li>
-<li>二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。</li>
+<li>二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。</li>
 </ul>
 </li>
 <li>
@@ -409,6 +409,20 @@
 </ul>
 </li>
 </ol>
+<p><img src="/p/what-is-p4/1UMaVhT.png"
+	width="506"
+	height="347"
+	srcset="/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, /p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w"
+	loading="lazy"
+	
+		alt="圖1: OpenFlow 和 P4 所運作的位置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
+	
+></p>
 <h3 id="差異性"><strong>差異性</strong>
 </h3><div class="table-wrapper"><table>
   <thead>
@@ -462,7 +476,7 @@
 	srcset="/p/what-is-p4/p4-09_hu6171328622038328369.png 480w, /p/what-is-p4/p4-09_hu10979434447022775760.png 1024w"
 	loading="lazy"
 	
-		alt="圖1：OpenFlow 的 Match 和 Action"
+		alt="圖2：OpenFlow 的 Match 和 Action"
 	
 	
 		class="gallery-image" 
@@ -477,27 +491,12 @@
 	srcset="/p/what-is-p4/Abuynwi_hu3894902318755102197.png 480w, /p/what-is-p4/Abuynwi_hu12692879872724982288.png 1024w"
 	loading="lazy"
 	
-		alt="圖2：OpenFlow 的 Header Fields 數量變化"
+		alt="圖3：OpenFlow 的 Header Fields 數量變化"
 	
 	
 		class="gallery-image" 
 		data-flex-grow="283"
 		data-flex-basis="680px"
-	
-></p>
-<hr>
-<p><img src="/p/what-is-p4/1UMaVhT.png"
-	width="506"
-	height="347"
-	srcset="/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, /p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w"
-	loading="lazy"
-	
-		alt="圖3: OpenFlow 和 P4 所運作的位置"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="145"
-		data-flex-basis="349px"
 	
 ></p>
 <h2 id="p4-的核心結構"><strong>P4 的核心結構</strong>

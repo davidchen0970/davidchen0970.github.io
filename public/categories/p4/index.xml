@@ -16,11 +16,11 @@
         <description>&lt;img src="https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg" alt="Featured image of post What is p4" /&gt;&lt;h2 id=&#34;p4-網路的介紹與應用&#34;&gt;P4 網路的介紹與應用
 &lt;/h2&gt;&lt;p&gt;隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 &lt;strong&gt;P4 (Programming Protocol-independent Packet Processors)&lt;/strong&gt; 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。&lt;/p&gt;
 &lt;h2 id=&#34;什麼是-p4&#34;&gt;&lt;strong&gt;什麼是 P4？&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自定義封包處理行為，使網路設備可以更彈性的使用。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;P4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。&lt;/p&gt;
 &lt;p&gt;P4 具有以下特點：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;協定無關性 (Protocol Independence) ：&lt;/strong&gt; 可以處理任意協定封包，而不受傳統協定限制。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;靈活性高：&lt;/strong&gt; 支援使用者定義 Field 和使用，可以適應不斷變化的需求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;靈活性高：&lt;/strong&gt; 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;硬體抽象性：&lt;/strong&gt; 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;openflow-與-p4-的相同和差別&#34;&gt;OpenFlow 與 P4 的相同和差別
@@ -31,7 +31,7 @@
 &lt;p&gt;&lt;strong&gt;同屬 SDN 範疇：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;OpenFlow&lt;/strong&gt; 和 &lt;strong&gt;P4&lt;/strong&gt; 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。&lt;/li&gt;
-&lt;li&gt;二者均可以支援動態配置網路，而不是依賴硬體製造商的預設功能。&lt;/li&gt;
+&lt;li&gt;二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -48,6 +48,20 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/what-is-p4/1UMaVhT.png&#34;
+	width=&#34;506&#34;
+	height=&#34;347&#34;
+	srcset=&#34;https://example.com/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, https://example.com/p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;圖1: OpenFlow 和 P4 所運作的位置&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;差異性&#34;&gt;&lt;strong&gt;差異性&lt;/strong&gt;
 &lt;/h3&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -101,7 +115,7 @@
 	srcset=&#34;https://example.com/p/what-is-p4/p4-09_hu6171328622038328369.png 480w, https://example.com/p/what-is-p4/p4-09_hu10979434447022775760.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;圖1：OpenFlow 的 Match 和 Action&#34;
+		alt=&#34;圖2：OpenFlow 的 Match 和 Action&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -116,27 +130,12 @@
 	srcset=&#34;https://example.com/p/what-is-p4/Abuynwi_hu3894902318755102197.png 480w, https://example.com/p/what-is-p4/Abuynwi_hu12692879872724982288.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;圖2：OpenFlow 的 Header Fields 數量變化&#34;
+		alt=&#34;圖3：OpenFlow 的 Header Fields 數量變化&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;283&#34;
 		data-flex-basis=&#34;680px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/what-is-p4/1UMaVhT.png&#34;
-	width=&#34;506&#34;
-	height=&#34;347&#34;
-	srcset=&#34;https://example.com/p/what-is-p4/1UMaVhT_hu15223468364882922661.png 480w, https://example.com/p/what-is-p4/1UMaVhT_hu6502668705448828017.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;圖3: OpenFlow 和 P4 所運作的位置&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;145&#34;
-		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;p4-的核心結構&#34;&gt;&lt;strong&gt;P4 的核心結構&lt;/strong&gt;

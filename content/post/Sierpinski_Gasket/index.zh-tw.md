@@ -7,7 +7,9 @@ categories = [
 ]
 +++
 
-# 探索 Sierpinski Gasket
+# Sierpinski Gasket
+
+**這篇文章由 AI 自動產生，尚在整理當中**
 
 在數學的廣闊領域中，分形幾何以其獨特的自相似性和無限的複雜性吸引了無數人的目光。其中，**Sierpinski Gasket（謝爾賓斯基三角形）** 作為分形幾何中的經典代表，展現了簡單規則下蘊藏的無限美麗。今天，我們將深入了解 Sierpinski Gasket，探索其構造方法、數學性質及其在現實中的應用。
 
