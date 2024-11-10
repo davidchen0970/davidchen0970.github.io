@@ -1,6 +1,7 @@
 +++
 date = '2024-11-08T16:32:43+08:00'
 title = 'What is URLLC'
+image = "pawel-czerwinski-L4G6OpDOxk8-unsplash.jpg"
 categories = [
     "URLLC"
 ]

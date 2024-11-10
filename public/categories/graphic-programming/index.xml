@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Graphic Programming on 這是我家啊!</title>
+        <title>Graphic Programming on 歡迎光臨我家</title>
         <link>https://example.com/categories/graphic-programming/</link>
-        <description>Recent content in Graphic Programming on 這是我家啊!</description>
+        <description>Recent content in Graphic Programming on 歡迎光臨我家</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>

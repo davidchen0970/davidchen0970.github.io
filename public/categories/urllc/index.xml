@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>URLLC on 這是我家啊!</title>
+        <title>URLLC on 歡迎光臨我家</title>
         <link>https://example.com/categories/urllc/</link>
-        <description>Recent content in URLLC on 這是我家啊!</description>
+        <description>Recent content in URLLC on 歡迎光臨我家</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
@@ -13,7 +13,7 @@
         <pubDate>Fri, 08 Nov 2024 16:32:43 +0800</pubDate>
         
         <guid>https://example.com/p/what-is-urllc/</guid>
-        <description>&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;img src="https://example.com/p/what-is-urllc/pawel-czerwinski-L4G6OpDOxk8-unsplash.jpg" alt="Featured image of post What is URLLC" /&gt;&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;urllc革命性的超可靠低延遲通信技術&#34;&gt;URLLC：革命性的超可靠低延遲通信技術
 &lt;/h3&gt;&lt;p&gt;隨著 5G 技術的興起，我們迎來了一個通信技術的全新時代。而在這些令人振奮的技術之中，「超可靠低延遲通信（Ultra-Reliable Low-Latency Communication, URLLC）」是最具潛力且變革性的一項技術。URLLC 旨在提供幾乎即時的反應時間以及接近百分之百的通信可靠性，這對未來的智慧工業、遠程醫療、自動駕駛等應用具有至關重要的影響。&lt;/p&gt;
 &lt;hr&gt;

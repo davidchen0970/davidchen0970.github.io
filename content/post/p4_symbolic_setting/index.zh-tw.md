@@ -19,7 +19,7 @@ make: *** No rule to make target '../../utils/Makefile'.  Stop
 這個問題代表 MakeFile 找不到，所以無法執行 `make run` ，因此我們要想個辦法。
 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 `Makefile`，而無需修改現有的專案結構。
 
-## 使用 Symbolic Link 解決 Makefile 缺失問題
+## 使用 Symbolic Link 解決 Makefile 遺失問題
 
 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。
 

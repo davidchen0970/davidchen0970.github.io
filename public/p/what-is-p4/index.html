@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
-<title>What is p4</title>
+    <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta
+name='description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n"> <title>What is p4</title>
 
-<link rel='canonical' href='https://example.com/p/what-is-p4/'>
+<link rel="canonical" href="https://example.com/p/what-is-p4/" />
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="What is p4">
 <meta property='og:description' content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n">
 <meta property='og:url' content='https://example.com/p/what-is-p4/'>
-<meta property='og:site_name' content='這是我家啊!'>
+<meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='article:modified_time' content='2024-11-07T17:38:34&#43;08:00'/><meta property='og:image' content='https://example.com/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg' />
 <meta name="twitter:title" content="What is p4">
 <meta name="twitter:description" content="P4 網路的介紹與應用\r隨著網路技術的快速發展，如何高效靈活地處理流量成為了關鍵議題。 P4 (Programming Protocol-independent Packet Processors) 是一種專為軟體定義網路 (SDN) 設計的高階程式語言，用於定義 Data Plane 設備的行為。底下將介紹 P4 的基本概念、核心功能及其應用場景。\n什麼是 P4？\rP4 是一種高階語言，主要特點是 Data Plane 的可程式性。傳統網路設備 (如路由器和交換機) 的 Data Plane 行為通常由硬體製造商預先定義，缺乏靈活性。而 P4 的出現，允許開發者通過程式自行定義封包處理行為，使網路設備可以更彈性的使用。\nP4 具有以下特點：\n協定無關性 (Protocol Independence) ： 可以處理任意協定封包，而不受傳統協定限制。 靈活性高： 支援使用者定義 Field 和使用其 Field，可以適應不斷變化的需求。 硬體抽象性： 可運行於多種硬體平台，如 ASIC、FPGA 和網路模擬器。 OpenFlow 與 P4 的相同和差別\rOpenFlow 和 P4 都是與 SDN 相關的重要技術，提升網路設備的靈活性與可程式性。但它們的設計目的、功能範圍及應用方式有明顯的不同。下面是相關性的說明與差異的比較表格:\n相關性\r同屬 SDN 範疇：\nOpenFlow 和 P4 都改變了傳統網路設備的固定功能，將更多的控制交給網路管理者，降低硬體製造商對設備的控制。 二者均可以支援動態設定網路，而不是依賴硬體製造商的預設功能。 Data Plane 與 Control Plane 的互動：\n"><meta name="twitter:card" content="summary_large_image">
@@ -70,8 +70,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">這是我家啊!</a></h1>
-            <h2 class="site-description">我家在施工...</h2>
+            <h1 class="site-name"><a href="/">歡迎光臨我家</a></h1>
+            <h2 class="site-description">施工中，施工中...</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -242,7 +242,7 @@
 
 
 
-                        <span>夜晚模式</span>
+                        <span>深色模式</span>
                     </li>
                 
             </ol>
@@ -602,16 +602,33 @@ P4 可自定義封包處理行為，監控對特定流量。例如，通過執�
     
 
     <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2024 David Chen
-    </section>
-    
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 建立 <br />
-        主題 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 設計
-    </section>
+  <section class="copyright">
+    &copy;  2024 David Chen
+  </section>
+
+  <section class="powerby">
+    使用 <a
+      href="https://gohugo.io/"
+      target="_blank"
+      rel="noopener"
+      >Hugo</a
+    > 建立
+    <br />
+    主題 <b
+      ><a
+        href="https://github.com/CaiJimmy/hugo-theme-stack"
+        target="_blank"
+        rel="noopener"
+        data-version="3.29.0"
+        >Stack</a
+      ></b
+    > 由 <a
+      href="https://jimmycai.com"
+      target="_blank"
+      rel="noopener"
+      >Jimmy</a
+    > 設計
+  </section>
 </footer>
 
 

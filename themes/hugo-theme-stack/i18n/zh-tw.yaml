@@ -1,73 +1,73 @@
 toggleMenu:
-    other: 切換選單
+  other: 切換選單
 
 darkMode:
-    other: 夜晚模式
+  other: 深色模式
 
 list:
-    page:
-        one: "第 {{ .Count }} 頁"
-        other: "第 {{ .Count }} 頁"
+  page:
+    one: "第 {{ .Count }} 頁"
+    other: "第 {{ .Count }} 頁"
 
-    section:
-        other: 段落
+  section:
+    other: 段落
 
-    subsection:
-        one: 小節
-        other: 小節
+  subsection:
+    one: 小節
+    other: 小節
 
 article:
-    back:
-        other: 返回
+  back:
+    other: 返回
 
-    tableOfContents:
-        other: 目錄
+  tableOfContents:
+    other: 目錄
 
-    relatedContent:
-        other: 相關文章
+  relatedContent:
+    other: 相關文章
 
-    lastUpdatedOn:
-        other: 最後更新
+  lastUpdatedOn:
+    other: 最後更新
 
-    readingTime:
-        one: "閱讀時間: {{ .Count }} 分鐘"
-        other: "閱讀時間: {{ .Count }} 分鐘"
+  readingTime:
+    one: "閱讀時間: {{ .Count }} 分鐘"
+    other: "閱讀時間: {{ .Count }} 分鐘"
 
 notFound:
-    title:
-        other: 404 錯誤
+  title:
+    other: 404 錯誤
 
-    subtitle:
-        other: 頁面不存在
+  subtitle:
+    other: 頁面不存在
 
 widget:
-    archives:
-        title:
-            other: 紀錄
+  archives:
+    title:
+      other: 紀錄
 
-        more:
-            other: 更多
+    more:
+      other: 更多
 
-    tagCloud:
-        title:
-            other: 標籤雲
-    categoriesCloud:
-        title:
-            other: 分類
+  tagCloud:
+    title:
+      other: 標籤雲
+  categoriesCloud:
+    title:
+      other: 分類
 
 search:
-    title:
-        other: 搜尋
+  title:
+    other: 搜尋
 
-    placeholder:
-        other: 輸入關鍵字...
+  placeholder:
+    other: 輸入關鍵字...
 
-    resultTitle:
-        other: "#PAGES_COUNT 個結果 （用時 #TIME_SECONDS 秒）"
+  resultTitle:
+    other: "#PAGES_COUNT 個結果 （用時 #TIME_SECONDS 秒）"
 
 footer:
-    builtWith:
-        other: 使用 {{ .Generator }} 建立
+  builtWith:
+    other: 使用 {{ .Generator }} 建立
 
-    designedBy:
-        other: 主題 {{ .Theme }} 由 {{ .DesignedBy }} 設計
+  designedBy:
+    other: 主題 {{ .Theme }} 由 {{ .DesignedBy }} 設計

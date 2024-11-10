@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>P4 on 這是我家啊!</title>
+        <title>P4 on 歡迎光臨我家</title>
         <link>https://example.com/categories/p4/</link>
-        <description>Recent content in P4 on 這是我家啊!</description>
+        <description>Recent content in P4 on 歡迎光臨我家</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
@@ -195,7 +195,7 @@ P4 可自定義封包處理行為，監控對特定流量。例如，通過執�
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;這個問題代表 MakeFile 找不到，所以無法執行 &lt;code&gt;make run&lt;/code&gt; ，因此我們要想個辦法。
 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 &lt;code&gt;Makefile&lt;/code&gt;，而無需修改現有的專案結構。&lt;/p&gt;
-&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-缺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 缺失問題
+&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-遺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 遺失問題
 &lt;/h2&gt;&lt;p&gt;透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。&lt;/p&gt;
 &lt;h3 id=&#34;步驟&#34;&gt;步驟
 &lt;/h3&gt;&lt;ol&gt;

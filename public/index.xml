@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>這是我家啊!</title>
+        <title>歡迎光臨我家</title>
         <link>https://example.com/</link>
-        <description>Recent content on 這是我家啊!</description>
+        <description>Recent content on 歡迎光臨我家</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Sat, 09 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 10 Nov 2024 12:35:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>What is URLLC</title>
         <link>https://example.com/p/what-is-urllc/</link>
         <pubDate>Fri, 08 Nov 2024 16:32:43 +0800</pubDate>
         
         <guid>https://example.com/p/what-is-urllc/</guid>
-        <description>&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
+        <description>&lt;img src="https://example.com/p/what-is-urllc/pawel-czerwinski-L4G6OpDOxk8-unsplash.jpg" alt="Featured image of post What is URLLC" /&gt;&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;urllc革命性的超可靠低延遲通信技術&#34;&gt;URLLC：革命性的超可靠低延遲通信技術
 &lt;/h3&gt;&lt;p&gt;隨著 5G 技術的興起，我們迎來了一個通信技術的全新時代。而在這些令人振奮的技術之中，「超可靠低延遲通信（Ultra-Reliable Low-Latency Communication, URLLC）」是最具潛力且變革性的一項技術。URLLC 旨在提供幾乎即時的反應時間以及接近百分之百的通信可靠性，這對未來的智慧工業、遠程醫療、自動駕駛等應用具有至關重要的影響。&lt;/p&gt;
 &lt;hr&gt;
@@ -661,7 +661,7 @@ P4 可自定義封包處理行為，監控對特定流量。例如，通過執�
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;這個問題代表 MakeFile 找不到，所以無法執行 &lt;code&gt;make run&lt;/code&gt; ，因此我們要想個辦法。
 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 &lt;code&gt;Makefile&lt;/code&gt;，而無需修改現有的專案結構。&lt;/p&gt;
-&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-缺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 缺失問題
+&lt;h2 id=&#34;使用-symbolic-link-解決-makefile-遺失問題&#34;&gt;使用 Symbolic Link 解決 Makefile 遺失問題
 &lt;/h2&gt;&lt;p&gt;透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。&lt;/p&gt;
 &lt;h3 id=&#34;步驟&#34;&gt;步驟
 &lt;/h3&gt;&lt;ol&gt;
@@ -758,7 +758,8 @@ P4 可自定義封包處理行為，監控對特定流量。例如，通過執�
         <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/%E9%97%9C%E6%96%BC/</guid>
-        <description>&lt;h3 id=&#34;關於我&#34;&gt;關於我
+        <description>&lt;p&gt;施工中，施工中，施工中&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;關於我&#34;&gt;關於我
 &lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
 &lt;h3 id=&#34;教育背景&#34;&gt;教育背景
 &lt;/h3&gt;&lt;ul&gt;

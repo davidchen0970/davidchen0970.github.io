@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n">
-<title>P4 Troubleshooting - Symbolic Link</title>
+    <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta
+name='description' content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n"> <title>P4 Troubleshooting - Symbolic Link</title>
 
-<link rel='canonical' href='https://example.com/en/p/p4-troubleshooting-symbolic-link/'>
+<link rel="canonical" href="https://example.com/en/p/p4-troubleshooting-symbolic-link/" />
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="P4 Troubleshooting - Symbolic Link">
 <meta property='og:description' content="P4 Troubleshooting - Symbolic Link\rWhen working with the P4 tutorials, we can typically run the make run command without issues. However, if we move outside of the tutorial directory, we might find that the make run command stops working, usually due to an error like this:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop This error indicates that the Makefile cannot be found, so make run fails to execute. To address this, one solution is to use a symbolic link to create the necessary path, allowing the system to locate the required Makefile without altering the existing project structure.\n">
@@ -528,16 +528,33 @@ Once files are generated, try running <code>make run</code> again to see if the 
     
 
     <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2024 David Chen
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
+  <section class="copyright">
+    &copy;  2024 David Chen
+  </section>
+
+  <section class="powerby">
+    Built with <a
+      href="https://gohugo.io/"
+      target="_blank"
+      rel="noopener"
+      >Hugo</a
+    >
+    <br />
+    Theme <b
+      ><a
+        href="https://github.com/CaiJimmy/hugo-theme-stack"
+        target="_blank"
+        rel="noopener"
+        data-version="3.29.0"
+        >Stack</a
+      ></b
+    > designed by <a
+      href="https://jimmycai.com"
+      target="_blank"
+      rel="noopener"
+      >Jimmy</a
+    >
+  </section>
 </footer>
 
 
