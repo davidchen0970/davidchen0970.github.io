@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2024-11-10T12:35:00+00:00</lastmod>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2024-11-08T16:32:43+08:00</lastmod>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,8 +38,14 @@
                 href="https://example.com/categories/"
                 />
   </url><url>
+    <loc>https://example.com/categories/mptcp/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/mptcp-exp1/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+  </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2024-11-08T16:32:43+08:00</lastmod>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -51,14 +57,14 @@
                 href="https://example.com/post/"
                 />
   </url><url>
+    <loc>https://example.com/categories/protocol/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+  </url><url>
     <loc>https://example.com/categories/urllc/</loc>
     <lastmod>2024-11-08T16:32:43+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/what-is-urllc/</loc>
     <lastmod>2024-11-08T16:32:43+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/protocol/</loc>
-    <lastmod>2024-11-08T16:14:38+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/prphsr-%E8%88%87-frer/</loc>
     <lastmod>2024-11-08T16:14:38+08:00</lastmod>
