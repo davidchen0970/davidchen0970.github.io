@@ -17,7 +17,7 @@
 &lt;/h1&gt;&lt;h2 id=&#34;1-實驗名稱&#34;&gt;1. 實驗名稱
 &lt;/h2&gt;&lt;p&gt;MPTCP 三路徑實驗&lt;/p&gt;
 &lt;h2 id=&#34;2-實驗目標&#34;&gt;2. 實驗目標
-&lt;/h2&gt;&lt;p&gt;利用 MPTCP 做出在兩個 host 中利用一個 route 實作出具有三條連線的拓樸&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;利用 MPTCP 做出在兩個 host 中利用一個 route 實作出具有三條連線的拓樸。&lt;/p&gt;
 &lt;h2 id=&#34;3-實驗方法&#34;&gt;3. 實驗方法
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
