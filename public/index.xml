@@ -7,7 +7,85 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Mon, 11 Nov 2024 16:37:14 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Nov 2024 22:11:02 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Comparison Between SDN and Traditional Network</title>
+        <link>https://example.com/p/comparison-between-sdn-and-traditional-network/</link>
+        <pubDate>Mon, 11 Nov 2024 22:11:02 +0800</pubDate>
+        
+        <guid>https://example.com/p/comparison-between-sdn-and-traditional-network/</guid>
+        <description>&lt;h1 id=&#34;軟體定義網路sdn與傳統網路架構的比較&#34;&gt;軟體定義網路（SDN）與傳統網路架構的比較
+&lt;/h1&gt;&lt;p&gt;原始連結: &lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/r1WWxc8Ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/pIU-3gzlu9I&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ithelp.ithome.com.tw/articles/10267704&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TCP/IP，網際網路的基礎通訊架構&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;目錄&#34;&gt;目錄
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;傳統網路架構概述&lt;/li&gt;
+&lt;li&gt;SDN 嘗試解決的問題(傳統 Internet 的既有限制)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;傳統網路架構&#34;&gt;傳統網路架構
+&lt;/h2&gt;&lt;p&gt;在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在&lt;strong&gt;TCP/IP 協議&lt;/strong&gt;基礎上的傳統網路架構誕生了。這種架構具備以下特徵：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;通訊協議的重要性&lt;/strong&gt;&lt;br&gt;
+兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;網路架構形式&lt;/strong&gt;&lt;br&gt;
+網路中的設備可以採用以下兩種架構之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主從式架構（Client-Server）&lt;/strong&gt;：由伺服器提供服務，客戶端發起請求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;對等式架構（Peer-to-Peer）&lt;/strong&gt;：所有節點平等，彼此直接傳遞資料。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基礎設備需求&lt;/strong&gt;&lt;br&gt;
+傳輸資料需要依賴網路設備，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;交換器（Switch）&lt;/strong&gt;：用於內部網路中的資料交換。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;路由器（Router）&lt;/strong&gt;：管理網路間的資料流動。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集線器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ithelp.ithome.com.tw/upload/images/20210919/20128159lPmUQe3GJx.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;圖1: 傳統網路架構示意圖&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sdn-想解決網路設備的甚麼問題&#34;&gt;SDN 想解決網路設備的甚麼問題
+&lt;/h2&gt;&lt;p&gt;隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：&lt;/p&gt;
+&lt;h3 id=&#34;1-缺乏彈性inflexibility&#34;&gt;1. 缺乏彈性（Inflexibility）
+&lt;/h3&gt;&lt;p&gt;傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;設備配置複雜且靜態。&lt;/li&gt;
+&lt;li&gt;網路拓撲固定，難以快速響應變化的需求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SDN 的解決方式&lt;/strong&gt;：&lt;br&gt;
+通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-供應商鎖定vendor-lock-in&#34;&gt;2. 供應商鎖定（Vendor Lock-In）
+&lt;/h3&gt;&lt;p&gt;傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;與其他供應商設備的相容性低。&lt;/li&gt;
+&lt;li&gt;原供應商的解決方案最適合原始架構，導致難以更換供應商。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SDN 的解決方式&lt;/strong&gt;：&lt;br&gt;
+SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>MPTCP exp1</title>
         <link>https://example.com/p/mptcp-exp1/</link>
         <pubDate>Mon, 11 Nov 2024 16:37:14 +0800</pubDate>

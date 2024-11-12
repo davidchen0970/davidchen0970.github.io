@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+    <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta
+name='description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"> <title>Comparison Between SDN and Traditional Network</title>
+
+<link rel="canonical" href="https://example.com/p/comparison-between-sdn-and-traditional-network/" />
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Comparison Between SDN and Traditional Network">
+<meta property='og:description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n">
+<meta property='og:url' content='https://example.com/p/comparison-between-sdn-and-traditional-network/'>
+<meta property='og:site_name' content='歡迎光臨我家'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='article:modified_time' content='2024-11-11T22:11:02&#43;08:00'/>
+<meta name="twitter:title" content="Comparison Between SDN and Traditional Network">
+<meta name="twitter:description" content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu8426949080533301442.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">歡迎光臨我家</a></h1>
+            <h2 class="site-description">施工中，施工中...</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/davidchen0970/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com'
+                        target="_blank"
+                        title="instagram"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="rgb(216, 220, 221)"  width="800px" height="800px" viewBox="16 16 224 224" id="Flat" xmlns="http://www.w3.org/2000/svg">
+  <path d="M128,84a44,44,0,1,0,44,44A44.04978,44.04978,0,0,0,128,84Zm0,80a36,36,0,1,1,36-36A36.04061,36.04061,0,0,1,128,164ZM172,32H84A52.059,52.059,0,0,0,32,84v88a52.059,52.059,0,0,0,52,52h88a52.059,52.059,0,0,0,52-52V84A52.059,52.059,0,0,0,172,32Zm44,140a44.04978,44.04978,0,0,1-44,44H84a44.04978,44.04978,0,0,1-44-44V84A44.04978,44.04978,0,0,1,84,40h88a44.04978,44.04978,0,0,1,44,44ZM188,76a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,188,76Z"/>
+</svg>
+
+<!-- reference : https://www.svgrepo.com/svg/365495/instagram-logo-thin -->
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首頁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%97%9C%E6%96%BC/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>關於</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>檔案</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://example.com/" selected>正體中文</option>
+                                
+                                    <option value="https://example.com/en/" >English</option>
+                                
+                                    <option value="https://example.com/zh-cn/" >简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>深色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目錄</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#目錄">目錄</a></li>
+      </ol>
+    </li>
+    <li><a href="#傳統網路架構">傳統網路架構</a></li>
+    <li><a href="#sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題</a>
+      <ol>
+        <li><a href="#1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）</a></li>
+        <li><a href="#2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/sdn/" >
+                SDN
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/comparison-between-sdn-and-traditional-network/">Comparison Between SDN and Traditional Network</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 11, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 1 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="軟體定義網路sdn與傳統網路架構的比較">軟體定義網路（SDN）與傳統網路架構的比較
+</h1><p>原始連結: <a class="link" href="https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/r1WWxc8Ko"  target="_blank" rel="noopener"
+    >Link</a></p>
+<p><strong>Reference</strong>:</p>
+<ol>
+<li><a class="link" href="https://youtu.be/pIU-3gzlu9I"  target="_blank" rel="noopener"
+    >1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN</a></li>
+<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10267704"  target="_blank" rel="noopener"
+    >TCP/IP，網際網路的基礎通訊架構</a></li>
+</ol>
+<h3 id="目錄">目錄
+</h3><ol>
+<li>傳統網路架構概述</li>
+<li>SDN 嘗試解決的問題(傳統 Internet 的既有限制)</li>
+</ol>
+<h2 id="傳統網路架構">傳統網路架構
+</h2><p>在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在<strong>TCP/IP 協議</strong>基礎上的傳統網路架構誕生了。這種架構具備以下特徵：</p>
+<ol>
+<li>
+<p><strong>通訊協議的重要性</strong><br>
+兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。</p>
+</li>
+<li>
+<p><strong>網路架構形式</strong><br>
+網路中的設備可以採用以下兩種架構之一：</p>
+<ul>
+<li><strong>主從式架構（Client-Server）</strong>：由伺服器提供服務，客戶端發起請求。</li>
+<li><strong>對等式架構（Peer-to-Peer）</strong>：所有節點平等，彼此直接傳遞資料。</li>
+</ul>
+</li>
+<li>
+<p><strong>基礎設備需求</strong><br>
+傳輸資料需要依賴網路設備，例如：</p>
+<ul>
+<li><strong>交換器（Switch）</strong>：用於內部網路中的資料交換。</li>
+<li><strong>路由器（Router）</strong>：管理網路間的資料流動。</li>
+<li><strong>集線器</strong></li>
+</ul>
+</li>
+</ol>
+<p>這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。</p>
+<p><img src="https://ithelp.ithome.com.tw/upload/images/20210919/20128159lPmUQe3GJx.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="圖1: 傳統網路架構示意圖"
+	
+	
+></p>
+<h2 id="sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題
+</h2><p>隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：</p>
+<h3 id="1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）
+</h3><p>傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：</p>
+<ul>
+<li>設備配置複雜且靜態。</li>
+<li>網路拓撲固定，難以快速響應變化的需求。</li>
+</ul>
+<p><strong>SDN 的解決方式</strong>：<br>
+通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。</p>
+<hr>
+<h3 id="2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）
+</h3><p>傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：</p>
+<ul>
+<li>與其他供應商設備的相容性低。</li>
+<li>原供應商的解決方案最適合原始架構，導致難以更換供應商。</li>
+</ul>
+<p><strong>SDN 的解決方式</strong>：<br>
+SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+  <section class="copyright">
+    &copy;  2024 David Chen
+  </section>
+
+  <section class="powerby">
+    使用 <a
+      href="https://gohugo.io/"
+      target="_blank"
+      rel="noopener"
+      >Hugo</a
+    > 建立
+    <br />
+    主題 <b
+      ><a
+        href="https://github.com/CaiJimmy/hugo-theme-stack"
+        target="_blank"
+        rel="noopener"
+        data-version="3.29.0"
+        >Stack</a
+      ></b
+    > 由 <a
+      href="https://jimmycai.com"
+      target="_blank"
+      rel="noopener"
+      >Jimmy</a
+    > 設計
+  </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

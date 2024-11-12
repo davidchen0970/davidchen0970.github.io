@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/en/</loc>
-    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://example.com/en/categories/</loc>
-    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -38,6 +38,58 @@
                 href="https://example.com/en/categories/"
                 />
   </url><url>
+    <loc>https://example.com/en/categories/mptcp/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/mptcp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/mptcp/"
+                />
+  </url><url>
+    <loc>https://example.com/en/p/mptcp-experiment-1/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/p/mptcp-exp1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/p/mptcp-experiment-1/"
+                />
+  </url><url>
+    <loc>https://example.com/en/post/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/post/"
+                />
+  </url><url>
+    <loc>https://example.com/en/categories/protocol/</loc>
+    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/protocol/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/protocol/"
+                />
+  </url><url>
     <loc>https://example.com/en/categories/graphic-programming/</loc>
     <lastmod>2024-11-06T12:39:48+08:00</lastmod>
     <xhtml:link
@@ -49,19 +101,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://example.com/en/categories/graphic-programming/"
-                />
-  </url><url>
-    <loc>https://example.com/en/post/</loc>
-    <lastmod>2024-11-06T12:39:48+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/en/post/"
                 />
   </url><url>
     <loc>https://example.com/en/p/sierpinski-gasket/</loc>

@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Wed, 06 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Nov 2024 16:37:14 +0800</lastBuildDate><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MPTCP</title>
+        <link>https://example.com/en/categories/mptcp/</link>
+        <pubDate>Mon, 11 Nov 2024 16:37:14 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/mptcp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Protocol</title>
+        <link>https://example.com/en/categories/protocol/</link>
+        <pubDate>Mon, 11 Nov 2024 16:37:14 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/protocol/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Graphic Programming</title>
         <link>https://example.com/en/categories/graphic-programming/</link>
         <pubDate>Wed, 06 Nov 2024 12:39:48 +0800</pubDate>

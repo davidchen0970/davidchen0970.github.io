@@ -5,6 +5,7 @@ image = "pawel-czerwinski-V10CV7MBdhc-unsplash.jpg"
 categories = [
     "MPTCP","Protocol"
 ]
+description = "利用 MPTCP 做出在兩個 host 中利用一個 route 實作出具有三條連線的拓樸。"
 +++
 
 # MPTCP - 實驗記錄
