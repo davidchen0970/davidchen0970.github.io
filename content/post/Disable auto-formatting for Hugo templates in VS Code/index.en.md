@@ -1,0 +1,69 @@
++++
+date = '2024-11-13T02:44:10+08:00'
+title = 'Disable auto-formatting for Hugo templates in VS Code'
+categories = [
+    "Hugo", "Visual Studio Code"
+]
++++
+
+# Disable auto-formatting for Hugo templates in VS Code
+
+If you've been frustrated by Visual Studio Code's auto-formatting feature removing your carefully arranged indentations in Hugo templates files, you're not alone. Here's a quick guide to stop this from happening and preserve your desired formatting.
+
+---
+
+## Problem
+
+When working with Hugo templates, auto-formatting can remove the indentation, making the code less readable. For example:
+
+### Input:
+```handlebars
+{{ range ... }}
+   {{ if .... }}
+      {{if ... }}
+          <tag></tag>
+      {{end}}
+   {{end}}
+{{end}}
+```
+
+### Output After Auto-Format:
+```handlebars
+{{ range ... }}
+{{ if .... }}
+{{if ... }}
+<tag></tag>
+{{end}}
+{{end}}
+{{end}}
+```
+
+This behavior can make complex templates hard to read and maintain. To fix this, you can disable auto-formatting specifically for Handlebars files.
+
+---
+
+## Solution
+
+### Disable Auto-Formatting for Handlebars in VS Code
+
+You can turn off auto-formatting for Handlebars files while keeping it enabled for other file types.
+
+#### Steps:
+1. Open VS Code's settings:
+   - Click on **File > Preferences > Settings** (or **Code > Preferences > Settings** on Mac).
+   - Alternatively, press `Ctrl + ,` (Windows/Linux) or `Cmd + ,` (Mac).
+2. Search for `editor.formatOnSave` and disable it for specific files by adding the following configuration in your `settings.json`:
+
+
+
+3. Add the following configuration to your `settings.json` file:
+
+   ```json
+   "[handlebars]": {
+     "editor.formatOnSave": false
+   }
+   ```
+
+   This setting ensures that auto-formatting is disabled for Handlebars files, identified by `.hbs` or `.handlebars` extensions.
+
+   ![Figure 1](/logddd.png)

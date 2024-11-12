@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Mon, 11 Nov 2024 16:37:14 +0800</lastBuildDate><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 13 Nov 2024 02:44:10 +0800</lastBuildDate><atom:link href="https://example.com/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://example.com/en/categories/hugo/</link>
+        <pubDate>Wed, 13 Nov 2024 02:44:10 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Visual Studio Code</title>
+        <link>https://example.com/en/categories/visual-studio-code/</link>
+        <pubDate>Wed, 13 Nov 2024 02:44:10 +0800</pubDate>
+        
+        <guid>https://example.com/en/categories/visual-studio-code/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>MPTCP</title>
         <link>https://example.com/en/categories/mptcp/</link>
         <pubDate>Mon, 11 Nov 2024 16:37:14 +0800</pubDate>

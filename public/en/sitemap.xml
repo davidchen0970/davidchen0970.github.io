@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/en/</loc>
-    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://example.com/en/categories/</loc>
-    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -36,6 +36,58 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://example.com/en/categories/"
+                />
+  </url><url>
+    <loc>https://example.com/en/p/disable-auto-formatting-for-hugo-templates-in-vs-code/</loc>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/p/disable-auto-formatting-for-hugo-templates-in-vs-code/"
+                />
+  </url><url>
+    <loc>https://example.com/en/categories/hugo/</loc>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/hugo/"
+                />
+  </url><url>
+    <loc>https://example.com/en/post/</loc>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/post/"
+                />
+  </url><url>
+    <loc>https://example.com/en/categories/visual-studio-code/</loc>
+    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/visual-studio-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/visual-studio-code/"
                 />
   </url><url>
     <loc>https://example.com/en/categories/mptcp/</loc>
@@ -62,19 +114,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://example.com/en/p/mptcp-experiment-1/"
-                />
-  </url><url>
-    <loc>https://example.com/en/post/</loc>
-    <lastmod>2024-11-11T16:37:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/en/post/"
                 />
   </url><url>
     <loc>https://example.com/en/categories/protocol/</loc>
