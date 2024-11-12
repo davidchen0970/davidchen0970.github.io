@@ -13,8 +13,9 @@
         <pubDate>Wed, 13 Nov 2024 02:44:10 +0800</pubDate>
         
         <guid>https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/</guid>
-        <description>&lt;h3 id=&#34;禁用-vs-code-中-hugo-模板的自動格式化&#34;&gt;禁用 VS Code 中 Hugo 模板的自動格式化
-&lt;/h3&gt;&lt;p&gt;如果你在使用 Visual Studio Code 時，因為自動格式化功能而失去在 Hugo 模板檔案中精心排列的縮排，感到困擾，那你並不孤單。這裡有一個簡單的指南，可以幫助你停止這種情況，並保留你想要的格式。&lt;/p&gt;
+        <description>&lt;p&gt;&lt;strong&gt;這篇文章由 AI 自動產生，尚未經過整理&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;禁用-vs-code-中-hugo-模板的自動格式化&#34;&gt;禁用 VS Code 中 Hugo 模板的自動格式化
+&lt;/h1&gt;&lt;p&gt;如果你在使用 Visual Studio Code 時，因為自動格式化功能而失去在 Hugo 模板檔案中精心排列的縮排，感到困擾，那你並不孤單。這裡有一個簡單的指南，可以幫助你停止這種情況，並保留你想要的格式。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;問題&#34;&gt;問題
 &lt;/h2&gt;&lt;p&gt;在處理 Hugo 模板時，自動格式化可能會移除縮排，使代碼變得不易閱讀。例如：&lt;/p&gt;
