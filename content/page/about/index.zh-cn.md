@@ -12,6 +12,8 @@ menu:
     weight: -90
     params:
       icon: user
+image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
+
 ---
 
 ### 关于我
