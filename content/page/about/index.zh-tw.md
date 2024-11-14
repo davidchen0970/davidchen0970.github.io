@@ -40,11 +40,8 @@ menu:
 
 ### 專案經驗
 
-(施工中... )
-
-- **專案名稱 1**：描述這個專案的目標、使用的技術和你的貢獻。
-- **專案名稱 2**：描述這個專案的目標、使用的技術和你的貢獻。
-- **專案名稱 3**：描述這個專案的目標、使用的技術和你的貢獻。
+- [Word Converter](https://github.com/davidchen0970/wordConverter) : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式
+- [Graphics Programing](https://github.com/davidchen0970/Graphics-Programing) / [Graphic Programming Language](https://github.com/davidchen0970/Graphic-programming-language) : 大二專題 - 計算機圖學
 
 ### 聯絡方式
 
