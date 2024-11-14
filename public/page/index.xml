@@ -18,12 +18,15 @@
 &lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
 &lt;h3 id=&#34;教育背景&#34;&gt;教育背景
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於 [學校名稱]&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於國立嘉義大學資工系&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士 (就讀中)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;在校成就&lt;/strong&gt;：
 &lt;ul&gt;
-&lt;li&gt;[獲得的獎學金或榮譽]&lt;/li&gt;
-&lt;li&gt;[參加的競賽或專案，例如：ACM 競賽、Hackathon 等]&lt;/li&gt;
+&lt;li&gt;111年第三屆有事青年行動競賽&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.itsa.org.tw/itsacontest/2022/register/index.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2022 ITSA 全國大專校院程式設計極客挑戰賽 - 佳作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://website.ncyu.edu.tw/csie/Contents?nodeId=27509&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;109學年度 - 程式設計競賽, 第三名&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

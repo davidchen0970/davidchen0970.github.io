@@ -27,6 +27,7 @@ menu:
 - **在校成就**：
   - 111年第三屆有事青年行動競賽
   - [2022 ITSA 全國大專校院程式設計極客挑戰賽 - 佳作](https://www.itsa.org.tw/itsacontest/2022/register/index.php)
+  - [109學年度 - 程式設計競賽, 第三名](https://website.ncyu.edu.tw/csie/Contents?nodeId=27509)
 
 ### 技能
 
