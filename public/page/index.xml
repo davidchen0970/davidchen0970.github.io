@@ -14,10 +14,10 @@
         
         <guid>https://example.com/%E9%97%9C%E6%96%BC/</guid>
         <description>&lt;p&gt;施工中，施工中，施工中&amp;hellip;&lt;/p&gt;
-&lt;h3 id=&#34;關於我&#34;&gt;關於我
-&lt;/h3&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
-&lt;h3 id=&#34;教育背景&#34;&gt;教育背景
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;關於我&#34;&gt;關於我
+&lt;/h2&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
+&lt;h2 id=&#34;教育背景&#34;&gt;教育背景
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於國立嘉義大學資工系&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士 (就讀中)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;在校成就&lt;/strong&gt;：
@@ -30,8 +30,8 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;技能&#34;&gt;技能
-&lt;/h3&gt;&lt;p&gt;我具備以下技能：&lt;/p&gt;
+&lt;h2 id=&#34;技能&#34;&gt;技能
+&lt;/h2&gt;&lt;p&gt;我具備以下技能：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;程式語言&lt;/strong&gt;：熟悉 C++ ，初學 Python、JavaScript 等&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;網頁開發&lt;/strong&gt;：具備 HTML、CSS 和 JavaScript 的基礎知識&lt;/li&gt;
@@ -47,16 +47,18 @@
 	
 	
 &gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;專案經驗&#34;&gt;專案經驗
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;專案經驗&#34;&gt;專案經驗
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/wordConverter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Word Converter&lt;/a&gt; : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/Graphics-Programing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Graphics Programing&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/Graphic-programming-language&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Graphic Programming Language&lt;/a&gt; : 大二專題 - 計算機圖學&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/line-bot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;line bot - 資工系帳號&lt;/a&gt; : 第一個 LINE BOT 機器人，以資工系為背景&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;聯絡方式&#34;&gt;聯絡方式
-&lt;/h3&gt;&lt;p&gt;如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：&lt;/p&gt;
+&lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式
+&lt;/h2&gt;&lt;p&gt;如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;電子郵件&lt;/strong&gt;：apple1051629@gmail.com&lt;/li&gt;
 &lt;/ul&gt;
