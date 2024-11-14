@@ -1,6 +1,7 @@
 +++  
 date = '2024-11-11T22:11:02+08:00'  
 title = 'Comparison Between SDN and Traditional Network'  
+image = "pawel-czerwinski-8DujUEpxazE-unsplash.jpg"
 categories = [
 "SDN"
 ]
