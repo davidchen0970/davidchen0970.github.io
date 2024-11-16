@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <lastmod>2024-11-16T12:39:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
+    <lastmod>2024-11-16T12:39:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,6 +37,25 @@
                 hreflang="zh-tw"
                 href="https://example.com/categories/"
                 />
+  </url><url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2024-11-16T12:39:48+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/post/"
+                />
+  </url><url>
+    <loc>https://example.com/categories/sdn/</loc>
+    <lastmod>2024-11-16T12:39:48+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/sdn-concept/</loc>
+    <lastmod>2024-11-16T12:39:48+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/</loc>
     <lastmod>2024-11-13T02:44:10+08:00</lastmod>
@@ -64,19 +83,6 @@
                 href="https://example.com/categories/hugo/"
                 />
   </url><url>
-    <loc>https://example.com/post/</loc>
-    <lastmod>2024-11-13T02:44:10+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://example.com/post/"
-                />
-  </url><url>
     <loc>https://example.com/categories/visual-studio-code/</loc>
     <lastmod>2024-11-13T02:44:10+08:00</lastmod>
     <xhtml:link
@@ -91,9 +97,6 @@
                 />
   </url><url>
     <loc>https://example.com/p/comparison-between-sdn-and-traditional-network/</loc>
-    <lastmod>2024-11-11T22:11:02+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/sdn/</loc>
     <lastmod>2024-11-11T22:11:02+08:00</lastmod>
   </url><url>
     <loc>https://example.com/categories/mptcp/</loc>
