@@ -1,3 +1,11 @@
++++
+date = '2024-11-16T14:02:21+08:00'
+title = 'OpenFlow Ports'
+categories = [
+    "SDN"
+]
++++
+
 # 軟體定義網路 - OpenFlow Ports 介紹  (2-1)
 
 reference:

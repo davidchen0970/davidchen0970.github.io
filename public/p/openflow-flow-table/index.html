@@ -2,18 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"> <title>Comparison Between SDN and Traditional Network</title>
+name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r圖片 說明 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1.1 Flow Table 的 Pipeline\r2. Flow Table 和 Flow Entry\r※此 Flow Table為 OpenFlow 1.3 的樣式，1.0~1.2 版本可以參考 1 2 3\n"> <title>OpenFlow Flow Table</title>
 
-<link rel="canonical" href="https://example.com/p/comparison-between-sdn-and-traditional-network/" />
+<link rel="canonical" href="https://example.com/p/openflow-flow-table/" />
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Comparison Between SDN and Traditional Network">
-<meta property='og:description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n">
-<meta property='og:url' content='https://example.com/p/comparison-between-sdn-and-traditional-network/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="OpenFlow Flow Table">
+<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r圖片 說明 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1.1 Flow Table 的 Pipeline\r2. Flow Table 和 Flow Entry\r※此 Flow Table為 OpenFlow 1.3 的樣式，1.0~1.2 版本可以參考 1 2 3\n">
+<meta property='og:url' content='https://example.com/p/openflow-flow-table/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='article:modified_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='og:image' content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
-<meta name="twitter:title" content="Comparison Between SDN and Traditional Network">
-<meta name="twitter:description" content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:00:21&#43;08:00'/>
+<meta name="twitter:title" content="OpenFlow Flow Table">
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r圖片 說明 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1.1 Flow Table 的 Pipeline\r2. Flow Table 和 Flow Entry\r※此 Flow Table為 OpenFlow 1.3 的樣式，1.0~1.2 版本可以參考 1 2 3\n">
     </head>
     <body class="
     article-page
@@ -274,14 +273,24 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <ol>
     <li>
       <ol>
-        <li><a href="#目錄">目錄</a></li>
-      </ol>
-    </li>
-    <li><a href="#傳統網路架構">傳統網路架構</a></li>
-    <li><a href="#sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題</a>
-      <ol>
-        <li><a href="#1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）</a></li>
-        <li><a href="#2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）</a></li>
+        <li><a href="#1-open-flow-的架構">1. Open Flow 的架構</a>
+          <ol>
+            <li><a href="#11-flow-table-的-pipeline">1.1 Flow Table 的 Pipeline</a></li>
+          </ol>
+        </li>
+        <li><a href="#2-flow-table-和-flow-entry">2. Flow Table 和 Flow Entry</a></li>
+        <li><a href="#3-flow-table-的欄位">3 Flow Table 的欄位</a>
+          <ol>
+            <li><a href="#31-各個欄位的作用">3.1 各個欄位的作用:</a></li>
+            <li><a href="#32-flow-table-管線處理流程">3.2 Flow Table 管線處理流程</a></li>
+            <li><a href="#33-table-miss-entry">3.3 Table Miss Entry</a></li>
+          </ol>
+        </li>
+        <li><a href="#4-action-set-中-actionhttpsbookryu-sdnorgzh_twhtmlopenflow_protocolhtmlaction-的執行順序">4. Action Set 中 <a href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#action">Action</a> 的執行順序</a>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -295,20 +304,8 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">
-                <img src="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg"
-                        srcset="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg 800w, /p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu13503813645109604192.jpg 1600w"
-                        width="800" 
-                        height="533" 
-                        loading="lazy"
-                        alt="Featured image of post Comparison Between SDN and Traditional Network" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -323,7 +320,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">Comparison Between SDN and Traditional Network</a>
+            <a href="/p/openflow-flow-table/">OpenFlow Flow Table</a>
         </h2>
     
         
@@ -345,7 +342,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 11, 2024</time>
+                <time class="article-time--published">Nov 16, 2024</time>
             </div>
         
 
@@ -360,7 +357,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
 
                 <time class="article-time--reading">
-                    閱讀時間: 1 分鐘
+                    閱讀時間: 2 分鐘
                 </time>
             </div>
         
@@ -375,77 +372,304 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
     <section class="article-content">
     
     
-    <h1 id="軟體定義網路sdn與傳統網路架構的比較">軟體定義網路（SDN）與傳統網路架構的比較
-</h1><p>原始連結: <a class="link" href="https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/r1WWxc8Ko"  target="_blank" rel="noopener"
-    >Link</a></p>
-<p><strong>Reference</strong>:</p>
+    <h1 id="軟體定義網路---openflow-中-flow-table-介紹">軟體定義網路 - OpenFlow 中 Flow Table 介紹
+</h1><p>reference:</p>
 <ol>
-<li><a class="link" href="https://youtu.be/pIU-3gzlu9I"  target="_blank" rel="noopener"
-    >1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN</a></li>
-<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10267704"  target="_blank" rel="noopener"
-    >TCP/IP，網際網路的基礎通訊架構</a></li>
+<li><a class="link" href="https://www.cables-solutions.com/whats-openflow-switch-how-it-works.html"  target="_blank" rel="noopener"
+    >OpenFlow Switch: What Is It and How Does it Work?</a></li>
+<li><a class="link" href="https://www.researchgate.net/figure/Flow-Table-Packet-Processing-Pipeline-2_fig1_318652506"  target="_blank" rel="noopener"
+    >圖 : Flow Table Packet Processing Pipeline</a></li>
+<li><a class="link" href="https://www.youtube.com/watch?v=aaPwiyjwrQM&amp;t"  target="_blank" rel="noopener"
+    >2-2 FlowTables</a></li>
+<li><a class="link" href="https://opennetworking.org/wp-content/uploads/2014/10/openflow-switch-v1.3.5.pdf"  target="_blank" rel="noopener"
+    >OpenFlow Switch Specification</a></li>
+<li><a class="link" href="https://download.huawei.com/mdl/image/download?uuid=12ee231f981047fabd03378e1442168f"  target="_blank" rel="noopener"
+    >圖 : 各版本openflow 的 header 長相</a></li>
+<li><a class="link" href="https://www.jianshu.com/p/acfeae1771b3"  target="_blank" rel="noopener"
+    >OpenFlow 交換器規範 1.3.0 (1)</a></li>
+<li><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/"  target="_blank" rel="noopener"
+    >Ryubook 1.0 說明文件</a></li>
 </ol>
-<h3 id="目錄">目錄
-</h3><ol>
-<li>傳統網路架構概述</li>
-<li>SDN 嘗試解決的問題(傳統 Internet 的既有限制)</li>
-</ol>
-<h2 id="傳統網路架構">傳統網路架構
-</h2><p>在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在<strong>TCP/IP 協議</strong>基礎上的傳統網路架構誕生了。這種架構具備以下特徵：</p>
+<hr>
+<p>目錄:</p>
 <ol>
-<li>
-<p><strong>通訊協議的重要性</strong><br>
-兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。</p>
-</li>
-<li>
-<p><strong>網路架構形式</strong><br>
-網路中的設備可以採用以下兩種架構之一：</p>
-<ul>
-<li><strong>主從式架構（Client-Server）</strong>：由伺服器提供服務，客戶端發起請求。</li>
-<li><strong>對等式架構（Peer-to-Peer）</strong>：所有節點平等，彼此直接傳遞資料。</li>
-</ul>
-</li>
-<li>
-<p><strong>基礎設備需求</strong><br>
-傳輸資料需要依賴網路設備，例如：</p>
-<ul>
-<li><strong>交換器（Switch）</strong>：用於內部網路中的資料交換。</li>
-<li><strong>路由器（Router）</strong>：管理網路間的資料流動。</li>
-<li><strong>集線器</strong></li>
-</ul>
-</li>
+<li><a class="link" href="#1-Open-Flow-%e7%9a%84%e6%9e%b6%e6%a7%8b" >Open Flow 的架構</a></li>
+<li><a class="link" href="#2-Flow-Table-%e5%92%8c-Flow-Entry" >Flow Table 和 Flow Entry</a></li>
+<li><a class="link" href="#3-Flow-Table-%e7%9a%84%e6%ac%84%e4%bd%8d" >Flow Table 欄位</a></li>
+<li><a class="link" href="#4-Action-Set-%e4%b8%ad-Action-%e7%9a%84%e5%9f%b7%e8%a1%8c%e9%a0%86%e5%ba%8f" >Action Set 中 Action 的執行順序</a></li>
 </ol>
-<p>這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。</p>
-<p><img src="https://ithelp.ithome.com.tw/upload/images/20210919/20128159lPmUQe3GJx.jpg"
+<hr>
+<h3 id="1-open-flow-的架構">1. Open Flow 的架構
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://www.cables-solutions.com/wp-content/uploads/2018/07/what-is-openflow-switch.png"
 	
 	
 	
 	loading="lazy"
 	
-		alt="圖1: 傳統網路架構示意圖"
+	
+></td>
+          <td><ul style='list-style-position:outside;'><li>在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。<li>Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。</ul></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="11-flow-table-的-pipeline">1.1 Flow Table 的 Pipeline
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><img src="https://www.researchgate.net/publication/318652506/figure/fig1/AS:519482711998464@1500865738587/Flow-Table-Packet-Processing-Pipeline-2.png"
 	
 	
-></p>
-<h2 id="sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題
-</h2><p>隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：</p>
-<h3 id="1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）
-</h3><p>傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：</p>
+	
+	loading="lazy"
+	
+	
+></td>
+      </tr>
+      <tr>
+          <td><img src="https://i.imgur.com/MC05Xma.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+      </tr>
+      <tr>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="2-flow-table-和-flow-entry">2. Flow Table 和 Flow Entry
+</h3><p>※此 Flow Table為 OpenFlow 1.3 的樣式，1.0~1.2 版本可以參考 <a class="link" href="https://support.huawei.com/enterprise/en/doc/EDOC1100196737"  target="_blank" rel="noopener"
+    >1</a> <a class="link" href="https://download.huawei.com/mdl/image/download?uuid=12ee231f981047fabd03378e1442168f"  target="_blank" rel="noopener"
+    >2</a> <a class="link" href="https://davidleitw.github.io/posts/sdn2/#flow-table"  target="_blank" rel="noopener"
+    >3</a></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Match Fields</th>
+          <th>Priority</th>
+          <th>Counter</th>
+          <th>Instructions</th>
+          <th>Timeouts</th>
+          <th>Cookie</th>
+          <th>Flags</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table></div>
 <ul>
-<li>設備配置複雜且靜態。</li>
-<li>網路拓撲固定，難以快速響應變化的需求。</li>
+<li>整個表會稱為 Flow Table，裡面的每個 row 稱為 Flow Entry。</li>
 </ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。</p>
-<hr>
-<h3 id="2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）
-</h3><p>傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：</p>
+<h3 id="3-flow-table-的欄位">3 Flow Table 的欄位
+</h3><h4 id="31-各個欄位的作用">3.1 各個欄位的作用:
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">名稱</th>
+          <th>解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#match"  target="_blank" rel="noopener"
+    >Match Fields</a></td>
+          <td>要去比對 packet 有沒有符合 flow entry，比對的內容至少有以下: <ul style='list-style-position:outside;'><li>ingress port</li><li>packet header</li> <li>optional metadate from previous table</li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Priority</td>
+          <td>flow entry 的優先程度，<strong>數字越高越優先</strong>，最小為零。</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Counter</td>
+          <td>紀錄以下資訊(當封包mtach時就更新): <ul style='list-style-position:outside;'><li>Received Packet</li><li>Received Data</li><li>Duration(秒數，<strong>一定要紀錄</strong>，指的是 flow entry 存在多久)</li><li>Duration(奈秒)</li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#instruction"  target="_blank" rel="noopener"
+    >Instruction</a></td>
+          <td>當封包符合 flow entry 的條件時，所要做的動作，包括以下:<ul style='list-style-position:outside;'><li>Meter : 要去看符合此 Flow Table 的封包量是否已經太多。</li><li>Apply Actions : 馬上對封包進行動作。例如把封包的header改掉，<strong>但不改變 Action set 的內容。</strong> </li><li>Clear/Write Actions (必須):修改封包中 Action set 的內容。</li><li>Write Metadata : 加入一些 metadata 給後面的 flow table 比對用。</li><li>Goto_Table(必須):指示封包之後要往哪一個 flow table 前進。</li><li>flood : 將接收到的封包廣播(除了輸入的 port 以外)</li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Timeouts</td>
+          <td>標記此 flow entry 甚麼時候要被消除，包含以下兩種形式:<ul style='list-style-position:outside;'><li>idle-timeout : 在閒置多久之後要被消除。</li> <li>hard-timeout : 在經過多少時間之後，不管有沒有閒置都要被消除。</li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Cookie</td>
+          <td><ul style='list-style-position:outside;'><li> 在處理封包的時候不會使用到此欄位。</li> <li>opaque data value chosen by the controller. May be used by the controller to filter flow entries affected by flow statistics, flow modification and flow deletion requests.  </li></ul></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Flags</td>
+          <td>用來改變 flow entry 的管理方式，例如 OFPFF_SEND_FLOW_REM 會觸發到刪除此 flow entry 的 message。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="32-flow-table-管線處理流程">3.2 Flow Table 管線處理流程
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/JnHJVhP.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td><ul style='list-style-position:outside;'><li>封包一定要從 table 0 開始比對。</li> <li><strong>由 priority 高的開始比對</strong>。</li> </ul></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="33-table-miss-entry">3.3 Table Miss Entry
+</h4><p>以下是某個 Flow Table :</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Match Fields</th>
+          <th>Priority</th>
+          <th>Counter</th>
+          <th>Instructions</th>
+          <th>Timeouts</th>
+          <th>Cookie</th>
+          <th>Flags</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>ANY</td>
+          <td>0</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>由上表可以看到，Table Miss Entry 所使用的 Match Feild 是 ANY，且因為是最後比的，因此 Priority 是最低的 0 。</p>
+<h3 id="4-action-set-中-actionhttpsbookryu-sdnorgzh_twhtmlopenflow_protocolhtmlaction-的執行順序">4. Action Set 中 <a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#action"  target="_blank" rel="noopener"
+    >Action</a> 的執行順序
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>順位</th>
+          <th>名稱</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1.</td>
+          <td>copy <a class="link" href="" >TTL</a> inwards</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>2.</td>
+          <td>pop</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>3.</td>
+          <td>push-<a class="link" href="https://www.google.com/search?q=MPLS&amp;sourceid=chrome&amp;ie=UTF-8"  target="_blank" rel="noopener"
+    >MPLS</a></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>4.</td>
+          <td>push-PBB</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>5.</td>
+          <td>push-VLAN</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>6.</td>
+          <td>copy TTL</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>7.</td>
+          <td>decrement TTL</td>
+          <td>TTL-=1</td>
+      </tr>
+      <tr>
+          <td>8.</td>
+          <td>set (set-field)</td>
+          <td>修改封包內的某些欄位</td>
+      </tr>
+      <tr>
+          <td>9.</td>
+          <td>qos (set-queue)</td>
+          <td>寫入一個 queue id 進到指定封包內</td>
+      </tr>
+      <tr>
+          <td>10.</td>
+          <td>group</td>
+          <td>如果有指定 group action ，就依照 group table 內的指令做</td>
+      </tr>
+      <tr>
+          <td>11.</td>
+          <td>output</td>
+          <td>如果沒有指定 group action，則在 output action 指定的 port 轉發 packet。</td>
+      </tr>
+  </tbody>
+</table></div>
 <ul>
-<li>與其他供應商設備的相容性低。</li>
-<li>原供應商的解決方案最適合原始架構，導致難以更換供應商。</li>
+<li><span id="TTL"> TTL </span> : Time To Live
+指一個封包在經過一個路由器時，可傳遞的最長距離（躍點數）。目的是防止封包因不正確的路由表等原因造成的無限循環而無法送達及耗盡網路資源。</li>
 </ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。</p>
-
+<h6 id="tags-sdn">tags: <code>SDN</code>
+</h6>
 </section>
 
 
@@ -520,12 +744,12 @@ SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對�
             
                 
 <article class="">
-    <a href="/p/openflow-flow-table/">
+    <a href="/p/mininet-commands-and-parameters/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">OpenFlow Flow Table</h2>
+            <h2 class="article-title">mininet commands and parameters</h2>
         </div>
     </a>
 </article>
@@ -533,12 +757,12 @@ SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對�
             
                 
 <article class="">
-    <a href="/p/mininet-commands-and-parameters/">
+    <a href="/p/sdn-concept/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">mininet commands and parameters</h2>
+            <h2 class="article-title">SDN concept</h2>
         </div>
     </a>
 </article>
