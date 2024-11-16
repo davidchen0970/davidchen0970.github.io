@@ -7,7 +7,114 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Wed, 13 Nov 2024 02:44:10 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 16 Nov 2024 12:39:48 +0800</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SDN concept</title>
+        <link>https://example.com/p/sdn-concept/</link>
+        <pubDate>Sat, 16 Nov 2024 12:39:48 +0800</pubDate>
+        
+        <guid>https://example.com/p/sdn-concept/</guid>
+        <description>&lt;h1 id=&#34;軟體定義網路---sdn-主要概念與分層架構-1-2&#34;&gt;軟體定義網路 - SDN 主要概念與分層架構 (1-2)
+&lt;/h1&gt;&lt;p&gt;reference:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/a1tnptPFH0s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SDN架構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sites.google.com/a/cnsrl.cycu.edu.tw/da-shu-bi-ji/sdn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SDN - 大叔筆記&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://showipprotocols-tw.blogspot.com/2014/06/northbound-southbound-east-west-bound.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北向、南向，都在講些什麼 &amp;ldquo;東西&amp;rdquo;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@UULi/SyqrpEntt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;計算機網路筆記-ch4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Software-defined_networking&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Software-defined networking - wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.techtarget.com/searchnetworking/definition/software-defined-networking-SDN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What is software-defined networking?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;SDN主要概念&lt;/li&gt;
+&lt;li&gt;SDN分層架構&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;0-網路術語&#34;&gt;0. 網路術語
+&lt;/h3&gt;&lt;img src=&#34;https://i.imgur.com/Nv98Zic.png&#34; alt=&#34;drawing&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;在控制器的角度上 :
+1. 往下傳達控制物理網路元件指令的API，習慣上稱為南向(Southbound API)
+2. 往上接受服務請求的API，習慣上稱為北向(Northbound API)。&lt;/p&gt;
+&lt;h3 id=&#34;1-傳統路由器架構&#34;&gt;1. 傳統路由器架構
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;維基百科 :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;路由（routing） : 就是通過互聯的網路把資訊從源位址傳輸到目的位址的活動。路由發生在OSI網路參考模型中的第三層即網路層。&lt;/li&gt;
+&lt;li&gt;轉送 : 將路由器輸入端的封包移送至適當的路由器輸出端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以，路由器（英語：Router，又稱路徑器）是一種電訊網路裝置，提供路由與轉送兩種重要機制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-openflow-路由器架構&#34;&gt;2. OpenFlow 路由器架構
+&lt;/h3&gt;&lt;img src=&#34;https://i.imgur.com/LzlzwJD.png&#34; alt=&#34;drawing&#34; width=&#34;400&#34;/&gt;
+&lt;ol&gt;
+&lt;li&gt;SDN在這裡會把路由分成 control plane 和 forwarding plane。&lt;/li&gt;
+&lt;li&gt;在control plane 和 forwarding plane之間新增一個 OpenFlow protocol 以做到分離效果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-從傳統路由器轉化成-sdn-路由器的步驟&#34;&gt;3. 從傳統路由器轉化成 SDN 路由器的步驟
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;把原先都是合併在一起的 control plane 和 forwarding plane 分離。&lt;/li&gt;
+&lt;li&gt;定義此兩層之間的標準介面 (API)&lt;/li&gt;
+&lt;li&gt;在把分離後的 control plane 集中管理，交給 controller，再透過 Openflow 協定控制其行為。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-sdn-網路架構&#34;&gt;4. SDN 網路架構
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/XvYtqdz.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;控制器可以透過openflow的管道與交換器溝通，也可以使用既有的網管協定與交換器溝通。&lt;/p&gt;
+&lt;h3 id=&#34;5-sdn的三層架構&#34;&gt;5. SDN的三層架構
+&lt;/h3&gt;&lt;!-- ![](https://i.imgur.com/mgG2ss7.png) --&gt;
+&lt;!-- ![](https://i.imgur.com/PRKDyPM.png) --&gt;
+&lt;img src=&#34;https://cdn.ttgtmedia.com/rms/onlineimages/sdn-sdn_architecture.png&#34; alt=&#34;drawing&#34; width=&#34;300&#34;/&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Application layer
+包含普通網絡應用程式或功能，例如防火牆、附載平衡器等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Control layer
+代表集中式 SDN 控制器軟體，可以稱為SDN中的大腦，管理整個網路的流向和流量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Infrastructure layer
+就是由所有的交換器所組成。負責傳輸網路流量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- 
+### 6. 電腦系統的演進趨勢
+![](https://i.imgur.com/pdsdN42.png)
+![](https://i.imgur.com/qpxQWHU.png)
+ --&gt;
+&lt;h3 id=&#34;6-sdn的三個特色&#34;&gt;6. SDN的三個特色
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;平台標準化
+每一個switch 都只要懂 openflow的協定就好，不用細分成很多層的switch&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;軟體平台化
+軟體不用對硬體開發，是對平台開發&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;資訊中心化
+軟體可以看到網路的全貌，可以做到全體的最佳化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6 id=&#34;tags-sdn&#34;&gt;tags: &lt;code&gt;SDN&lt;/code&gt;
+&lt;/h6&gt;</description>
+        </item>
+        <item>
         <title>Disable auto-formatting for Hugo templates in VS Code</title>
         <link>https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/</link>
         <pubDate>Wed, 13 Nov 2024 02:44:10 +0800</pubDate>
