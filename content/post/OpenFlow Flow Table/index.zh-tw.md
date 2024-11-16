@@ -1,3 +1,12 @@
++++
+date = '2024-11-16T14:00:21+08:00'
+title = 'OpenFlow Flow Table'
+categories = [
+    "SDN"
+]
++++
+
+
 # 軟體定義網路 - OpenFlow 中 Flow Table 介紹
 
 reference:

@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.136.5"><meta charset="utf-8" />
+<html lang="zh-tw" dir="ltr">
+    <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="Hello"> <title>Pager 2 - This is my house</title>
+name='description' content="軟體定義網路 - Open vSwitch (1-3)\rreference:\n在 OpenWRT 上架設 Open vSwitch (OVS) Open vSwitch 目錄:\nOpen vSwitch 1. Open vSwitch\r是一種虛擬交換器，目的是實現網路的虛擬化 可以用來作為 L2 Switch，或其他層的 Switch 支援 OpenFlow 協定 針對 Linux 核心開發 2. Open vSwitch 的特性\r1. 成本低 2. 工作效率高 3. 占用資源小 4. 配置靈活性高\n3. Open vSwitch 架構\rovs-vswitchd ${\\to}$ switch 的邏輯運作 、 control plane 的抽象化，提供像 OpenFlow 的介面，可以跟外部的控制器連接。 ovsdb-server ${\\to}$ 管理輕量級的資料庫:ovsdb，存放資料轉發的規則表(flow-table)，裡面的規則稱作 : flow-role openvswitch.ko ${\\to}$ep su3 負責資料轉發層的 data plane 的工作，\n"> <title>Open vSwitch</title>
 
-<link rel="canonical" href="https://example.com/en/" />
+<link rel="canonical" href="https://example.com/p/open-vswitch/" />
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="This is my house">
-<meta property='og:description' content="Hello">
-<meta property='og:url' content='https://example.com/en/'>
-<meta property='og:site_name' content='This is my house'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-11-13T02:44:10&#43;08:00 '/>
-<meta name="twitter:title" content="This is my house">
-<meta name="twitter:description" content="Hello"><link
-  rel="alternate"
-  type="application/rss&#43;xml"
-  href="https://example.com/en/index.xml"
-/>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Open vSwitch">
+<meta property='og:description' content="軟體定義網路 - Open vSwitch (1-3)\rreference:\n在 OpenWRT 上架設 Open vSwitch (OVS) Open vSwitch 目錄:\nOpen vSwitch 1. Open vSwitch\r是一種虛擬交換器，目的是實現網路的虛擬化 可以用來作為 L2 Switch，或其他層的 Switch 支援 OpenFlow 協定 針對 Linux 核心開發 2. Open vSwitch 的特性\r1. 成本低 2. 工作效率高 3. 占用資源小 4. 配置靈活性高\n3. Open vSwitch 架構\rovs-vswitchd ${\\to}$ switch 的邏輯運作 、 control plane 的抽象化，提供像 OpenFlow 的介面，可以跟外部的控制器連接。 ovsdb-server ${\\to}$ 管理輕量級的資料庫:ovsdb，存放資料轉發的規則表(flow-table)，裡面的規則稱作 : flow-role openvswitch.ko ${\\to}$ep su3 負責資料轉發層的 data plane 的工作，\n">
+<meta property='og:url' content='https://example.com/p/open-vswitch/'>
+<meta property='og:site_name' content='歡迎光臨我家'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T12:51:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T12:51:21&#43;08:00'/>
+<meta name="twitter:title" content="Open vSwitch">
+<meta name="twitter:description" content="軟體定義網路 - Open vSwitch (1-3)\rreference:\n在 OpenWRT 上架設 Open vSwitch (OVS) Open vSwitch 目錄:\nOpen vSwitch 1. Open vSwitch\r是一種虛擬交換器，目的是實現網路的虛擬化 可以用來作為 L2 Switch，或其他層的 Switch 支援 OpenFlow 協定 針對 Linux 核心開發 2. Open vSwitch 的特性\r1. 成本低 2. 工作效率高 3. 占用資源小 4. 配置靈活性高\n3. Open vSwitch 架構\rovs-vswitchd ${\\to}$ switch 的邏輯運作 、 control plane 的抽象化，提供像 OpenFlow 的介面，可以跟外部的控制器連接。 ovsdb-server ${\\to}$ 管理輕量級的資料庫:ovsdb，存放資料轉發的規則表(flow-table)，裡面的規則稱作 : flow-role openvswitch.ko ${\\to}$ep su3 負責資料轉發層的 data plane 的工作，\n">
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -43,7 +40,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -53,7 +50,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
         
             
             <figure class="site-avatar">
-                <a href="/en/">
+                <a href="/">
                 
                     
                     
@@ -72,8 +69,8 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/en">This is my house</a></h1>
-            <h2 class="site-description">Hello</h2>
+            <h1 class="site-name"><a href="/">歡迎光臨我家</a></h1>
+            <h2 class="site-description">施工中，施工中...</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -140,8 +137,8 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
         
         
         
-        <li  class='current' >
-            <a href='/en/' >
+        <li >
+            <a href='/' >
                 
                 
                 
@@ -155,13 +152,13 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
                 
-                <span>Home</span>
+                <span>首頁</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/en/about/' >
+            <a href='/%E9%97%9C%E6%96%BC/' >
                 
                 
                 
@@ -174,13 +171,13 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
                 
-                <span>About</span>
+                <span>關於</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/en/archives/' >
+            <a href='/archives/' >
                 
                 
                 
@@ -194,7 +191,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
                 
-                <span>Archives</span>
+                <span>檔案</span>
             </a>
         </li>
         
@@ -215,9 +212,9 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://example.com/" >正體中文</option>
+                                    <option value="https://example.com/" selected>正體中文</option>
                                 
-                                    <option value="https://example.com/en/" selected>English</option>
+                                    <option value="https://example.com/en/" >English</option>
                                 
                                     <option value="https://example.com/zh-cn/" >简体中文</option>
                                 
@@ -244,7 +241,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
 
-                        <span>Dark Mode</span>
+                        <span>深色模式</span>
                     </li>
                 
             </ol>
@@ -256,44 +253,9 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
         
             
                 
-            
-        
-            
-                <section class="widget archives">
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Archives</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/en/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">4</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -303,93 +265,43 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
 
-    </div>
-    <h2 class="widget-title section-title">Categories</h2>
+        </div>
+        <h2 class="widget-title section-title">目錄</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#1-open-vswitch">1. Open vSwitch</a></li>
+        <li><a href="#2-open-vswitch-的特性">2. Open vSwitch 的特性</a></li>
+        <li><a href="#3-open-vswitch-架構">3. Open vSwitch 架構</a>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
-    <div class="tagCloud-tags">
-        
-            <a href="/en/categories/graphic-programming/" class="font_size_1">
-                Graphic Programming
-            </a>
-        
-            <a href="/en/categories/hugo/" class="font_size_1">
-                Hugo
-            </a>
-        
-            <a href="/en/categories/mptcp/" class="font_size_1">
-                MPTCP
-            </a>
-        
-            <a href="/en/categories/p4/" class="font_size_1">
-                P4
-            </a>
-        
-            <a href="/en/categories/protocol/" class="font_size_1">
-                Protocol
-            </a>
-        
-            <a href="/en/categories/visual-studio-code/" class="font_size_1">
-                Visual Studio Code
-            </a>
-        
-    </div>
-</section>
-
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title">Tags</h2>
-
-    <div class="tagCloud-tags">
-        
-    </div>
-</section>
             
         
     </aside>
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/en/p/p4-troubleshooting-symbolic-link/">
-                <img src="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg"
-                        srcset="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu13459586684579990428.jpg 800w, /p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu3425483315149503896.jpg 1600w"
-                        width="800" 
-                        height="534" 
-                        loading="lazy"
-                        alt="Featured image of post P4 Troubleshooting - Symbolic Link" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/en/categories/p4/" >
-                P4
+            <a href="/categories/sdn/" >
+                SDN
             </a>
         
     </header>
@@ -397,7 +309,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/en/p/p4-troubleshooting-symbolic-link/">P4 Troubleshooting - Symbolic Link</a>
+            <a href="/p/open-vswitch/">Open vSwitch</a>
         </h2>
     
         
@@ -419,7 +331,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 05, 2024</time>
+                <time class="article-time--published">Nov 16, 2024</time>
             </div>
         
 
@@ -434,7 +346,7 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    閱讀時間: 1 分鐘
                 </time>
             </div>
         
@@ -442,60 +354,109 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
     
 
     
-        <footer class="article-translations">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="軟體定義網路---open-vswitch-1-3">軟體定義網路 - Open vSwitch (1-3)
+</h1><p>reference:</p>
+<ol>
+<li><a class="link" href="https://openwrt-nctu.gitbook.io/project/experiment-sdn/ovs-on-openwrt"  target="_blank" rel="noopener"
+    >在 OpenWRT 上架設 Open vSwitch (OVS)</a></li>
+<li><a class="link" href="https://www.youtube.com/watch?v=-jX4ce_WaOM"  target="_blank" rel="noopener"
+    >Open vSwitch</a></li>
+</ol>
+<hr>
+<p>目錄:</p>
+<ol>
+<li>Open vSwitch</li>
+</ol>
+<hr>
+<h3 id="1-open-vswitch">1. Open vSwitch
+</h3><ol>
+<li>是一種虛擬交換器，目的是實現網路的虛擬化</li>
+<li>可以用來作為 L2 Switch，或其他層的 Switch</li>
+<li>支援 OpenFlow 協定</li>
+<li>針對 Linux 核心開發</li>
+</ol>
+<h3 id="2-open-vswitch-的特性">2. Open vSwitch 的特性
+</h3><p><img src="https://i.imgur.com/gjlrCqx.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+1. 成本低
+2. 工作效率高
+3. 占用資源小
+4. 配置靈活性高</p>
+<h3 id="3-open-vswitch-架構">3. Open vSwitch 架構
+</h3><!--     ![](https://i.imgur.com/tO5EZvx.png) -->
+<p><img src="https://i.imgur.com/bCnpF6C.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>ovs-vswitchd ${\to}$ switch 的邏輯運作 、 control plane 的抽象化，提供像 OpenFlow 的介面，可以跟外部的控制器連接。
+ovsdb-server ${\to}$ 管理輕量級的資料庫:ovsdb，存放資料轉發的規則表(flow-table)，裡面的規則稱作 : flow-role
+openvswitch.ko ${\to}$ep su3 負責資料轉發層的 data plane 的工作，</p>
+<h6 id="tags-sdn">tags: <code>SDN</code>
+</h6>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
 </svg>
 
 
 
-            <div>
-                
-                    <a href="https://example.com/p/p4-troubleshooting-symbolic-link/" class="link">正體中文</a>
-                
-            </div>
-        </footer>
-    
-</div>
-
-</header>
-</article>
-        
+        <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    <nav class='pagination'>
-        
-        
+    </footer>
 
-        
-            
-                    <a class='page-link' href='/en/'>1</a>
-                
-            
-            
-                <span class='page-link current'>2</span>
-                
-            
-    </nav>
 
-<footer class="site-footer">
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
   <section class="copyright">
     &copy;  2024 David Chen
   </section>
 
   <section class="powerby">
-    Built with <a
+    使用 <a
       href="https://gohugo.io/"
       target="_blank"
       rel="noopener"
       >Hugo</a
-    >
+    > 建立
     <br />
-    Theme <b
+    主題 <b
       ><a
         href="https://github.com/CaiJimmy/hugo-theme-stack"
         target="_blank"
@@ -503,14 +464,93 @@ name='description' content="Hello"> <title>Pager 2 - This is my house</title>
         data-version="3.29.0"
         >Stack</a
       ></b
-    > designed by <a
+    > 由 <a
       href="https://jimmycai.com"
       target="_blank"
       rel="noopener"
       >Jimmy</a
-    >
+    > 設計
   </section>
 </footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>

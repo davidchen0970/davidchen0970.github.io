@@ -2,18 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"> <title>Comparison Between SDN and Traditional Network</title>
+name='description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4)\rreference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼\rMininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性\r支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令\r1. net\r圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes\r圖片 說明 顯示可用的所有節點。 3. links\r圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports\r圖片 說明 查看交換機連接的port 5. dump\r圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs\r圖片 說明 列出各個設備所有的網路介面。 7. iperf\r圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall\r圖片 說明 ping 所有的相連的裝置。 9. pingallfull\r圖片 說明 顯示詳細資訊的pingall。 10. exit\r圖片 說明 離開mininet。 11. xterm / gterm\r使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 "> <title>mininet commands and parameters</title>
 
-<link rel="canonical" href="https://example.com/p/comparison-between-sdn-and-traditional-network/" />
+<link rel="canonical" href="https://example.com/p/mininet-commands-and-parameters/" />
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Comparison Between SDN and Traditional Network">
-<meta property='og:description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n">
-<meta property='og:url' content='https://example.com/p/comparison-between-sdn-and-traditional-network/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="mininet commands and parameters">
+<meta property='og:description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4)\rreference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼\rMininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性\r支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令\r1. net\r圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes\r圖片 說明 顯示可用的所有節點。 3. links\r圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports\r圖片 說明 查看交換機連接的port 5. dump\r圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs\r圖片 說明 列出各個設備所有的網路介面。 7. iperf\r圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall\r圖片 說明 ping 所有的相連的裝置。 9. pingallfull\r圖片 說明 顯示詳細資訊的pingall。 10. exit\r圖片 說明 離開mininet。 11. xterm / gterm\r使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 ">
+<meta property='og:url' content='https://example.com/p/mininet-commands-and-parameters/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='article:modified_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='og:image' content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
-<meta name="twitter:title" content="Comparison Between SDN and Traditional Network">
-<meta name="twitter:description" content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T13:51:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T13:51:21&#43;08:00'/>
+<meta name="twitter:title" content="mininet commands and parameters">
+<meta name="twitter:description" content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4)\rreference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼\rMininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性\r支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令\r1. net\r圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes\r圖片 說明 顯示可用的所有節點。 3. links\r圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports\r圖片 說明 查看交換機連接的port 5. dump\r圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs\r圖片 說明 列出各個設備所有的網路介面。 7. iperf\r圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall\r圖片 說明 ping 所有的相連的裝置。 9. pingallfull\r圖片 說明 顯示詳細資訊的pingall。 10. exit\r圖片 說明 離開mininet。 11. xterm / gterm\r使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 ">
     </head>
     <body class="
     article-page
@@ -274,14 +273,23 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <ol>
     <li>
       <ol>
-        <li><a href="#目錄">目錄</a></li>
-      </ol>
-    </li>
-    <li><a href="#傳統網路架構">傳統網路架構</a></li>
-    <li><a href="#sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題</a>
-      <ol>
-        <li><a href="#1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）</a></li>
-        <li><a href="#2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）</a></li>
+        <li><a href="#0-mininet-是甚麼">0. Mininet 是甚麼</a></li>
+        <li><a href="#1-mininet-的特性">1. Mininet 的特性</a></li>
+        <li><a href="#2-基本-mininet-指令">2. 基本 Mininet 指令</a>
+          <ol>
+            <li><a href="#1-net">1. net</a></li>
+            <li><a href="#2-nodes">2. nodes</a></li>
+            <li><a href="#3-links">3. links</a></li>
+            <li><a href="#4-ports">4. ports</a></li>
+            <li><a href="#5-dump">5. dump</a></li>
+            <li><a href="#6-intfs">6. intfs</a></li>
+            <li><a href="#7-iperf">7. iperf</a></li>
+            <li><a href="#8-pingall">8. pingall</a></li>
+            <li><a href="#9-pingallfull">9. pingallfull</a></li>
+            <li><a href="#10-exit">10. exit</a></li>
+            <li><a href="#11-xterm--gterm">11. xterm / gterm</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -295,20 +303,8 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">
-                <img src="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg"
-                        srcset="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg 800w, /p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu13503813645109604192.jpg 1600w"
-                        width="800" 
-                        height="533" 
-                        loading="lazy"
-                        alt="Featured image of post Comparison Between SDN and Traditional Network" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -323,7 +319,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">Comparison Between SDN and Traditional Network</a>
+            <a href="/p/mininet-commands-and-parameters/">mininet commands and parameters</a>
         </h2>
     
         
@@ -345,7 +341,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 11, 2024</time>
+                <time class="article-time--published">Nov 16, 2024</time>
             </div>
         
 
@@ -375,77 +371,286 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
     <section class="article-content">
     
     
-    <h1 id="軟體定義網路sdn與傳統網路架構的比較">軟體定義網路（SDN）與傳統網路架構的比較
-</h1><p>原始連結: <a class="link" href="https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/r1WWxc8Ko"  target="_blank" rel="noopener"
-    >Link</a></p>
-<p><strong>Reference</strong>:</p>
+    <h1 id="軟體定義網路---mininet-基本指令與參數介紹-1-4">軟體定義網路 - Mininet 基本指令與參數介紹 (1-4)
+</h1><p>reference:</p>
 <ol>
-<li><a class="link" href="https://youtu.be/pIU-3gzlu9I"  target="_blank" rel="noopener"
-    >1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN</a></li>
-<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10267704"  target="_blank" rel="noopener"
-    >TCP/IP，網際網路的基礎通訊架構</a></li>
+<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10243780"  target="_blank" rel="noopener"
+    >Day10 菜鳥的Mininet紀錄-Mininet指令</a></li>
+<li><a class="link" href="https://www.kshuang.xyz/doku.php/ccis_lab:sdn:mininet:mininet_basic"  target="_blank" rel="noopener"
+    >Mininet基本演練
+</a></li>
+<li><a class="link" href="https://tingkuan.wordpress.com/2017/11/09/%E3%80%90mininet%E6%8C%87%E4%BB%A4%E4%BB%8B%E7%B4%B9%E3%80%91/"  target="_blank" rel="noopener"
+    >【Mininet指令介紹】</a></li>
+<li><a class="link" href="https://airtoncs.wordpress.com/2014/07/30/using-gnome-terminal-instead-of-xterm-on-mininet/"  target="_blank" rel="noopener"
+    >USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET</a></li>
 </ol>
-<h3 id="目錄">目錄
+<hr>
+<p>目錄:</p>
+<ol start="0">
+<li>Mininet 是甚麼</li>
+<li>Mininet 的特性</li>
+<li>基本 Mininet 指令</li>
+</ol>
+<!-- 3. Mininet 參數 -->
+<hr>
+<h3 id="0-mininet-是甚麼">0. Mininet 是甚麼
+</h3><p>Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (<a class="link" href="https://ithelp.ithome.com.tw/articles/10243028"  target="_blank" rel="noopener"
+    >reference</a>)</p>
+<h3 id="1-mininet-的特性">1. Mininet 的特性
 </h3><ol>
-<li>傳統網路架構概述</li>
-<li>SDN 嘗試解決的問題(傳統 Internet 的既有限制)</li>
+<li>支援OpenFlow</li>
+<li>可以自行定義複雜的拓樸</li>
+<li>因為是基於Linux開發的，所以具有高硬體移植性。</li>
+<li>具有高拓展性</li>
+<li>提供Python API，所以可以方必多人協同開發。</li>
 </ol>
-<h2 id="傳統網路架構">傳統網路架構
-</h2><p>在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在<strong>TCP/IP 協議</strong>基礎上的傳統網路架構誕生了。這種架構具備以下特徵：</p>
-<ol>
-<li>
-<p><strong>通訊協議的重要性</strong><br>
-兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。</p>
-</li>
-<li>
-<p><strong>網路架構形式</strong><br>
-網路中的設備可以採用以下兩種架構之一：</p>
-<ul>
-<li><strong>主從式架構（Client-Server）</strong>：由伺服器提供服務，客戶端發起請求。</li>
-<li><strong>對等式架構（Peer-to-Peer）</strong>：所有節點平等，彼此直接傳遞資料。</li>
-</ul>
-</li>
-<li>
-<p><strong>基礎設備需求</strong><br>
-傳輸資料需要依賴網路設備，例如：</p>
-<ul>
-<li><strong>交換器（Switch）</strong>：用於內部網路中的資料交換。</li>
-<li><strong>路由器（Router）</strong>：管理網路間的資料流動。</li>
-<li><strong>集線器</strong></li>
-</ul>
-</li>
-</ol>
-<p>這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。</p>
-<p><img src="https://ithelp.ithome.com.tw/upload/images/20210919/20128159lPmUQe3GJx.jpg"
+<h3 id="2-基本-mininet-指令">2. 基本 Mininet 指令
+</h3><h4 id="1-net">1. net
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/geqpnSh.png"
 	
 	
 	
 	loading="lazy"
 	
-		alt="圖1: 傳統網路架構示意圖"
+	
+></td>
+          <td>列出現在所有節點的資訊。<br> 在此可以看到: <br> <ul style='list-style-position:outside;'><li>有兩台虛擬機h1和h2<li>h1接上的是<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth1上。<li>h2接上的也是自己的<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth2上。</ul></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="2-nodes">2. nodes
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/Xw9LPrK.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>顯示可用的所有節點。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="3-links">3. links
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/RBn9O0s.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>列出目前的節點連接狀態。 後面的OK代表之間的連線正常。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="4-ports">4. ports
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/zVQNZvR.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>查看交換機連接的port</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="5-dump">5. dump
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/WuzcpLo.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>顯示各節點資訊 <br> pid -&gt; process id</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="6-intfs">6. intfs
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/qsbP3pb.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>列出各個設備所有的網路介面。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="7-iperf">7. iperf
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/j6e1RR1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>在兩個節點之間進行 iperf 的測試。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="8-pingall">8. pingall
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/EkVaeO5.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>ping 所有的相連的裝置。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="9-pingallfull">9. pingallfull
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/1L57NVb.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>顯示詳細資訊的pingall。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="10-exit">10. exit
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">圖片</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><img src="https://i.imgur.com/OvN8Jad.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></td>
+          <td>離開mininet。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="11-xterm--gterm">11. xterm / gterm
+</h4><p>使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。
+<img src="https://i.imgur.com/O4lEsOD.png"
+	
+	
+	
+	loading="lazy"
 	
 	
 ></p>
-<h2 id="sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題
-</h2><p>隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：</p>
-<h3 id="1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）
-</h3><p>傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：</p>
-<ul>
-<li>設備配置複雜且靜態。</li>
-<li>網路拓撲固定，難以快速響應變化的需求。</li>
-</ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。</p>
-<hr>
-<h3 id="2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）
-</h3><p>傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：</p>
-<ul>
-<li>與其他供應商設備的相容性低。</li>
-<li>原供應商的解決方案最適合原始架構，導致難以更換供應商。</li>
-</ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。</p>
+<p><img src="https://i.imgur.com/NEkxkFy.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<!-- ### 3. Mininet 參數
 
+#### 1. 總覽
+`mn [–topo] [–controller] [–link] [–switch] [–mac] [–nat] [–ipbase]`
+
+#### 2. topo -->
+<h6 id="tags-sdn-mininet">tags: <code>SDN</code> <code>mininet</code>
+</h6>
 </section>
 
 
@@ -533,12 +738,12 @@ SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對�
             
                 
 <article class="">
-    <a href="/p/mininet-commands-and-parameters/">
+    <a href="/p/sdn-concept/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">mininet commands and parameters</h2>
+            <h2 class="article-title">SDN concept</h2>
         </div>
     </a>
 </article>

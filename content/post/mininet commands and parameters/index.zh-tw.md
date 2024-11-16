@@ -1,3 +1,12 @@
++++
+date = '2024-11-16T13:51:21+08:00'
+title = 'mininet commands and parameters'
+categories = [
+    "SDN"
+]
++++
+
+
 # 軟體定義網路 - Mininet 基本指令與參數介紹 (1-4)
 
 reference:

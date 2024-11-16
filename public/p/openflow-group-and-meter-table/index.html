@@ -2,18 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"> <title>Comparison Between SDN and Traditional Network</title>
+name='description' content="軟體定義網路 - OpenFlow 中 Group / Meter Table (2-3)\rreference:\n2-3 GroupTable and MeterTable OpenFlow Switch Specification 目錄:\nGroup Table Meter Table 1. Group Table\r以下是 Group Table 的長相 :\nGroup Idantifier Group Type Counter Action Buckets &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; Group Identifier : 是一個 32 bit 的非負整數，用來識別用。 Group Type : 用來決定此 Group 的 semantic。 共有四種。 Counter : 用來計算此 Group 被使用幾次。 Action Buckets : 內含一堆 action bucket ，而每個 action bucket 都內含著一系列的 action 。 1.1 Group Type\r用來決定此 Group 的 semantic。 以下共有四種。\n"> <title>OpenFlow Group and Meter Table</title>
 
-<link rel="canonical" href="https://example.com/p/comparison-between-sdn-and-traditional-network/" />
+<link rel="canonical" href="https://example.com/p/openflow-group-and-meter-table/" />
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Comparison Between SDN and Traditional Network">
-<meta property='og:description' content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n">
-<meta property='og:url' content='https://example.com/p/comparison-between-sdn-and-traditional-network/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="OpenFlow Group and Meter Table">
+<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Group / Meter Table (2-3)\rreference:\n2-3 GroupTable and MeterTable OpenFlow Switch Specification 目錄:\nGroup Table Meter Table 1. Group Table\r以下是 Group Table 的長相 :\nGroup Idantifier Group Type Counter Action Buckets &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; Group Identifier : 是一個 32 bit 的非負整數，用來識別用。 Group Type : 用來決定此 Group 的 semantic。 共有四種。 Counter : 用來計算此 Group 被使用幾次。 Action Buckets : 內含一堆 action bucket ，而每個 action bucket 都內含著一系列的 action 。 1.1 Group Type\r用來決定此 Group 的 semantic。 以下共有四種。\n">
+<meta property='og:url' content='https://example.com/p/openflow-group-and-meter-table/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='article:modified_time' content='2024-11-11T22:11:02&#43;08:00'/><meta property='og:image' content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
-<meta name="twitter:title" content="Comparison Between SDN and Traditional Network">
-<meta name="twitter:description" content="軟體定義網路（SDN）與傳統網路架構的比較\r原始連結: Link\nReference:\n1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN TCP/IP，網際網路的基礎通訊架構 目錄\r傳統網路架構概述 SDN 嘗試解決的問題(傳統 Internet 的既有限制) 傳統網路架構\r在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在TCP/IP 協議基礎上的傳統網路架構誕生了。這種架構具備以下特徵：\n通訊協議的重要性\n兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。\n網路架構形式\n網路中的設備可以採用以下兩種架構之一：\n主從式架構（Client-Server）：由伺服器提供服務，客戶端發起請求。 對等式架構（Peer-to-Peer）：所有節點平等，彼此直接傳遞資料。 基礎設備需求\n傳輸資料需要依賴網路設備，例如：\n交換器（Switch）：用於內部網路中的資料交換。 路由器（Router）：管理網路間的資料流動。 集線器 這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。\nSDN 想解決網路設備的甚麼問題\r隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：\n1. 缺乏彈性（Inflexibility）\r傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：\n設備配置複雜且靜態。 網路拓撲固定，難以快速響應變化的需求。 SDN 的解決方式：\n通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。\n2. 供應商鎖定（Vendor Lock-In）\r傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：\n與其他供應商設備的相容性低。 原供應商的解決方案最適合原始架構，導致難以更換供應商。 SDN 的解決方式：\nSDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.com/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:02:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:02:21&#43;08:00'/>
+<meta name="twitter:title" content="OpenFlow Group and Meter Table">
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Group / Meter Table (2-3)\rreference:\n2-3 GroupTable and MeterTable OpenFlow Switch Specification 目錄:\nGroup Table Meter Table 1. Group Table\r以下是 Group Table 的長相 :\nGroup Idantifier Group Type Counter Action Buckets &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; &hellip; Group Identifier : 是一個 32 bit 的非負整數，用來識別用。 Group Type : 用來決定此 Group 的 semantic。 共有四種。 Counter : 用來計算此 Group 被使用幾次。 Action Buckets : 內含一堆 action bucket ，而每個 action bucket 都內含著一系列的 action 。 1.1 Group Type\r用來決定此 Group 的 semantic。 以下共有四種。\n">
     </head>
     <body class="
     article-page
@@ -274,14 +273,17 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <ol>
     <li>
       <ol>
-        <li><a href="#目錄">目錄</a></li>
-      </ol>
-    </li>
-    <li><a href="#傳統網路架構">傳統網路架構</a></li>
-    <li><a href="#sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題</a>
-      <ol>
-        <li><a href="#1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）</a></li>
-        <li><a href="#2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）</a></li>
+        <li><a href="#1-group-table">1. Group Table</a>
+          <ol>
+            <li><a href="#11-group-type">1.1 Group Type</a></li>
+            <li><a href="#12-小例子">1.2 小例子</a></li>
+          </ol>
+        </li>
+        <li><a href="#2-meter-table">2. Meter Table</a>
+          <ol>
+            <li><a href="#21-meter-table----meter-band">2.1 Meter Table &ndash; Meter Band</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -295,20 +297,8 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">
-                <img src="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg"
-                        srcset="/p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu1770527871647644221.jpg 800w, /p/comparison-between-sdn-and-traditional-network/pawel-czerwinski-8DujUEpxazE-unsplash_hu13503813645109604192.jpg 1600w"
-                        width="800" 
-                        height="533" 
-                        loading="lazy"
-                        alt="Featured image of post Comparison Between SDN and Traditional Network" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
@@ -323,7 +313,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/comparison-between-sdn-and-traditional-network/">Comparison Between SDN and Traditional Network</a>
+            <a href="/p/openflow-group-and-meter-table/">OpenFlow Group and Meter Table</a>
         </h2>
     
         
@@ -345,7 +335,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 11, 2024</time>
+                <time class="article-time--published">Nov 16, 2024</time>
             </div>
         
 
@@ -360,7 +350,7 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
 
 
                 <time class="article-time--reading">
-                    閱讀時間: 1 分鐘
+                    閱讀時間: 2 分鐘
                 </time>
             </div>
         
@@ -375,77 +365,183 @@ name='description' content="軟體定義網路（SDN）與傳統網路架構的�
     <section class="article-content">
     
     
-    <h1 id="軟體定義網路sdn與傳統網路架構的比較">軟體定義網路（SDN）與傳統網路架構的比較
-</h1><p>原始連結: <a class="link" href="https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/r1WWxc8Ko"  target="_blank" rel="noopener"
-    >Link</a></p>
-<p><strong>Reference</strong>:</p>
+    <h1 id="軟體定義網路---openflow-中-group--meter-table-2-3">軟體定義網路 - OpenFlow 中 Group / Meter Table (2-3)
+</h1><p>reference:</p>
 <ol>
-<li><a class="link" href="https://youtu.be/pIU-3gzlu9I"  target="_blank" rel="noopener"
-    >1-1 傳統網路的演進與 SDN 的崛起｜ Architecture of Traditional Network and Emergence of SDN</a></li>
-<li><a class="link" href="https://ithelp.ithome.com.tw/articles/10267704"  target="_blank" rel="noopener"
-    >TCP/IP，網際網路的基礎通訊架構</a></li>
+<li><a class="link" href="https://www.youtube.com/watch?v=kHdym8hVeFs"  target="_blank" rel="noopener"
+    >2-3 GroupTable and MeterTable</a></li>
+<li><a class="link" href="https://opennetworking.org/wp-content/uploads/2014/10/openflow-switch-v1.3.5.pdf"  target="_blank" rel="noopener"
+    >OpenFlow Switch Specification</a></li>
 </ol>
-<h3 id="目錄">目錄
-</h3><ol>
-<li>傳統網路架構概述</li>
-<li>SDN 嘗試解決的問題(傳統 Internet 的既有限制)</li>
-</ol>
-<h2 id="傳統網路架構">傳統網路架構
-</h2><p>在早期網際網路的發展中，為了讓多台電腦能夠彼此溝通，建立在<strong>TCP/IP 協議</strong>基礎上的傳統網路架構誕生了。這種架構具備以下特徵：</p>
-<ol>
-<li>
-<p><strong>通訊協議的重要性</strong><br>
-兩台電腦或多台電腦需要可以共同溝通時，必須要有相同的 protocol。</p>
-</li>
-<li>
-<p><strong>網路架構形式</strong><br>
-網路中的設備可以採用以下兩種架構之一：</p>
-<ul>
-<li><strong>主從式架構（Client-Server）</strong>：由伺服器提供服務，客戶端發起請求。</li>
-<li><strong>對等式架構（Peer-to-Peer）</strong>：所有節點平等，彼此直接傳遞資料。</li>
-</ul>
-</li>
-<li>
-<p><strong>基礎設備需求</strong><br>
-傳輸資料需要依賴網路設備，例如：</p>
-<ul>
-<li><strong>交換器（Switch）</strong>：用於內部網路中的資料交換。</li>
-<li><strong>路由器（Router）</strong>：管理網路間的資料流動。</li>
-<li><strong>集線器</strong></li>
-</ul>
-</li>
-</ol>
-<p>這些設備通常由網路供應商（ISP）部署於其資料中心內，構成整體的網路基礎設施。</p>
-<p><img src="https://ithelp.ithome.com.tw/upload/images/20210919/20128159lPmUQe3GJx.jpg"
-	
-	
-	
-	loading="lazy"
-	
-		alt="圖1: 傳統網路架構示意圖"
-	
-	
-></p>
-<h2 id="sdn-想解決網路設備的甚麼問題">SDN 想解決網路設備的甚麼問題
-</h2><p>隨著網路需求不斷增長，傳統網路架構的侷限逐漸明顯。**軟體定義網路（SDN）**作為新一代網路架構，針對以下問題提供了解決方法：</p>
-<h3 id="1-缺乏彈性inflexibility">1. 缺乏彈性（Inflexibility）
-</h3><p>傳統網路的硬體設備安裝後，通常很少進行調整或變更，原因在於：</p>
-<ul>
-<li>設備配置複雜且靜態。</li>
-<li>網路拓撲固定，難以快速響應變化的需求。</li>
-</ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-通過將 Control Plane 與 Data Plane 分離，SDN 可以更動態地控制網路流量。</p>
 <hr>
-<h3 id="2-供應商鎖定vendor-lock-in">2. 供應商鎖定（Vendor Lock-In）
-</h3><p>傳統網路設備通常由單一供應商提供，擴展時可能面臨以下問題：</p>
+<p>目錄:</p>
+<ol>
+<li><a class="link" href="#1-Group-Table" >Group Table</a></li>
+<li><a class="link" href="#2-Meter-Table" >Meter Table</a></li>
+</ol>
+<hr>
+<h3 id="1-group-table">1. Group Table
+</h3><p>以下是 Group Table 的長相 :</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Group Idantifier</th>
+          <th>Group Type</th>
+          <th>Counter</th>
+          <th>Action Buckets</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table></div>
 <ul>
-<li>與其他供應商設備的相容性低。</li>
-<li>原供應商的解決方案最適合原始架構，導致難以更換供應商。</li>
+<li>Group Identifier : 是一個 32 bit 的非負整數，用來識別用。</li>
+<li><a class="link" href="#11-Group-Type" >Group Type</a> : 用來決定此 Group 的 semantic。 共有四種。</li>
+<li>Counter : 用來計算此 Group 被使用幾次。</li>
+<li>Action Buckets : 內含一堆 action bucket ，而每個 action bucket 都內含著一系列的 <a class="link" href="https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/rylyjGUni#switch-processing"  target="_blank" rel="noopener"
+    >action</a> 。</li>
 </ul>
-<p><strong>SDN 的解決方式</strong>：<br>
-SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對單一供應商的依賴。</p>
-
+<h4 id="11-group-type">1.1 Group Type
+</h4><p>用來決定此 Group 的 semantic。 以下共有四種。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>名稱</th>
+          <th>switch 支援程度</th>
+          <th>解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Indirect</td>
+          <td>必須支援</td>
+          <td><ul style='list-style-position:outside;'><li>去執行 action bucket 裡面的動作。</li><li>此組的 action bucket 只會有一個。</li> </ul></td>
+      </tr>
+      <tr>
+          <td>All</td>
+          <td>必須支援</td>
+          <td><ul style='list-style-position:outside;'> <li>去執行 action bucket 內<strong>所有的</strong>動作。</li> <li>此組的 action bucket 可以有很多個。</li> </ul></td>
+      </tr>
+      <tr>
+          <td>Select</td>
+          <td>不一定支援</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>fast failover</td>
+          <td>不一定支援</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="12-小例子">1.2 小例子
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Group Idantifier</th>
+          <th>Group Type</th>
+          <th>Counter</th>
+          <th>Action Buckets</th>
+          <th>動作解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>7</td>
+          <td>Indirect</td>
+          <td>&hellip;</td>
+          <td>{output 3}</td>
+          <td>從 output 3 丟出去</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>All</td>
+          <td>&hellip;</td>
+          <td>{output 1}, {output 3}</td>
+          <td>all 會複製封包， 分別在 port 1/3 各傳送一份。</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>Select</td>
+          <td>&hellip;</td>
+          <td>{output 1}, {output 3}</td>
+          <td>封包會選擇 port 1/3 的其中一個送出去。</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>fast failover</td>
+          <td>&hellip;</td>
+          <td>{output 1}, {output 3}</td>
+          <td>預設會先傳送某一個 port ，若發現預設 port 的有問題時，會在不經過 controller 的情況下，直接使用 action bucket 另外一個 port 傳送。</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>※ failover : 故障排除</p>
+<h3 id="2-meter-table">2. Meter Table
+</h3><p>以下是 Meter Table 的長相 :</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Meter Identifier</th>
+          <th>Meter Band</th>
+          <th>Counter</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&hellip;</td>
+          <td>{&hellip;},{&hellip;}</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>{&hellip;}</td>
+          <td>&hellip;</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="21-meter-table----meter-band">2.1 Meter Table &ndash; Meter Band
+</h4><p>其中 Meter Band 可以再放大成底下的樣子 :</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Band Type</th>
+          <th>Rate</th>
+          <th>Burst</th>
+          <th>Counters</th>
+          <th>Type specific arguments</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>指定封包要做怎麼樣的處理</td>
+          <td>指定的速率</td>
+          <td>自己設定的單位</td>
+          <td>計數器</td>
+          <td>其他參數</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Meter Band 在 Meter Table 代表的是當此類的封包達到一定的速率後要如何處理，因此會記錄一些重要資訊。</p>
+<p>Band Type 在此有兩種處理方式 :</p>
+<ol>
+<li>drop : 在封包超過一定流量時，直接將封包丟棄。</li>
+<li>dscp_remark : 當封包超過一定流量時，將封包的優先度降低。</li>
+</ol>
+<h6 id="tags-sdn">tags: <code>SDN</code>
+</h6>
 </section>
 
 
@@ -494,19 +590,6 @@ SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對�
             
                 
 <article class="">
-    <a href="/p/openflow-group-and-meter-table/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">OpenFlow Group and Meter Table</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
     <a href="/p/openflow-ports/">
         
         
@@ -539,6 +622,19 @@ SDN 採用開放式標準，允許不同品牌的設備共同運作，減少對�
 
         <div class="article-details">
             <h2 class="article-title">mininet commands and parameters</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/sdn-concept/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SDN concept</h2>
         </div>
     </a>
 </article>

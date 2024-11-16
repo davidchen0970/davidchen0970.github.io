@@ -1,3 +1,10 @@
++++
+date = '2024-11-16T14:05:21+08:00'
+title = 'OpenFlow Protocol'
+categories = [
+    "SDN"
+]
++++
 # 軟體定義網路 - OpenFlow Protocol (2-4)
 
 reference:
