@@ -1,3 +1,12 @@
++++
+date = '2024-11-18T02:14:38+08:00'
+title = 'PRP、HSR 與 FRER'
+image = "pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg"
+categories = [
+    "Protocol"
+]
++++
+
 # 軟體定義網路 - ryu 的第一個程式  (3-2-1)
 
 reference:
