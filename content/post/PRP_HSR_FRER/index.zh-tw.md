@@ -1,7 +1,7 @@
 +++
 date = '2024-11-08T16:14:38+08:00'
 title = 'PRP、HSR 與 FRER'
-image = "pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg"
+image = 'pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg'
 categories = [
     "Protocol"
 ]

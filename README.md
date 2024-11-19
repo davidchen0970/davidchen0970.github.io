@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Hi! I'm David Chen 👋</h1>
   <p>🌟 A passionate developer with experience in <b>JavaScript</b> and <b>Python</b>.</p>
-  <p> [my website link](https://davidchen0970.github.io/) </p>
+  <p> my website link: https://davidchen0970.github.io/ </p>
 </div>
 
 ---
