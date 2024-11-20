@@ -1,6 +1,6 @@
 +++
 date = '2024-11-20T17:38:06+08:00'
-title = 'MPTCP_exp2'
+title = 'MPTCP exp2'
 image = "pawel-czerwinski-V10CV7MBdhc-unsplash.jpg"
 categories = [
     "MPTCP","Protocol"
@@ -10,16 +10,16 @@ description = "修改原本的 router ，改成相同網域的 switch"
 
 # MPTCP - 實驗記錄 2
 
-## 1. 實驗名稱
+## 實驗名稱
 
 MPTCP 三路徑實驗 - 相同網域使用 switch 
 
 
-## 2. 實驗目標
+## 實驗目標
 
 利用 MPTCP 做出在兩個 host 中利用一個 switch 實作出具有三條連線的拓樸。
 
-## 3. 實驗方法
+## 實驗方法
 
 1. 利用 script 建立拓樸
 
@@ -126,7 +126,7 @@ MPTCP 三路徑實驗 - 相同網域使用 switch
     ```
 2. 執行實驗
 
-## 4. 實驗結果、分析
+## 實驗結果、分析
 
 1. 沒開 MPTCP
 
@@ -136,11 +136,11 @@ MPTCP 三路徑實驗 - 相同網域使用 switch
 
    ![圖3: 開啟 MPTCP 之後的實驗結果](/result_with_MPTCP.png)
 
-## 5. 結論
+## 結論
 
 MPTCP 可以在相同 LAN 當中進行多路徑傳輸，提升網路傳輸效率。
 
-## 6. 參考資料
+## 參考資料
 
 1. [mptcp 协议参数解析](https://blog.csdn.net/asddasads/article/details/110678627)
 2. [MPTCP 协议在 mininet 中的性能测试](https://blog.csdn.net/asddasads/article/details/110678705)

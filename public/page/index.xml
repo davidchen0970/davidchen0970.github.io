@@ -56,7 +56,8 @@
 &lt;h2 id=&#34;專案經驗&#34;&gt;專案經驗
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/wordConverter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Word Converter&lt;/a&gt; : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式&lt;/li&gt;
+    &gt;Word Converter&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://davidchen0970.github.io/wordConverter/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;網站連結&lt;/a&gt; : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/Graphics-Programing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Graphics Programing&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://github.com/davidchen0970/Graphic-programming-language&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Graphic Programming Language&lt;/a&gt; : 大二專題 - 計算機圖學&lt;/li&gt;
