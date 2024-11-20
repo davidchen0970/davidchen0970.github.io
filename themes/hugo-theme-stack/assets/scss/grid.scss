@@ -54,7 +54,8 @@
     }
 
     @include respond(xl) {
-      max-width: 1280px;
+      // max-width: 1280px;
+      max-width: 1900px;
     }
   }
 }
