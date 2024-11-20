@@ -6,7 +6,7 @@ name='description' content="解決 Hugo 部署失敗的問題：本機正常但 
 
 <link rel="canonical" href="https://example.com/p/solve-hugo-push-issue/" />
 
-<link rel="stylesheet" href="/scss/style.min.df33fb90baa3a667a958b4f5b6d88148589cc2d9a7ec56a714270cf097d1f5f5.css"><meta property='og:title' content="Solve hugo push issue">
+<link rel="stylesheet" href="/scss/style.min.e557ee4a20ea9104f986e0b7a2b8061b393bf7c2c8ee89b26c7a4c1cb322b60d.css"><meta property='og:title' content="Solve hugo push issue">
 <meta property='og:description' content="解決 Hugo 部署失敗的問題：本機正常但 GitHub 無法顯示\r使用 Hugo 建立靜態網站時，有時可能會遇到這樣的情況：在本機使用 hugo server 測試時一切正常，但部署到 GitHub Pages 上後，網站卻出現錯誤或無法正確顯示。本文將說明這個問題的可能原因，並提供簡單的解決方法。\n問題表現方式\r在本機使用 hugo server 指令時，網站可以正常運行，所有內容正確顯示。 將網站的內容推送（push）到 GitHub 後，部署的網站卻出現問題： 網頁完全無法出現 問題原因分析\r這種情況可能與 Hugo 在生成靜態網站時未正確清理輸出目錄有關。Hugo 預設會將生成的檔案輸出到 public 目錄，如果該目錄中存在殘留的舊檔案，這些檔案可能會被推送到 GitHub，導致部署的網站出現問題。\n解決方法\r要解決這個問題，可以嘗試以下步驟：\n清理輸出目錄並重新生成網站 使用 hugo --cleanDestinationDir 指令，這會在生成靜態網站時自動清理輸出目錄，確保僅保留最新的檔案。\n1 hugo --cleanDestinationDir 此指令確保 public 目錄中的舊檔案被移除，避免部署過時或衝突的資源。\n重新部署到 GitHub 在執行清理和重新生成後，將更新後的檔案推送到 GitHub：\n1 2 3 git add . git commit -m &#34;Fix deployment issue&#34; git push origin main 檢查部署狀況 完成推送後，檢查 GitHub Pages 部署狀態，確認網站是否恢復正常。\n">
 <meta property='og:url' content='https://example.com/p/solve-hugo-push-issue/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
