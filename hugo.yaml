@@ -50,6 +50,7 @@ permalinks:
   page: /:slug/
 
 params:
+  enableGitInfo : true
   mainSections:
     - post
   featuredImageField: image
@@ -204,7 +205,13 @@ params:
     cover:
       enabled: true
     content:
-      enabled: true
+      enabled: false
+  render:
+    image:
+      externalLink:
+        enabled: true
+  
+
 
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu

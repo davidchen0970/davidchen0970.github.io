@@ -93,20 +93,22 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This setting ensures that auto-formatting is disabled for Handlebars files, identified by &lt;code&gt;.hbs&lt;/code&gt; or &lt;code&gt;.handlebars&lt;/code&gt; extensions.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd.png&#34;
-	width=&#34;633&#34;
-	height=&#34;482&#34;
-	srcset=&#34;https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd_hu8239465718293841369.png 480w, https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd_hu5232790001785036436.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Figure 1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;131&#34;
-		data-flex-basis=&#34;315px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd.png&#34;
+    width=&#34;633&#34;
+    height=&#34;482&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;Figure 1&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;131&#34;
+        data-flex-basis=&#34;315px&#34;
+    
+&gt;
+&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -126,20 +128,22 @@
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Create topology using a script&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/mptcp-exp1/topo.png&#34;
-	width=&#34;1351&#34;
-	height=&#34;285&#34;
-	srcset=&#34;https://example.com/p/mptcp-exp1/topo_hu16803539351573969268.png 480w, https://example.com/p/mptcp-exp1/topo_hu10515431294449368284.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Figure 1: Experiment Topology&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;474&#34;
-		data-flex-basis=&#34;1137px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/mptcp-exp1/topo.png&#34;
+    width=&#34;1351&#34;
+    height=&#34;285&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;Figure 1: Experiment Topology&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;474&#34;
+        data-flex-basis=&#34;1137px&#34;
+    
+&gt;
+&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -433,37 +437,41 @@
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Without MPTCP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/mptcp-exp1/result_without_MPTCP.png&#34;
-	width=&#34;1282&#34;
-	height=&#34;1095&#34;
-	srcset=&#34;https://example.com/p/mptcp-exp1/result_without_MPTCP_hu4517821490470557055.png 480w, https://example.com/p/mptcp-exp1/result_without_MPTCP_hu17110751667852302139.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Figure 2: Results without MPTCP&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;117&#34;
-		data-flex-basis=&#34;280px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/mptcp-exp1/result_without_MPTCP.png&#34;
+    width=&#34;1282&#34;
+    height=&#34;1095&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;Figure 2: Results without MPTCP&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;117&#34;
+        data-flex-basis=&#34;280px&#34;
+    
+&gt;
+&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;With MPTCP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/mptcp-exp1/result_with_MPTCP.png&#34;
-	width=&#34;1282&#34;
-	height=&#34;1095&#34;
-	srcset=&#34;https://example.com/p/mptcp-exp1/result_with_MPTCP_hu3697326743680049867.png 480w, https://example.com/p/mptcp-exp1/result_with_MPTCP_hu11550123445469188098.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Figure 3: Results with MPTCP&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;117&#34;
-		data-flex-basis=&#34;280px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/mptcp-exp1/result_with_MPTCP.png&#34;
+    width=&#34;1282&#34;
+    height=&#34;1095&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;Figure 3: Results with MPTCP&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;117&#34;
+        data-flex-basis=&#34;280px&#34;
+    
+&gt;
+&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;5-conclusion&#34;&gt;5. Conclusion
@@ -490,20 +498,22 @@
         <guid>https://example.com/en/p/sierpinski-gasket/</guid>
         <description>&lt;img src="https://example.com/p/sierpinski-gasket/pawel-czerwinski-yUkcmOU07CQ-unsplash.jpg" alt="Featured image of post Sierpinski Gasket" /&gt;&lt;h1 id=&#34;exploring-the-sierpinski-gasket&#34;&gt;Exploring the Sierpinski Gasket
 &lt;/h1&gt;&lt;p&gt;In the vast field of mathematics, fractal geometry has attracted countless people&amp;rsquo;s attention with its unique self-similarity and infinite complexity. Among them, the &lt;strong&gt;Sierpinski Gasket&lt;/strong&gt; (also known as the Sierpinski Triangle) stands as a classic representative of fractal geometry, showcasing the infinite beauty hidden within simple rules. Today, we will dive deep into the Sierpinski Gasket, exploring its construction methods, mathematical properties, and real-world applications.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket.png&#34;
-	width=&#34;592&#34;
-	height=&#34;583&#34;
-	srcset=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu6900824192516665066.png 480w, https://example.com/p/sierpinski-gasket/Sierpinski_Gasket_hu17873769084831844443.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Sierpinski Gasket Triangle&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;101&#34;
-		data-flex-basis=&#34;243px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/sierpinski-gasket/Sierpinski_Gasket.png&#34;
+    width=&#34;592&#34;
+    height=&#34;583&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;Sierpinski Gasket Triangle&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;101&#34;
+        data-flex-basis=&#34;243px&#34;
+    
+&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;what-is-the-sierpinski-gasket&#34;&gt;What is the Sierpinski Gasket?
 &lt;/h2&gt;&lt;p&gt;The Sierpinski Gasket, also known as the Sierpinski Triangle, is a fractal structure proposed by Polish mathematician Wacław Sierpiński in 1915.&lt;/p&gt;
 &lt;h2 id=&#34;methods-for-constructing-the-sierpinski-gasket&#34;&gt;Methods for Constructing the Sierpinski Gasket

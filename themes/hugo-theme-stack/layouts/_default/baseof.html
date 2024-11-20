@@ -2,9 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}">
     <head>
         {{- partial "head/head.html" . -}}
+        <script src="{{ "js/external-image-resize.js" | relURL }}"></script>
         {{- block "head" . -}}{{ end }}
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">
+
         {{- partial "head/colorScheme" . -}}
 
         {{/* The container is wider when there's any activated widget */}}
