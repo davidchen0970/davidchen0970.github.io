@@ -42,7 +42,7 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 ## 專案經驗
 
-- [Word Converter](https://github.com/davidchen0970/wordConverter) : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式
+- [Word Converter](https://github.com/davidchen0970/wordConverter) / [網站連結](https://davidchen0970.github.io/wordConverter/) : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式
 - [Graphics Programing](https://github.com/davidchen0970/Graphics-Programing) / [Graphic Programming Language](https://github.com/davidchen0970/Graphic-programming-language) : 大二專題 - 計算機圖學
 - [line bot - 資工系帳號](https://github.com/davidchen0970/line-bot) : 第一個 LINE BOT 機器人，以資工系為背景
 
