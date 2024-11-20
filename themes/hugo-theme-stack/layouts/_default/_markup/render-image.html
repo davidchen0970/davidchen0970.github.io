@@ -5,37 +5,42 @@
 {{- $Height := 0 -}}
 {{- $Srcset := "" -}}
 
-{{/* SVG and external images won't work with gallery layout, because their width and height attributes are unknown */}}
+{{/* 判斷內部圖片與外部圖片 */}}
+{{- $isExternal := or (ne (path.Ext .Destination) ".svg") (ne (path.Ext .Destination) ".jpg") }}
+
 {{- $galleryImage := false -}}
 
-{{- if $image -}}
-	{{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
-	{{- $Permalink = $image.RelPermalink -}}
+{{- if $image -}} 
+    {{- $Permalink = $image.RelPermalink -}}
+    {{- $Width = $image.Width -}}
+    {{- $Height = $image.Height -}}
+    {{- $galleryImage = true -}}
 
-	{{- if $notSVG -}}
-		{{- $Width = $image.Width -}}
-		{{- $Height = $image.Height -}}
-		{{- $galleryImage = true -}}
-
-		{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
-			{{- $small := $image.Resize `480x` -}}
-			{{- $big := $image.Resize `1024x` -}}
-			{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
-		{{- end -}}
-	{{- end -}}
+    {{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+        {{- $small := $image.Resize `480x` -}}
+        {{- $big := $image.Resize `1024x` -}}
+        {{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+    {{- end -}}
+{{- else if $isExternal -}} 
+    <!-- 處理外部圖片 -->
+    {{- $Permalink = .Destination -}} <!-- 直接使用外部圖片的 URL -->
+    {{- $galleryImage = true -}} 
+    {{- $Width = 800 -}} <!-- 設定一個預設寬度 -->
+    {{- $Height = 600 -}} <!-- 設定一個預設高度 -->
 {{- end -}}
 
+<!-- 設置圖片標籤 -->
 <img src="{{ $Permalink }}"
-	{{ with $Width }}width="{{ . }}"{{ end }}
-	{{ with $Height }}height="{{ . }}"{{ end }}
-	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
-	loading="lazy"
-	{{ with $alt }}
-		alt="{{ . }}"
-	{{ end }}
-	{{ if $galleryImage }}
-		class="gallery-image" 
-		data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
-		data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
-	{{ end }}
+    {{ with $Width }}width="{{ . }}"{{ end }}
+    {{ with $Height }}height="{{ . }}"{{ end }}
+    {{ with $Srcset }}srcset="{{ . }}"{{ end }}
+    loading="lazy"
+    {{ with $alt }}
+        alt="{{ . }}"
+    {{ end }}
+    {{ if $galleryImage }}
+        class="gallery-image" 
+        data-flex-grow="{{ div (mul $Width 100) $Height }}"
+        data-flex-basis="{{ div (mul $Width 240) $Height }}px"
+    {{ end }}
 >

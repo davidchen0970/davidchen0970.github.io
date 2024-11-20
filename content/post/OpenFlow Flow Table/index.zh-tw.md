@@ -30,18 +30,14 @@ reference:
 ---
 
 ### 1. Open Flow 的架構
+![圖1 : OpenFlow 架構示意圖](https://www.cables-solutions.com/wp-content/uploads/2018/07/what-is-openflow-switch.png)  
 
-| 圖片 | 說明 | 
-| :--------: | -------- |
-| ![]( https://www.cables-solutions.com/wp-content/uploads/2018/07/what-is-openflow-switch.png)  |   <ul style='list-style-position:outside;'><li>在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。<li>Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。</ul>   | 
+<ul style='list-style-position:outside;'><li>在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。<li>Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。</ul> 
 
 #### 1.1 Flow Table 的 Pipeline
+![圖2: OpenFlow Pipeline 簡易流程圖](https://www.researchgate.net/publication/318652506/figure/fig1/AS:519482711998464@1500865738587/Flow-Table-Packet-Processing-Pipeline-2.png) 
 
-|  | 
-| -------- | 
-| ![]( https://www.researchgate.net/publication/318652506/figure/fig1/AS:519482711998464@1500865738587/Flow-Table-Packet-Processing-Pipeline-2.png)  | 
-| ![](https://i.imgur.com/MC05Xma.jpg)
-  | 
+![圖3: OpenFlow Pipeline 詳細流程圖](https://i.imgur.com/MC05Xma.jpg) 
 
 ### 2. Flow Table 和 Flow Entry
 
@@ -69,10 +65,10 @@ reference:
 
 #### 3.2 Flow Table 管線處理流程
 
-|圖片| 解釋|
-|:---:|---|
-|![](https://i.imgur.com/JnHJVhP.jpg)|<ul style='list-style-position:outside;'><li>封包一定要從 table 0 開始比對。</li> <li>**由 priority 高的開始比對**。</li> </ul>|
+![圖4: Flow Table 管線處理流程](https://i.imgur.com/JnHJVhP.jpg)
 
+- 封包一定要從 table 0 開始比對。
+- **由 priority 高的開始比對**。
 
 #### 3.3 Table Miss Entry
 

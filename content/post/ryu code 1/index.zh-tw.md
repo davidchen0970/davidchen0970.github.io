@@ -1,6 +1,6 @@
 +++
 date = '2024-11-18T02:14:38+08:00'
-title = 'PRP、HSR 與 FRER'
+title = '軟體定義網路 - ryu 的第一個程式'
 image = "pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg"
 categories = [
     "Protocol"
@@ -57,10 +57,10 @@ sudo apt install ryu-bin
 ### 2. 測試 ryu
 
 在終端機輸入以下指令:
-```bash
+```
 sudo ryu-manager ryu.app.simple_switch_13
 ```
-![](https://i.imgur.com/6HAQZmI.png)
+![圖1: 測試結果](https://i.imgur.com/6HAQZmI.png)
 
 如果有上述結果代表正常執行。
 
