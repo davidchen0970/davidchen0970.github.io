@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow概述｜OpenFlow Overview 區分OpenFlow定義各Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure 1. OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個flow被定義為:兩台電腦所連接的一個 port)。 1.1 OpenFlow 交換器的基本架構\r圖片 說明 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out) switch processing\rmatch : 封包進交換器之後會去跟flow table做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 1.2 controller 和 switch 之間的連線方式\r圖片 連線方式 In-Band Out-of-Band In-Band : 指的是 controller 和 switch 的控制封包走的路徑是和一般封包一樣，因此控制封包會使用 TLS 加密。會使用的port : LOCAL port。 Out-of-Band : 代表有特殊路徑 (port) 來傳送控制封包。會使用的 port : CONTROLLER port。 2. OpenFlow Ports\r2.1 OpenFlow Ports\r實體埠 (physical port) : 在乙太網路的交換器上，會直接對應到實際的port。另外可以指定 Queue ID 來區隔 QoS。 邏輯埠 (logical port) : 保留給設備商，讓設備商可以自行定義。這種邏輯性的埠指的是與硬體上無關，而是由軟體定義並且管理的埠，這些埠不見得都是由OpenFlow協定所建立，也可能是其他方式所產生的。 可以指定 Tunnel ID。 保留埠 (reversed port) ： 也是一種 Logical port ，由 OpenFlow 先定義好。(LOCAL、NORMAL、FLOOD可以不支援。) 2.2 Port Queues\r指的是在某一個 physical port 裡面，設計很多個 queue 來做 QoS ，而不同的 Queue 會有不同的優先權。\n"> <title>OpenFlow Ports</title>
+name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構\r主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n"> <title>OpenFlow Ports</title>
 
 <link rel="canonical" href="https://example.com/p/openflow-ports/" />
 
 <link rel="stylesheet" href="/scss/style.min.e557ee4a20ea9104f986e0b7a2b8061b393bf7c2c8ee89b26c7a4c1cb322b60d.css"><meta property='og:title' content="OpenFlow Ports">
-<meta property='og:description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow概述｜OpenFlow Overview 區分OpenFlow定義各Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure 1. OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個flow被定義為:兩台電腦所連接的一個 port)。 1.1 OpenFlow 交換器的基本架構\r圖片 說明 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out) switch processing\rmatch : 封包進交換器之後會去跟flow table做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 1.2 controller 和 switch 之間的連線方式\r圖片 連線方式 In-Band Out-of-Band In-Band : 指的是 controller 和 switch 的控制封包走的路徑是和一般封包一樣，因此控制封包會使用 TLS 加密。會使用的port : LOCAL port。 Out-of-Band : 代表有特殊路徑 (port) 來傳送控制封包。會使用的 port : CONTROLLER port。 2. OpenFlow Ports\r2.1 OpenFlow Ports\r實體埠 (physical port) : 在乙太網路的交換器上，會直接對應到實際的port。另外可以指定 Queue ID 來區隔 QoS。 邏輯埠 (logical port) : 保留給設備商，讓設備商可以自行定義。這種邏輯性的埠指的是與硬體上無關，而是由軟體定義並且管理的埠，這些埠不見得都是由OpenFlow協定所建立，也可能是其他方式所產生的。 可以指定 Tunnel ID。 保留埠 (reversed port) ： 也是一種 Logical port ，由 OpenFlow 先定義好。(LOCAL、NORMAL、FLOOD可以不支援。) 2.2 Port Queues\r指的是在某一個 physical port 裡面，設計很多個 queue 來做 QoS ，而不同的 Queue 會有不同的優先權。\n">
+<meta property='og:description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構\r主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n">
 <meta property='og:url' content='https://example.com/p/openflow-ports/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:02:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:02:21&#43;08:00'/>
 <meta name="twitter:title" content="OpenFlow Ports">
-<meta name="twitter:description" content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow概述｜OpenFlow Overview 區分OpenFlow定義各Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure 1. OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個flow被定義為:兩台電腦所連接的一個 port)。 1.1 OpenFlow 交換器的基本架構\r圖片 說明 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out) switch processing\rmatch : 封包進交換器之後會去跟flow table做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 1.2 controller 和 switch 之間的連線方式\r圖片 連線方式 In-Band Out-of-Band In-Band : 指的是 controller 和 switch 的控制封包走的路徑是和一般封包一樣，因此控制封包會使用 TLS 加密。會使用的port : LOCAL port。 Out-of-Band : 代表有特殊路徑 (port) 來傳送控制封包。會使用的 port : CONTROLLER port。 2. OpenFlow Ports\r2.1 OpenFlow Ports\r實體埠 (physical port) : 在乙太網路的交換器上，會直接對應到實際的port。另外可以指定 Queue ID 來區隔 QoS。 邏輯埠 (logical port) : 保留給設備商，讓設備商可以自行定義。這種邏輯性的埠指的是與硬體上無關，而是由軟體定義並且管理的埠，這些埠不見得都是由OpenFlow協定所建立，也可能是其他方式所產生的。 可以指定 Tunnel ID。 保留埠 (reversed port) ： 也是一種 Logical port ，由 OpenFlow 先定義好。(LOCAL、NORMAL、FLOOD可以不支援。) 2.2 Port Queues\r指的是在某一個 physical port 裡面，設計很多個 queue 來做 QoS ，而不同的 Queue 會有不同的優先權。\n"><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rreference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性\rOpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構\r主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n"><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -271,41 +271,41 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#openflow-的特性">OpenFlow 的特性</a>
       <ol>
-        <li><a href="#1-openflow-的特性">1. OpenFlow 的特性</a>
+        <li><a href="#openflow-交換器的基本架構">OpenFlow 交換器的基本架構</a>
           <ol>
-            <li><a href="#11-openflow-交換器的基本架構">1.1 OpenFlow 交換器的基本架構</a></li>
-            <li><a href="#12-controller-和-switch-之間的連線方式">1.2 controller 和 switch 之間的連線方式</a></li>
+            <li><a href="#switch-processing">Switch Processing</a></li>
           </ol>
         </li>
-        <li><a href="#2-openflow-ports">2. OpenFlow Ports</a>
-          <ol>
-            <li><a href="#21-openflow-ports">2.1 OpenFlow Ports</a></li>
-            <li><a href="#22-port-queues">2.2 Port Queues</a></li>
-          </ol>
-        </li>
-        <li><a href="#3-各種保留埠的特性">3. 各種保留埠的特性</a>
-          <ol>
-            <li><a href="#31-all-required">3.1 ALL (Required)</a></li>
-            <li><a href="#32-controller-required">3.2 CONTROLLER (Required)</a></li>
-            <li><a href="#33-table-reqiured">3.3 TABLE (Reqiured)</a></li>
-            <li><a href="#34-in_port-required">3.4 IN_PORT (Required)</a></li>
-            <li><a href="#36-local-optional">3.6 LOCAL (Optional)</a></li>
-            <li><a href="#37-normal-optional">3.7 NORMAL (Optional)</a></li>
-            <li><a href="#37-flood-optional">3.7 FLOOD (Optional)</a></li>
-          </ol>
-        </li>
-        <li><a href="#4-multiple-controller">4. Multiple Controller</a>
-          <ol>
-            <li><a href="#41-控制器對交換器的三種模式">4.1 控制器對交換器的三種模式</a></li>
-          </ol>
-        </li>
-        <li><a href="#5-controller-connection-faliure">5. Controller Connection Faliure</a>
-          <ol>
-            <li><a href="#51-交換器失去與控制器的連線的兩種方式">5.1 交換器失去與控制器的連線的兩種方式</a></li>
-          </ol>
-        </li>
+        <li><a href="#controller-和-switch-之間的連線方式">controller 和 switch 之間的連線方式</a></li>
+      </ol>
+    </li>
+    <li><a href="#openflow-ports">OpenFlow Ports</a>
+      <ol>
+        <li><a href="#openflow-ports-1">OpenFlow Ports</a></li>
+        <li><a href="#port-queues">Port Queues</a></li>
+      </ol>
+    </li>
+    <li><a href="#各種保留埠的特性">各種保留埠的特性</a>
+      <ol>
+        <li><a href="#all-required">ALL (Required)</a></li>
+        <li><a href="#controller-required">CONTROLLER (Required)</a></li>
+        <li><a href="#table-reqiured">TABLE (Reqiured)</a></li>
+        <li><a href="#in_port-required">IN_PORT (Required)</a></li>
+        <li><a href="#local-optional">LOCAL (Optional)</a></li>
+        <li><a href="#normal-optional">NORMAL (Optional)</a></li>
+        <li><a href="#flood-optional">FLOOD (Optional)</a></li>
+      </ol>
+    </li>
+    <li><a href="#multiple-controller">Multiple Controller</a>
+      <ol>
+        <li><a href="#控制器對交換器的三種模式">控制器對交換器的三種模式</a></li>
+      </ol>
+    </li>
+    <li><a href="#controller-connection-faliure">Controller Connection Faliure</a>
+      <ol>
+        <li><a href="#交換器失去與控制器的連線的兩種方式">交換器失去與控制器的連線的兩種方式</a></li>
       </ol>
     </li>
   </ol>
@@ -387,7 +387,7 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
     <section class="article-content">
     
     
-    <h1 id="軟體定義網路---openflow-ports-介紹--2-1">軟體定義網路 - OpenFlow Ports 介紹  (2-1)
+    <h1 id="軟體定義網路---openflow-ports-介紹-2-1">軟體定義網路 - OpenFlow Ports 介紹 (2-1)
 </h1><p>reference:</p>
 <ol>
 <li><a class="link" href="https://en.wikipedia.org/wiki/OpenFlow"  target="_blank" rel="noopener"
@@ -395,9 +395,9 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
 <li><a class="link" href="https://zh.wikipedia.org/zh-tw/OpenFlow"  target="_blank" rel="noopener"
     >OpenFlow</a></li>
 <li><a class="link" href="https://www.youtube.com/watch?v=6ZEqeWEAnL4"  target="_blank" rel="noopener"
-    >2-1 OpenFlow概述｜OpenFlow Overview</a></li>
+    >2-1 OpenFlow 概述｜ OpenFlow Overview</a></li>
 <li><a class="link" href="https://www.netadmin.com.tw/netadmin/zh-tw/technology/FA061FD873454FB2934151DB0A6C89D1?page=2"  target="_blank" rel="noopener"
-    >區分OpenFlow定義各Port 弄懂軟體定義網路交換器</a></li>
+    >區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器</a></li>
 </ol>
 <hr>
 <p>目錄:</p>
@@ -409,29 +409,22 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
 <li>Controller Connection Faliure</li>
 </ol>
 <hr>
-<h3 id="1-openflow-的特性">1. OpenFlow 的特性
-</h3><ol>
+<h2 id="openflow-的特性">OpenFlow 的特性
+</h2><ol>
 <li>OpenFlow 是一個在<strong>資料連接層</strong>的通訊協定。</li>
 <li>可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。</li>
-<li>OpenFlow 位於 TCP 之上，在TCP port 6653 (舊版:6633)監聽要建立連接的交換器。</li>
-<li>轉發規則以 Flow 為單位 (一個flow被定義為:兩台電腦所連接的一個 port)。</li>
+<li>OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。</li>
+<li>轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。</li>
 </ol>
-<h4 id="11-openflow-交換器的基本架構">1.1 OpenFlow 交換器的基本架構
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<h3 id="openflow-交換器的基本架構">OpenFlow 交換器的基本架構
+</h3><p>
 <img src="https://i.imgur.com/kPEyRcA.png"
     width="800"
     height="600"
     
     loading="lazy"
+    
+        alt="圖1: OpenFlow 交換器的基本架構"
     
     
         class="gallery-image" 
@@ -439,14 +432,11 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要動作:<br><ul style='list-style-position:outside;'><li>欄位匹配<li>匹配後動作<li>訪問控制器(packet in / out)</ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h6 id="switch-processing">switch processing
-</h6><ul>
-<li>match : 封包進交換器之後會去跟flow table做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。</li>
+</p>
+<p>主要動作:<br><ul style='list-style-position:outside;'><li>欄位匹配<li>匹配後動作<li>訪問控制器(packet in / out)</ul></p>
+<h4 id="switch-processing">Switch Processing
+</h4><ul>
+<li>match : 封包進交換器之後會去跟 flow table 做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。</li>
 <li>action : 當比對到之後，就會執行之後要做的事情。</li>
 <li>packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。</li>
 <li>packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式:
@@ -456,22 +446,15 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
 </ol>
 </li>
 </ul>
-<h4 id="12-controller-和-switch-之間的連線方式">1.2 controller 和 switch 之間的連線方式
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>連線方式</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<h3 id="controller-和-switch-之間的連線方式">controller 和 switch 之間的連線方式
+</h3><p>
 <img src="https://i.imgur.com/6hzuv5N.png"
     width="800"
     height="600"
     
     loading="lazy"
+    
+        alt="圖2"
     
     
         class="gallery-image" 
@@ -479,22 +462,24 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td><ul style='list-style-position:outside;'><li>In-Band<li> Out-of-Band</li></ul></td>
-      </tr>
-  </tbody>
-</table></div>
+</p>
+<p>連線方式:</p>
 <ul>
-<li>In-Band : 指的是 controller 和 switch 的控制封包走的路徑是和一般封包一樣，因此控制封包會使用 TLS 加密。會使用的port : <strong>LOCAL port</strong>。</li>
+<li>In-Band : 指的是 controller 和 switch 的控制封包走的路徑是和一般封包一樣，因此控制封包會使用 TLS 加密。會使用的 port : <strong>LOCAL port</strong>。</li>
 <li>Out-of-Band : 代表有特殊路徑 (port) 來傳送控制封包。會使用的 port : <strong>CONTROLLER port</strong>。</li>
 </ul>
-<h3 id="2-openflow-ports">2. OpenFlow Ports
-</h3><h4 id="21-openflow-ports">2.1 OpenFlow Ports
-</h4><ol>
-<li>實體埠 (physical port) : 在乙太網路的交換器上，會直接對應到實際的port。另外可以指定 Queue ID 來區隔 QoS。</li>
-<li>邏輯埠 (logical port) : 保留給設備商，讓設備商可以自行定義。這種邏輯性的埠指的是與硬體上無關，而是由軟體定義並且管理的埠，這些埠不見得都是由OpenFlow協定所建立，也可能是其他方式所產生的。 可以指定 Tunnel ID。</li>
-<li>保留埠 (reversed port) ： 也是一種 Logical port ，由 OpenFlow 先定義好。(LOCAL、NORMAL、FLOOD可以不支援。)
-
+<h2 id="openflow-ports">OpenFlow Ports
+</h2><h3 id="openflow-ports-1">OpenFlow Ports
+</h3><ol>
+<li>
+<p>實體埠 (physical port) : 在乙太網路的交換器上，會直接對應到實際的 port。另外可以指定 Queue ID 來區隔 QoS。</p>
+</li>
+<li>
+<p>邏輯埠 (logical port) : 保留給設備商，讓設備商可以自行定義。這種邏輯性的埠指的是與硬體上無關，而是由軟體定義並且管理的埠，這些埠不見得都是由 OpenFlow 協定所建立，也可能是其他方式所產生的。 可以指定 Tunnel ID。</p>
+</li>
+<li>
+<p>保留埠 (reversed port) ： 也是一種 Logical port ，由 OpenFlow 先定義好。(LOCAL、NORMAL、FLOOD 可以不支援。)</p>
+<p>
 <img src="https://i.imgur.com/Hn3jPde.png"
     width="800"
     height="600"
@@ -507,22 +492,14 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
+</p>
 </li>
 </ol>
-<h4 id="22-port-queues">2.2 Port Queues
-</h4><p>指的是在某一個 physical port 裡面，設計很多個 queue 來做 QoS ，而不同的 Queue 會有不同的優先權。</p>
-<h3 id="3-各種保留埠的特性">3. 各種保留埠的特性
-</h3><h4 id="31-all-required">3.1 ALL (Required)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<h3 id="port-queues">Port Queues
+</h3><p>指的是在某一個 physical port 裡面，設計很多個 queue 來做 QoS ，而不同的 Queue 會有不同的優先權。</p>
+<h2 id="各種保留埠的特性">各種保留埠的特性
+</h2><h3 id="all-required">ALL (Required)
+</h3><p>
 <img src="https://i.imgur.com/jlF1GOy.png"
     width="800"
     height="600"
@@ -535,22 +512,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>對所有的port傳送封包，除了 ingress port(也就是輸入封包的port)</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="32-controller-required">3.2 CONTROLLER (Required)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>對所有的 port 傳送封包，除了 ingress port(也就是輸入封包的 port)</li> </ul></p>
+<h3 id="controller-required">CONTROLLER (Required)
+</h3><p>
 <img src="https://i.imgur.com/Y9b9zmn.png"
     width="800"
     height="600"
@@ -563,22 +528,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>是 Out-of-Band 的傳輸模式，由特殊的 port 互相傳輸。</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="33-table-reqiured">3.3 TABLE (Reqiured)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>是 Out-of-Band 的傳輸模式，由特殊的 port 互相傳輸。</li> </ul></p>
+<h3 id="table-reqiured">TABLE (Reqiured)
+</h3><p>
 <img src="https://i.imgur.com/UbRVrID.png"
     width="800"
     height="600"
@@ -591,22 +544,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>主要用於 packet out，即如果 controller 對 switch 的指令是要 switch <a class="link" href="#switch-processing" >再次比對封包時</a>，就會使用到此封包。</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="34-in_port-required">3.4 IN_PORT (Required)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>主要用於 packet out，即如果 controller 對 switch 的指令是要 switch <a class="link" href="#switch-processing" >再次比對封包時</a>，就會使用到此封包。</li> </ul></p>
+<h3 id="in_port-required">IN_PORT (Required)
+</h3><p>
 <img src="https://i.imgur.com/2SfxJuB.png"
     width="800"
     height="600"
@@ -619,22 +560,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>會將封包回傳給原本輸入進封包的 port 。</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="36-local-optional">3.6 LOCAL (Optional)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>會將封包回傳給原本輸入進封包的 port 。</li> </ul></p>
+<h3 id="local-optional">LOCAL (Optional)
+</h3><p>
 <img src="https://i.imgur.com/BwyW79a.png"
     width="800"
     height="600"
@@ -647,22 +576,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>是 In-Band 的傳輸模式，因此會使用 TLS 加密。</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="37-normal-optional">3.7 NORMAL (Optional)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>是 In-Band 的傳輸模式，因此會使用 TLS 加密。</li> </ul></p>
+<h3 id="normal-optional">NORMAL (Optional)
+</h3><p>
 <img src="https://i.imgur.com/T0zRi3S.png"
     width="800"
     height="600"
@@ -675,22 +592,10 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>當此port 所傳送的封包所要使用的協定不是OpenFlow時，就會傳送此訊號。</li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h4 id="37-flood-optional">3.7 FLOOD (Optional)
-</h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>當此 port 所傳送的封包所要使用的協定不是 OpenFlow 時，就會傳送此訊號。</li> </ul></p>
+<h3 id="flood-optional">FLOOD (Optional)
+</h3><p>
 <img src="https://i.imgur.com/hai16CV.png"
     width="800"
     height="600"
@@ -703,26 +608,22 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1)\rre
         data-flex-basis="320px"
     
 >
-</td>
-          <td>主要特點:<br><ul style='list-style-position:outside;'><li>當廣播的動作要由其他協定而不是 OpenFlow 做時會使用到此功能。 </li> </ul></td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="4-multiple-controller">4. Multiple Controller
-</h3><h4 id="41-控制器對交換器的三種模式">4.1 控制器對交換器的三種模式
-</h4><ol>
+</p>
+<p>主要特點:<br><ul style='list-style-position:outside;'><li>當廣播的動作要由其他協定而不是 OpenFlow 做時會使用到此功能。 </li> </ul></p>
+<h2 id="multiple-controller">Multiple Controller
+</h2><h3 id="控制器對交換器的三種模式">控制器對交換器的三種模式
+</h3><ol>
 <li>master : 控制器具有完全的控制權 (且唯一)</li>
 <li>slave : 控制器只會向交換器詢問資料</li>
 <li>equal : 控制器具有完全的控制權 (可不唯一)</li>
 </ol>
-<h3 id="5-controller-connection-faliure">5. Controller Connection Faliure
-</h3><h4 id="51-交換器失去與控制器的連線的兩種方式">5.1 交換器失去與控制器的連線的兩種方式
-</h4><ol>
-<li>fail secure : 交換器依照失去連接前的flow table 正常運作，但不對控制器再發送任何訊號。</li>
+<h2 id="controller-connection-faliure">Controller Connection Faliure
+</h2><h3 id="交換器失去與控制器的連線的兩種方式">交換器失去與控制器的連線的兩種方式
+</h3><ol>
+<li>fail secure : 交換器依照失去連接前的 flow table 正常運作，但不對控制器再發送任何訊號。</li>
 <li>fail standalone : 交換器回到 legacy (non-OpenFlow) 模式運作。</li>
 </ol>
-<h6 id="tags-sdn">tags: <code>SDN</code>
-</h6>
+
 </section>
 
 
