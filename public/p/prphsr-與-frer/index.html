@@ -6,7 +6,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
 
 <link rel="canonical" href="https://example.com/p/prphsr-%E8%88%87-frer/" />
 
-<link rel="stylesheet" href="/scss/style.min.e557ee4a20ea9104f986e0b7a2b8061b393bf7c2c8ee89b26c7a4c1cb322b60d.css"><meta property='og:title' content="PRP、HSR 與 FRER">
+<link rel="stylesheet" href="/scss/style.min.3c139cf48963206f9cc803992dc39b384e9e1ac8149ef90847ac716ee6db5969.css"><meta property='og:title' content="PRP、HSR 與 FRER">
 <meta property='og:description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析\r這篇文章由 AI 自動產生，尚在整理當中\n在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。\n這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。\nPRP：Parallel Redundancy Protocol\rPRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。\nPRP 的基本概念\r雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構\rPRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。\n由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。\n">
 <meta property='og:url' content='https://example.com/p/prphsr-%E8%88%87-frer/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
@@ -630,6 +630,30 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
     <h2 class="section-title">相關文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mptcp-exp3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mptcp-exp3/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu9663845483930274570.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post MPTCP exp3"
+                        
+                        data-hash="md5-UbR0DO4y4jl60JrSeFV0&#43;A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MPTCP exp3</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
