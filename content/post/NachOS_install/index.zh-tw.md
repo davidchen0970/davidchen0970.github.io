@@ -176,3 +176,4 @@ cd userprog
 1. [HackMD 筆記](https://hackmd.io/@r83V7BYGQYqK6_RFjL0vbA/B1Et9W_8w)
 2. [Sean Peng 的 HackMD 筆記](https://hackmd.io/@seanpeng12/HkrEHYsu5)
 3. [JeffProgrammer 部落格](https://jeffprogrammer.wordpress.com/2016/10/31/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1-nachos-%E7%B0%A1%E4%BB%8B/)
+4. [Nachos 介紹 - 朱痕染跡璧有瑕](https://yalanin.medium.com/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1-%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%9A%84%E7%B5%90%E6%A7%8B-1e08c0e5f8dc)
