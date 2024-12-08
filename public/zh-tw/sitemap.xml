@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2024-12-04T01:03:11+08:00</lastmod>
+    <lastmod>2024-12-08T14:42:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,11 +20,11 @@
                 href="https://example.com/"
                 />
   </url><url>
-    <loc>https://example.com/p/nachos-install-note/</loc>
-    <lastmod>2024-12-04T01:03:11+08:00</lastmod>
+    <loc>https://example.com/p/operating_system_ch6/</loc>
+    <lastmod>2024-12-08T14:42:36+08:00</lastmod>
   </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2024-12-04T01:03:11+08:00</lastmod>
+    <lastmod>2024-12-08T14:42:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -35,6 +35,9 @@
                 hreflang="zh-tw"
                 href="https://example.com/post/"
                 />
+  </url><url>
+    <loc>https://example.com/p/nachos-install-note/</loc>
+    <lastmod>2024-12-04T01:03:11+08:00</lastmod>
   </url><url>
     <loc>https://example.com/categories/</loc>
     <lastmod>2024-12-03T22:12:01+08:00</lastmod>

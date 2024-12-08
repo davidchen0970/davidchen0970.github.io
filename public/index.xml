@@ -7,7 +7,212 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
-        <lastBuildDate>Wed, 04 Dec 2024 01:03:11 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Dec 2024 14:42:36 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Operating_System_CH6</title>
+        <link>https://example.com/p/operating_system_ch6/</link>
+        <pubDate>Sun, 08 Dec 2024 14:42:36 +0800</pubDate>
+        
+        <guid>https://example.com/p/operating_system_ch6/</guid>
+        <description>&lt;h1 id=&#34;作業系統-ch6&#34;&gt;作業系統 CH6
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;CH6 : Process Synchronization
+&lt;ul&gt;
+&lt;li&gt;process Communication 運作的兩種方式&lt;/li&gt;
+&lt;li&gt;Race Condition Problem&lt;/li&gt;
+&lt;li&gt;Race Condition 的求解的兩大策略
+&lt;ul&gt;
+&lt;li&gt;Disable interrupt&lt;/li&gt;
+&lt;li&gt;Critical section Design&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;C.S. Design 基本認知&lt;/li&gt;
+&lt;li&gt;正確的 C.S. Design 該滿足的3個 Criteria
+&lt;ol&gt;
+&lt;li&gt;mutual exclusion&lt;/li&gt;
+&lt;li&gt;progress&lt;/li&gt;
+&lt;li&gt;bounded waiting&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;C.S. Design 方法
+&lt;ul&gt;
+&lt;li&gt;SW solution
+&lt;ul&gt;
+&lt;li&gt;2 processes : peterson&amp;rsquo;s solution/ (Dekker&amp;rsquo;s solution)&lt;/li&gt;
+&lt;li&gt;n processes : Bakery&amp;rsquo;s algorithm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HW 指令支援
+&lt;ul&gt;
+&lt;li&gt;test-and-set&lt;/li&gt;
+&lt;li&gt;swap&lt;/li&gt;
+&lt;li&gt;semaphore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;semaphore&lt;/li&gt;
+&lt;li&gt;monitor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;著名的同步問題的解決方法
+&lt;ul&gt;
+&lt;li&gt;Producer - consumer problem&lt;/li&gt;
+&lt;li&gt;Reader / Writer Problem&lt;/li&gt;
+&lt;li&gt;The sleeping Barber&lt;/li&gt;
+&lt;li&gt;The Dinner philosophers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Message Passing 技術
+&lt;ul&gt;
+&lt;li&gt;Direct vs. Indirect、send、receive 指令配合 Blocking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;process-communication-運作的兩種方式&#34;&gt;Process Communication 運作的兩種方式
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Shared Memory&lt;/li&gt;
+&lt;li&gt;Message Passing&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;項目&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;Shared Memory&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;Message Passing&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;定義&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;透過共享變數溝通。&lt;/td&gt;
+          &lt;td&gt;建立連結後傳輸 Message。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;特色&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Programmer 負責，OS 提供共享區域。&lt;/td&gt;
+          &lt;td&gt;適合連結管理與例外處理。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;快速，適合大量資訊，OS 無需額外支援。&lt;/td&gt;
+          &lt;td&gt;簡單易用，僅需 send/receive 指令。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;需互斥控制，防止競態條件。&lt;/td&gt;
+          &lt;td&gt;需 kernel 介入，速度較慢。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;share-memory-共享記憶體&#34;&gt;Share Memory (共享記憶體)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定義：&lt;/strong&gt; 透過對共享變數的存取，讓 Process 之間進行溝通。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特色：&lt;/strong&gt; 由 &lt;strong&gt;Programmer 負責實作&lt;/strong&gt;，OS 只需提供共享記憶體區域。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;優點：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS 無需額外支援，僅需提供共享記憶體功能即可。&lt;/li&gt;
+&lt;li&gt;適合 &lt;strong&gt;大量資訊傳輸&lt;/strong&gt;，溝通速度快，因為不需要 Kernel 介入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺點：&lt;/strong&gt; 需要對共享變數進行 &lt;strong&gt;互斥控制&lt;/strong&gt;，避免 Race Condition 的發生。&lt;/p&gt;
+&lt;h3 id=&#34;message-passing-訊息傳遞&#34;&gt;Message Passing (訊息傳遞)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定義：&lt;/strong&gt; Process 通過以下步驟進行通訊：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;建立 &lt;strong&gt;Communication Link&lt;/strong&gt;（通訊連結）&lt;/li&gt;
+&lt;li&gt;傳輸訊息&lt;/li&gt;
+&lt;li&gt;釋放連結&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;特色：&lt;/strong&gt; 適用於 &lt;strong&gt;Communication Link 管理&lt;/strong&gt; 及某些例外處理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;優點：&lt;/strong&gt; &lt;strong&gt;程式編寫簡單，&lt;/strong&gt; Programmer 無需撰寫額外控制程式，僅需使用 &lt;code&gt;send&lt;/code&gt; 和 &lt;code&gt;receive&lt;/code&gt; 指令。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;缺點：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需 &lt;strong&gt;Kernel 介入&lt;/strong&gt;，溝通速度較慢。&lt;/li&gt;
+&lt;li&gt;適用於 &lt;strong&gt;少量訊息&lt;/strong&gt; 的傳輸。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-2-race-condition&#34;&gt;6-2 Race Condition
+&lt;/h2&gt;&lt;p&gt;定義 :
+在 Shared Memory Communication 的環境中，若未對共享變數 (Shared Variable) 提供互斥存取(mutaul exclusive accrss)的控制，共享變數最終結果會因為 Process 之間的交錯執行順序不同而有所不同，這種的 Data inconsistency 稱為 Race Condition。&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;https://miro.medium.com/v2/resize:fit:720/format:webp/1*cbekIFfmP0JV5zrzZTQMkw.png&#34;
+    width=&#34;800&#34;
+    height=&#34;600&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;圖1 : Race Condition 程式碼所造成的不同情況&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;133&#34;
+        data-flex-basis=&#34;320px&#34;
+    
+&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;image reference : &lt;a class=&#34;link&#34; href=&#34;https://medium.com/%E7%A8%8B%E5%BC%8F%E4%BA%BA%E6%9C%88%E5%88%8A/%E7%AB%B6%E7%88%AD%E6%83%85%E6%B3%81%E7%9A%84c%E8%AA%9E%E8%A8%80%E7%AF%84%E4%BE%8B-1a88df31c20e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Example Code: &lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@91UWhfTFSYS7v0K-bURk6A/HyJwG2zV1g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Race Condition 實驗記錄&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;race-condition-的求解的兩大策略&#34;&gt;Race Condition 的求解的兩大策略
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Disable interrupt&lt;/li&gt;
+&lt;li&gt;Critical section Design&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(略)&lt;/p&gt;
+&lt;h2 id=&#34;cs-design-基本認知&#34;&gt;C.S. Design 基本認知
+&lt;/h2&gt;&lt;h2 id=&#34;正確的-cs-design-該滿足的3個-criteria&#34;&gt;正確的 C.S. Design 該滿足的3個 Criteria
+&lt;/h2&gt;&lt;h3 id=&#34;mutual-exclusion&#34;&gt;Mutual Exclusion
+&lt;/h3&gt;&lt;h3 id=&#34;progress&#34;&gt;Progress
+&lt;/h3&gt;&lt;h3 id=&#34;bounded-waiting&#34;&gt;Bounded Waiting
+&lt;/h3&gt;&lt;h2 id=&#34;cs-design-方法&#34;&gt;C.S. Design 方法
+&lt;/h2&gt;&lt;p&gt;
+&lt;img src=&#34;https://example.com/p/operating_system_ch6/C_S_Design_Architecture.jpg&#34;
+    width=&#34;2388&#34;
+    height=&#34;1201&#34;
+    
+    loading=&#34;lazy&#34;
+    
+        alt=&#34;圖2 : C_S_Design_Architecture&#34;
+    
+    
+        class=&#34;gallery-image&#34; 
+        data-flex-grow=&#34;198&#34;
+        data-flex-basis=&#34;477px&#34;
+    
+&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;sw-solution&#34;&gt;SW Solution
+&lt;/h3&gt;&lt;h4 id=&#34;2-processes-petersons-solution--dekkers-solution&#34;&gt;2 Processes: Peterson&amp;rsquo;s Solution / Dekker&amp;rsquo;s Solution
+&lt;/h4&gt;&lt;h4 id=&#34;n-processes-bakerys-algorithm&#34;&gt;n Processes: Bakery&amp;rsquo;s Algorithm
+&lt;/h4&gt;&lt;h3 id=&#34;hw-指令支援&#34;&gt;HW 指令支援
+&lt;/h3&gt;&lt;h4 id=&#34;test-and-set&#34;&gt;Test-and-Set
+&lt;/h4&gt;&lt;h4 id=&#34;swap&#34;&gt;Swap
+&lt;/h4&gt;&lt;h4 id=&#34;semaphore&#34;&gt;Semaphore
+&lt;/h4&gt;&lt;h3 id=&#34;semaphore-1&#34;&gt;Semaphore
+&lt;/h3&gt;&lt;h3 id=&#34;monitor&#34;&gt;Monitor
+&lt;/h3&gt;&lt;h2 id=&#34;著名的同步問題的解決方法&#34;&gt;著名的同步問題的解決方法
+&lt;/h2&gt;&lt;h3 id=&#34;producer-consumer-problem&#34;&gt;Producer-Consumer Problem
+&lt;/h3&gt;&lt;h3 id=&#34;readerwriter-problem&#34;&gt;Reader/Writer Problem
+&lt;/h3&gt;&lt;h3 id=&#34;the-sleeping-barber&#34;&gt;The Sleeping Barber
+&lt;/h3&gt;&lt;h3 id=&#34;the-dining-philosophers&#34;&gt;The Dining Philosophers
+&lt;/h3&gt;&lt;h2 id=&#34;message-passing-技術&#34;&gt;Message Passing 技術
+&lt;/h2&gt;&lt;h3 id=&#34;direct-vs-indirect&#34;&gt;Direct vs. Indirect
+&lt;/h3&gt;&lt;h3 id=&#34;send--receive-指令配合-blocking&#34;&gt;Send / Receive 指令配合 Blocking
+&lt;/h3&gt;&lt;h2 id=&#34;reference&#34;&gt;reference
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ptt.cc/bbs/graduate/M.1552651462.A.B84.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;大碩 資工研究所 筆記&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ithelp.ithome.com.tw/articles/10278735&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Day-26 Process Synchronization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/%E7%A8%8B%E5%BC%8F%E4%BA%BA%E6%9C%88%E5%88%8A/%E7%AB%B6%E7%88%AD%E6%83%85%E6%B3%81%E7%9A%84c%E8%AA%9E%E8%A8%80%E7%AF%84%E4%BE%8B-1a88df31c20e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;競爭情況的C語言範例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@WenHsuanYu/OS-Ch6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;作業系統Ch6: Process Synchronization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Operating System Concepts&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>NachOS Install Note</title>
         <link>https://example.com/p/nachos-install-note/</link>
         <pubDate>Wed, 04 Dec 2024 01:03:11 +0800</pubDate>
