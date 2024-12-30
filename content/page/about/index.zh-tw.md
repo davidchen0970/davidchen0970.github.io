@@ -40,7 +40,7 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 [![Leetcode Stats](https://leetcard.jacoblin.cool/david0970?ext=contest)](https://leetcode.com/david0970)
 
-## 專案經驗
+## 各式大小專案與小品
 
 - [Word Converter](https://github.com/davidchen0970/wordConverter) / [網站連結](https://davidchen0970.github.io/wordConverter/) : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式
 - [Graphics Programing](https://github.com/davidchen0970/Graphics-Programing) / [Graphic Programming Language](https://github.com/davidchen0970/Graphic-programming-language) : 大二專題 - 計算機圖學
