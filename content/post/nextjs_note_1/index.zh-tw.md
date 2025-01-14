@@ -3,9 +3,6 @@ date = '2025-01-14T14:12:45+08:00'
 title = 'Nextjs_note_1'
 +++
 
-當然可以！以下是基於你所問的問題，所寫的博客範本：
-
----
 
 ## 如何在 Next.js 中建立新專案？
 
@@ -24,18 +21,18 @@ Next.js 是一個非常受歡迎的 React 應用框架，它提供了許多強�
    npx create-next-app@latest
    ```
 
-2. 接下來，工具會提示你輸入專案名稱（例如 `my-next-app`），然後自動創建一個新的資料夾並初始化專案。
+2. 接下來，工具會提示你輸入專案名稱（例如 `my-app-method-1`），然後自動創建一個新的資料夾並初始化專案。
 
 3. 若要指定專案名稱，可以直接執行：
 
    ```bash
-   npx create-next-app@latest my-next-app
+   npx create-next-app@latest my-app-method-1
    ```
 
 4. 完成後，你只需要進入專案資料夾並啟動開發伺服器：
 
    ```bash
-   cd my-next-app
+   cd my-app-method-1
    npm run dev
    ```
 
@@ -57,13 +54,13 @@ Next.js 是一個非常受歡迎的 React 應用框架，它提供了許多強�
 3. 如果你想指定專案名稱，可以直接執行：
 
    ```bash
-   yarn create next-app my-next-app
+   yarn create next-app my-app-method-2
    ```
 
 4. 創建完成後，同樣進入專案資料夾並啟動開發伺服器：
 
    ```bash
-   cd my-next-app
+   cd my-app-method-2
    yarn dev
    ```
 
@@ -152,7 +149,3 @@ npx create-next-app@latest my-next-app -e with-typescript
 無論你是 Next.js 的新手，還是有經驗的開發者，這些方法都能幫助你快速建立一個新的專案。使用 `create-next-app` 是最簡單和最推薦的方式，特別是對於初學者來說。如果你需要更多的定制化設置，可以選擇手動設置專案或者使用模板來快速啟動。
 
 無論你選擇哪一種方式，Next.js 都會幫助你快速構建現代化的 React 應用，並享受高效的開發流程。祝你開發順利！
-
---- 
-
-這篇博客提供了多種方法來建立 Next.js 專案，並且能夠讓讀者根據自己的需求選擇最合適的方式。希望這篇文章對你有幫助！
