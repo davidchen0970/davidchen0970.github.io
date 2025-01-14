@@ -13,9 +13,7 @@
         <pubDate>Tue, 14 Jan 2025 14:12:45 +0800</pubDate>
         
         <guid>https://example.com/p/nextjs_note_1/</guid>
-        <description>&lt;p&gt;當然可以！以下是基於你所問的問題，所寫的博客範本：&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;如何在-nextjs-中建立新專案&#34;&gt;如何在 Next.js 中建立新專案？
+        <description>&lt;h2 id=&#34;如何在-nextjs-中建立新專案&#34;&gt;如何在 Next.js 中建立新專案？
 &lt;/h2&gt;&lt;p&gt;Next.js 是一個非常受歡迎的 React 應用框架，它提供了許多強大的功能，比如伺服器端渲染（SSR）、靜態網站生成（SSG）、API 路由等。建立 Next.js 專案的方式有很多種，無論是使用官方的創建工具，還是手動設置，都能幫助你快速上手這個框架。&lt;/p&gt;
 &lt;p&gt;在這篇文章中，我將介紹如何使用不同的方法來創建一個新的 Next.js 專案，讓你根據自己的需求選擇最適合的方式。&lt;/p&gt;
 &lt;h3 id=&#34;方法一使用-create-next-app最簡單方法&#34;&gt;方法一：使用 &lt;code&gt;create-next-app&lt;/code&gt;（最簡單方法）
@@ -34,7 +32,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;接下來，工具會提示你輸入專案名稱（例如 &lt;code&gt;my-next-app&lt;/code&gt;），然後自動創建一個新的資料夾並初始化專案。&lt;/p&gt;
+&lt;p&gt;接下來，工具會提示你輸入專案名稱（例如 &lt;code&gt;my-app-method-1&lt;/code&gt;），然後自動創建一個新的資料夾並初始化專案。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;若要指定專案名稱，可以直接執行：&lt;/p&gt;
@@ -43,7 +41,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx create-next-app@latest my-next-app
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx create-next-app@latest my-app-method-1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -55,7 +53,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-next-app
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-app-method-1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run dev
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -89,7 +87,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn create next-app my-next-app
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn create next-app my-app-method-2
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -101,7 +99,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-next-app
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-app-method-2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn dev
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -238,8 +236,6 @@
 &lt;h3 id=&#34;結語&#34;&gt;結語
 &lt;/h3&gt;&lt;p&gt;無論你是 Next.js 的新手，還是有經驗的開發者，這些方法都能幫助你快速建立一個新的專案。使用 &lt;code&gt;create-next-app&lt;/code&gt; 是最簡單和最推薦的方式，特別是對於初學者來說。如果你需要更多的定制化設置，可以選擇手動設置專案或者使用模板來快速啟動。&lt;/p&gt;
 &lt;p&gt;無論你選擇哪一種方式，Next.js 都會幫助你快速構建現代化的 React 應用，並享受高效的開發流程。祝你開發順利！&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;這篇博客提供了多種方法來建立 Next.js 專案，並且能夠讓讀者根據自己的需求選擇最合適的方式。希望這篇文章對你有幫助！&lt;/p&gt;
 </description>
         </item>
         <item>
