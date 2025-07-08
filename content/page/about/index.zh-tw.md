@@ -16,16 +16,13 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 ---
 
-施工中，施工中，施工中...
-
 ## 關於我
 
-你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。
+大家好！我是一名畢業於資工所的新鮮人。目前正在補充社會歷練中XD
 
 ## 教育背景
 
-- **學校名稱**：目前就讀於國立嘉義大學資工系
-- **學位**：資工系碩士 (就讀中)
+- **學位**：國立嘉義大學資工所
 - **在校成就**：
   - 111年第三屆有事青年行動競賽
   - [2022 ITSA 全國大專校院程式設計極客挑戰賽 - 佳作](https://www.itsa.org.tw/itsacontest/2022/register/index.php)
@@ -46,7 +43,7 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 - [Graphics Programing](https://github.com/davidchen0970/Graphics-Programing) / [Graphic Programming Language](https://github.com/davidchen0970/Graphic-programming-language) : 大二專題 - 計算機圖學
 - [line bot - 資工系帳號](https://github.com/davidchen0970/line-bot) : 第一個 LINE BOT 機器人，以資工系為背景
 - [QRcodeDecoder](https://davidchen0970.github.io/QRcodeDecoder/) / [網站連結](https://davidchen0970.github.io/QRcodeDecoder/)：可以利用此程式碼產生特殊的 QRcode，並且掃描後會解析，將多個連結轉換成單一QRCode。
-
+- [LeetCode 解題筆記](https://hackmd.io/@DSArecorder/r1TkJ8WFR)：紀錄我和道友的 Leetcode 筆記，期望有一天可以過五關斬六將（？
 
 ## 聯絡方式
 

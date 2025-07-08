@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異\r1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景\r智慧型手機（Apple、Samsung、LG 等）\r支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL）\r提供更高的頻寬。 與 5G 標準的關聯\r作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference\rMPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation "> <title>MPTCP introduction</title>
+name='description' content="MPTCP 是什麼 多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異 1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景 智慧型手機（Apple、Samsung、LG 等） 支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL） 提供更高的頻寬。 與 5G 標準的關聯 作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference MPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation "> <title>MPTCP introduction</title>
 
 <link rel="canonical" href="http://localhost:1313/p/mptcp-introduction/" />
 
-<link rel="stylesheet" href="/scss/style.min.e557ee4a20ea9104f986e0b7a2b8061b393bf7c2c8ee89b26c7a4c1cb322b60d.css"><meta property='og:title' content="MPTCP introduction">
-<meta property='og:description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異\r1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景\r智慧型手機（Apple、Samsung、LG 等）\r支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL）\r提供更高的頻寬。 與 5G 標準的關聯\r作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference\rMPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation ">
+<link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="MPTCP introduction">
+<meta property='og:description' content="MPTCP 是什麼 多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異 1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景 智慧型手機（Apple、Samsung、LG 等） 支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL） 提供更高的頻寬。 與 5G 標準的關聯 作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference MPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation ">
 <meta property='og:url' content='http://localhost:1313/p/mptcp-introduction/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-11T16:36:46&#43;08:00'/><meta property='article:modified_time' content='2024-11-11T16:36:46&#43;08:00'/>
 <meta name="twitter:title" content="MPTCP introduction">
-<meta name="twitter:description" content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異\r1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景\r智慧型手機（Apple、Samsung、LG 等）\r支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL）\r提供更高的頻寬。 與 5G 標準的關聯\r作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference\rMPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation "><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="MPTCP 是什麼 多路徑 TCP（Multipath TCP, MPTCP）是一種能夠同時透過不同路徑為單一連線交換資料的技術。\n基於 RFC-6824，由 IETF 多路徑 TCP 工作組（MPTCP Working Group）制定與提供支援。\nTCP 和 MPTCP 的差異 1 2 3 4 5 6 7 8 9 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | Options (if any) | +-------------------+-------------------+-------------------+----------------+ 1 2 3 4 5 6 7 8 9 10 11 12 13 +-------------------+-------------------+-------------------+-------------------+ | Source Port | Destination Port | Sequence Number | +-------------------+-------------------+-------------------+-------------------+ | Acknowledgment Number | +-------+-------+-----------+-------------------+-------------------------+ | Offset| Resrvd| Flags (TCP Control Bits) | Window Size | +-------+-------+-------------------+-------------------+-------------------+ | Checksum | Urgent Pointer | MPTCP Options | +-------------------+-------------------+----------------------------------+ | Subtype | Data Sequence Number (if applicable) | +-------------------+-------------------+----------------------------------+ | Data-Level Checksum (if applicable) | Add Address (if any) | +--------------------------------------------+----------------------------+ 多路徑 TCP 的應用場景 智慧型手機（Apple、Samsung、LG 等） 支援故障轉移 / “走出範圍”情境。 提供更高的頻寬。 家用閘道器（例如 LTE + DSL） 提供更高的頻寬。 與 5G 標準的關聯 作為 5G 標準的一部分，實現流量導向、切換及分流功能（ATSSS）。 reference MPTCP Multipath TCP Upstreaming MultiPath TCP - Linux Kernel implementation "><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
                     
                     
                         
-                        <img src="/img/avatar_hu8426949080533301442.png" width="300"
+                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -483,15 +483,15 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
             
                 
 <article class="has-image">
-    <a href="/p/mptcp_exp2/">
+    <a href="/p/mptcp-exp3/">
         
         
             <div class="article-image">
-                <img src="/p/mptcp_exp2/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8.51b4740cee32e2397ad09ad2785574f8_hu9663845483930274570.jpg" 
+                <img src="/p/mptcp-exp3/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post MPTCP_exp2"
+                        alt="Featured image of post MPTCP exp3"
                         
                         data-hash="md5-UbR0DO4y4jl60JrSeFV0&#43;A==">
                 
@@ -499,7 +499,31 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
         
 
         <div class="article-details">
-            <h2 class="article-title">MPTCP_exp2</h2>
+            <h2 class="article-title">MPTCP exp3</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mptcp-exp2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mptcp-exp2/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post MPTCP exp2"
+                        
+                        data-hash="md5-UbR0DO4y4jl60JrSeFV0&#43;A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MPTCP exp2</h2>
         </div>
     </a>
 </article>
@@ -511,7 +535,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
         
         
             <div class="article-image">
-                <img src="/p/mptcp-exp1/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu9663845483930274570.jpg" 
+                <img src="/p/mptcp-exp1/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -535,7 +559,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
         
         
             <div class="article-image">
-                <img src="/p/%E8%BB%9F%E9%AB%94%E5%AE%9A%E7%BE%A9%E7%B6%B2%E8%B7%AF-ryu-%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B%E7%A8%8B%E5%BC%8F/pawel-czerwinski-fnLi5j7kPU4-unsplash.f101f0bb5134b4f23ff437eb65610132.f101f0bb5134b4f23ff437eb65610132_hu9561346603181011322.jpg" 
+                <img src="/p/%E8%BB%9F%E9%AB%94%E5%AE%9A%E7%BE%A9%E7%B6%B2%E8%B7%AF-ryu-%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B%E7%A8%8B%E5%BC%8F/pawel-czerwinski-fnLi5j7kPU4-unsplash.f101f0bb5134b4f23ff437eb65610132_hu_50f863c10f255457.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -559,7 +583,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
         
         
             <div class="article-image">
-                <img src="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash.f101f0bb5134b4f23ff437eb65610132.f101f0bb5134b4f23ff437eb65610132_hu9561346603181011322.jpg" 
+                <img src="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash.f101f0bb5134b4f23ff437eb65610132_hu_50f863c10f255457.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -588,7 +612,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
 
     <footer class="site-footer">
   <section class="copyright">
-    &copy;  2024 David Chen
+    &copy;  2024 -  2025 David Chen
   </section>
 
   <section class="powerby">
@@ -701,7 +725,7 @@ name='description' content="MPTCP 是什麼\r多路徑 TCP（Multipath TCP, MPTC
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.9f2f28b602bb690758f98010bdfbc7ca8829484398ec4b071fec423dd41e1686.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.a870c7b6951e386abd098cdcfc94939f97f8d538f907eabb4bc60225ebd71565.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

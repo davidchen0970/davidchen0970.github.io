@@ -13,13 +13,11 @@
         <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/%E9%97%9C%E6%96%BC/</guid>
-        <description>&lt;img src="https://example.com/%E9%97%9C%E6%96%BC/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg" alt="Featured image of post 關於" /&gt;&lt;p&gt;施工中，施工中，施工中&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;關於我&#34;&gt;關於我
-&lt;/h2&gt;&lt;p&gt;你好！我是一名資工系的學生。我對於程式設計和技術充滿熱情，尤其是在 人工智慧、網頁開發領域。我相信技術可以改變世界，所以我常常提升自己的技能，以便能夠在未來的工作中發揮作用。&lt;/p&gt;
+        <description>&lt;img src="https://example.com/%E9%97%9C%E6%96%BC/pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg" alt="Featured image of post 關於" /&gt;&lt;h2 id=&#34;關於我&#34;&gt;關於我
+&lt;/h2&gt;&lt;p&gt;大家好！我是一名畢業於資工所的新鮮人。目前正在補充社會歷練中XD&lt;/p&gt;
 &lt;h2 id=&#34;教育背景&#34;&gt;教育背景
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;學校名稱&lt;/strong&gt;：目前就讀於國立嘉義大學資工系&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：資工系碩士 (就讀中)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學位&lt;/strong&gt;：國立嘉義大學資工所&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;在校成就&lt;/strong&gt;：
 &lt;ul&gt;
 &lt;li&gt;111年第三屆有事青年行動競賽&lt;/li&gt;
@@ -66,6 +64,8 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://davidchen0970.github.io/QRcodeDecoder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;QRcodeDecoder&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://davidchen0970.github.io/QRcodeDecoder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;網站連結&lt;/a&gt;：可以利用此程式碼產生特殊的 QRcode，並且掃描後會解析，將多個連結轉換成單一QRCode。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hackmd.io/@DSArecorder/r1TkJ8WFR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LeetCode 解題筆記&lt;/a&gt;：紀錄我和道友的 Leetcode 筆記，期望有一天可以過五關斬六將（？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式
 &lt;/h2&gt;&lt;p&gt;如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：&lt;/p&gt;
