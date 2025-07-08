@@ -8,12 +8,12 @@
         <language>zh-tw</language>
         <copyright>David Chen</copyright>
         <lastBuildDate>Tue, 14 Jan 2025 14:12:45 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Nextjs_note_1</title>
-        <link>https://example.com/p/nextjs_note_1/</link>
+        <title>Next Note 1</title>
+        <link>https://example.com/p/next-note-1/</link>
         <pubDate>Tue, 14 Jan 2025 14:12:45 +0800</pubDate>
         
-        <guid>https://example.com/p/nextjs_note_1/</guid>
-        <description>&lt;h2 id=&#34;如何在-nextjs-中建立新專案&#34;&gt;如何在 Next.js 中建立新專案？
+        <guid>https://example.com/p/next-note-1/</guid>
+        <description>&lt;img src="https://example.com/p/next-note-1/pawel-czerwinski-iDvy-VLTf4M-unsplash.jpg" alt="Featured image of post Next Note 1" /&gt;&lt;h2 id=&#34;如何在-nextjs-中建立新專案&#34;&gt;如何在 Next.js 中建立新專案？
 &lt;/h2&gt;&lt;p&gt;Next.js 是一個非常受歡迎的 React 應用框架，它提供了許多強大的功能，比如伺服器端渲染（SSR）、靜態網站生成（SSG）、API 路由等。建立 Next.js 專案的方式有很多種，無論是使用官方的創建工具，還是手動設置，都能幫助你快速上手這個框架。&lt;/p&gt;
 &lt;p&gt;在這篇文章中，我將介紹如何使用不同的方法來創建一個新的 Next.js 專案，讓你根據自己的需求選擇最適合的方式。&lt;/p&gt;
 &lt;h3 id=&#34;方法一使用-create-next-app最簡單方法&#34;&gt;方法一：使用 &lt;code&gt;create-next-app&lt;/code&gt;（最簡單方法）

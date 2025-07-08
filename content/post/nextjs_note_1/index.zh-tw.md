@@ -1,6 +1,8 @@
 +++
 date = '2025-01-14T14:12:45+08:00'
-title = 'Nextjs_note_1'
+title = 'Next Note 1'
+image = "pawel-czerwinski-iDvy-VLTf4M-unsplash.jpg"
+description = "用多種方法建立一個新的 Next.js 專案"
 +++
 
 

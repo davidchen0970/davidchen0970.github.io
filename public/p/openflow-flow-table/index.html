@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r"> <title>OpenFlow Flow Table</title>
+name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 "> <title>OpenFlow Flow Table</title>
 
 <link rel="canonical" href="https://example.com/p/openflow-flow-table/" />
 
-<link rel="stylesheet" href="/scss/style.min.3c139cf48963206f9cc803992dc39b384e9e1ac8149ef90847ac716ee6db5969.css"><meta property='og:title' content="OpenFlow Flow Table">
-<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r">
+<link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="OpenFlow Flow Table">
+<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 ">
 <meta property='og:url' content='https://example.com/p/openflow-flow-table/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:00:21&#43;08:00'/>
 <meta name="twitter:title" content="OpenFlow Flow Table">
-<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\rreference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構\r"><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 "><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹\
                     
                     
                         
-                        <img src="/img/avatar_hu8426949080533301442.png" width="300"
+                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
