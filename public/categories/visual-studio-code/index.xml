@@ -94,9 +94,9 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;此設定確保對於 &lt;code&gt;.hbs&lt;/code&gt; 或 &lt;code&gt;.handlebars&lt;/code&gt; 擴展名的 Handlebars 檔案，會禁用自動格式化。&lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&#34;https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd.png&#34;
-    width=&#34;633&#34;
-    height=&#34;482&#34;
+&lt;img src=&#34;https://example.com/logddd.png&#34;
+    width=&#34;800&#34;
+    height=&#34;600&#34;
     
     loading=&#34;lazy&#34;
     
@@ -104,8 +104,8 @@
     
     
         class=&#34;gallery-image&#34; 
-        data-flex-grow=&#34;131&#34;
-        data-flex-basis=&#34;315px&#34;
+        data-flex-grow=&#34;133&#34;
+        data-flex-basis=&#34;320px&#34;
     
 &gt;
 &lt;/p&gt;

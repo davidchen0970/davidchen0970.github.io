@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs. Indirect、send、receive 指令配合 Blocking Process Communication 運作的兩種方式 Shared Memory Message Passing 項目 Shared Memory Message Passing 定義 透過共享變數溝通。 建立連結後傳輸 Message。 特色 Programmer 負責，OS 提供共享區域。 適合連結管理與例外處理。 優點 快速，適合大量資訊，OS 無需額外支援。 簡單易用，僅需 send/receive 指令。 缺點 需互斥控制，防止競態條件。 需 kernel 介入，速度較慢。 Share Memory (共享記憶體) 定義： 透過對共享變數的存取，讓 Process 之間進行溝通。\n"> <title>Operating_System_CH6</title>
+name='description' content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs."> <title>Operating_System_CH6</title>
 
 <link rel="canonical" href="https://example.com/p/operating_system_ch6/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="Operating_System_CH6">
-<meta property='og:description' content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs. Indirect、send、receive 指令配合 Blocking Process Communication 運作的兩種方式 Shared Memory Message Passing 項目 Shared Memory Message Passing 定義 透過共享變數溝通。 建立連結後傳輸 Message。 特色 Programmer 負責，OS 提供共享區域。 適合連結管理與例外處理。 優點 快速，適合大量資訊，OS 無需額外支援。 簡單易用，僅需 send/receive 指令。 缺點 需互斥控制，防止競態條件。 需 kernel 介入，速度較慢。 Share Memory (共享記憶體) 定義： 透過對共享變數的存取，讓 Process 之間進行溝通。\n">
+<meta property='og:description' content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs.">
 <meta property='og:url' content='https://example.com/p/operating_system_ch6/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-08T14:42:36&#43;08:00'/><meta property='article:modified_time' content='2024-12-08T14:42:36&#43;08:00'/>
 <meta name="twitter:title" content="Operating_System_CH6">
-<meta name="twitter:description" content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs. Indirect、send、receive 指令配合 Blocking Process Communication 運作的兩種方式 Shared Memory Message Passing 項目 Shared Memory Message Passing 定義 透過共享變數溝通。 建立連結後傳輸 Message。 特色 Programmer 負責，OS 提供共享區域。 適合連結管理與例外處理。 優點 快速，適合大量資訊，OS 無需額外支援。 簡單易用，僅需 send/receive 指令。 缺點 需互斥控制，防止競態條件。 需 kernel 介入，速度較慢。 Share Memory (共享記憶體) 定義： 透過對共享變數的存取，讓 Process 之間進行溝通。\n"><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="作業系統 CH6 CH6 : Process Synchronization process Communication 運作的兩種方式 Race Condition Problem Race Condition 的求解的兩大策略 Disable interrupt Critical section Design C.S. Design 基本認知 正確的 C.S. Design 該滿足的3個 Criteria mutual exclusion progress bounded waiting C.S. Design 方法 SW solution 2 processes : peterson&rsquo;s solution/ (Dekker&rsquo;s solution) n processes : Bakery&rsquo;s algorithm HW 指令支援 test-and-set swap semaphore semaphore monitor 著名的同步問題的解決方法 Producer - consumer problem Reader / Writer Problem The sleeping Barber The Dinner philosophers Message Passing 技術 Direct vs."><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="作業系統 CH6 CH6 : Process Synchronization proce
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -453,35 +453,35 @@ name='description' content="作業系統 CH6 CH6 : Process Synchronization proce
 <li>Message Passing</li>
 </ol>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th><strong>項目</strong></th>
-          <th><strong>Shared Memory</strong></th>
-          <th><strong>Message Passing</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>定義</strong></td>
-          <td>透過共享變數溝通。</td>
-          <td>建立連結後傳輸 Message。</td>
-      </tr>
-      <tr>
-          <td><strong>特色</strong></td>
-          <td>Programmer 負責，OS 提供共享區域。</td>
-          <td>適合連結管理與例外處理。</td>
-      </tr>
-      <tr>
-          <td><strong>優點</strong></td>
-          <td>快速，適合大量資訊，OS 無需額外支援。</td>
-          <td>簡單易用，僅需 send/receive 指令。</td>
-      </tr>
-      <tr>
-          <td><strong>缺點</strong></td>
-          <td>需互斥控制，防止競態條件。</td>
-          <td>需 kernel 介入，速度較慢。</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th><strong>項目</strong></th>
+<th><strong>Shared Memory</strong></th>
+<th><strong>Message Passing</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>定義</strong></td>
+<td>透過共享變數溝通。</td>
+<td>建立連結後傳輸 Message。</td>
+</tr>
+<tr>
+<td><strong>特色</strong></td>
+<td>Programmer 負責，OS 提供共享區域。</td>
+<td>適合連結管理與例外處理。</td>
+</tr>
+<tr>
+<td><strong>優點</strong></td>
+<td>快速，適合大量資訊，OS 無需額外支援。</td>
+<td>簡單易用，僅需 send/receive 指令。</td>
+</tr>
+<tr>
+<td><strong>缺點</strong></td>
+<td>需互斥控制，防止競態條件。</td>
+<td>需 kernel 介入，速度較慢。</td>
+</tr>
+</tbody>
 </table></div>
 <h3 id="share-memory-共享記憶體">Share Memory (共享記憶體)
 </h3><p><strong>定義：</strong> 透過對共享變數的存取，讓 Process 之間進行溝通。</p>
@@ -738,7 +738,7 @@ name='description' content="作業系統 CH6 CH6 : Process Synchronization proce
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

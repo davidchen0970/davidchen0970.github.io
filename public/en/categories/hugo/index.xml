@@ -94,9 +94,9 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This setting ensures that auto-formatting is disabled for Handlebars files, identified by &lt;code&gt;.hbs&lt;/code&gt; or &lt;code&gt;.handlebars&lt;/code&gt; extensions.&lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&#34;https://example.com/p/disable-auto-formatting-for-hugo-templates-in-vs-code/logddd.png&#34;
-    width=&#34;633&#34;
-    height=&#34;482&#34;
+&lt;img src=&#34;https://example.com/logddd.png&#34;
+    width=&#34;800&#34;
+    height=&#34;600&#34;
     
     loading=&#34;lazy&#34;
     
@@ -104,8 +104,8 @@
     
     
         class=&#34;gallery-image&#34; 
-        data-flex-grow=&#34;131&#34;
-        data-flex-basis=&#34;315px&#34;
+        data-flex-grow=&#34;133&#34;
+        data-flex-basis=&#34;320px&#34;
     
 &gt;
 &lt;/p&gt;

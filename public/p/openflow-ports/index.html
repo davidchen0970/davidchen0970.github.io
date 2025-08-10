@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n"> <title>OpenFlow Ports</title>
+name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference: OpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄: OpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作: 欄位匹配匹配後動作訪問控制器(packet in / out) Switch Processing match : 封包進交換器之後會去跟 flow table 做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 controller 和 switch 之間的連線方式 連線方式:"> <title>OpenFlow Ports</title>
 
 <link rel="canonical" href="https://example.com/p/openflow-ports/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="OpenFlow Ports">
-<meta property='og:description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n">
+<meta property='og:description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference: OpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄: OpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作: 欄位匹配匹配後動作訪問控制器(packet in / out) Switch Processing match : 封包進交換器之後會去跟 flow table 做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 controller 和 switch 之間的連線方式 連線方式:">
 <meta property='og:url' content='https://example.com/p/openflow-ports/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:02:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:02:21&#43;08:00'/>
 <meta name="twitter:title" content="OpenFlow Ports">
-<meta name="twitter:description" content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference:\nOpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄:\nOpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作:\n欄位匹配匹配後動作訪問控制器(packet in / out)\n"><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) reference: OpenFlow - wiki - en OpenFlow 2-1 OpenFlow 概述｜ OpenFlow Overview 區分 OpenFlow 定義各 Port 弄懂軟體定義網路交換器 目錄: OpenFlow 的特性 OpenFlow ports 各種保留埠的特性 Multiple Controller Controller Connection Faliure OpenFlow 的特性 OpenFlow 是一個在資料連接層的通訊協定。 可以控制、定義網路交換器的 forwarding plane 來改變封包所走的網路路徑。 OpenFlow 位於 TCP 之上，在 TCP port 6653 (舊版:6633)監聽要建立連接的交換器。 轉發規則以 Flow 為單位 (一個 flow 被定義為:兩台電腦所連接的一個 port)。 OpenFlow 交換器的基本架構 主要動作: 欄位匹配匹配後動作訪問控制器(packet in / out) Switch Processing match : 封包進交換器之後會去跟 flow table 做比對，當比對到時，比對的 flow entry 會寫下要如何進行下一個動作。 action : 當比對到之後，就會執行之後要做的事情。 packet in : 當 switch 不知道要如何處理封包的時候，就會執行此動作，詢問 controller 要如何處理此封包。 packet out : controll 回應 packet in 的相對動作，用來回應 switch 要如何動作。 此地方會有不同方式: 第一種會請 controller 直接丟封包到某一個 port 就結束。 第二種會請 controller 再比對此封包一次，比對完之後再根據 flow table 的內容再傳送出去 controller 和 switch 之間的連線方式 連線方式:"><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) ref
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -846,7 +846,7 @@ name='description' content="軟體定義網路 - OpenFlow Ports 介紹 (2-1) ref
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

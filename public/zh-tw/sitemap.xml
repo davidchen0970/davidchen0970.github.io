@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2025-07-08T09:25:54+08:00</lastmod>
+    <lastmod>2025-01-14T14:12:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,8 +20,11 @@
                 href="https://example.com/"
                 />
   </url><url>
+    <loc>https://example.com/p/next-note-1/</loc>
+    <lastmod>2025-01-14T14:12:45+08:00</lastmod>
+  </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2025-07-08T09:25:54+08:00</lastmod>
+    <lastmod>2025-01-14T14:12:45+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -32,9 +35,6 @@
                 hreflang="zh-tw"
                 href="https://example.com/post/"
                 />
-  </url><url>
-    <loc>https://example.com/p/next-note-1/</loc>
-    <lastmod>2025-01-14T14:12:45+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/operating_system_ch6/</loc>
     <lastmod>2024-12-08T14:42:36+08:00</lastmod>
@@ -206,6 +206,11 @@
     <lastmod>2024-11-06T12:39:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/graphic-programming/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://example.com/en/categories/graphic-programming/"
                 />
@@ -293,6 +298,23 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://example.com/archives/"
+                />
+  </url><url>
+    <loc>https://example.com/categories/graphic-programming/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/graphic-programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/categories/graphic-programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/graphic-programming/"
                 />
   </url><url>
     <loc>https://example.com/tags/</loc>

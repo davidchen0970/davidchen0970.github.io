@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) reference:\nOpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄:\nOpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 :\n欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。\n"> <title>OpenFlow Protocol</title>
+name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) reference: OpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄: OpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 : 欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。 對稱 (Symmetric) 控制器到交換器 (Controller-to-switch) 非同步 (Asynchronous) 2."> <title>OpenFlow Protocol</title>
 
 <link rel="canonical" href="https://example.com/p/openflow-protocol/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="OpenFlow Protocol">
-<meta property='og:description' content="軟體定義網路 - OpenFlow Protocol (2-4) reference:\nOpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄:\nOpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 :\n欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。\n">
+<meta property='og:description' content="軟體定義網路 - OpenFlow Protocol (2-4) reference: OpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄: OpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 : 欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。 對稱 (Symmetric) 控制器到交換器 (Controller-to-switch) 非同步 (Asynchronous) 2.">
 <meta property='og:url' content='https://example.com/p/openflow-protocol/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:05:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:05:21&#43;08:00'/>
 <meta name="twitter:title" content="OpenFlow Protocol">
-<meta name="twitter:description" content="軟體定義網路 - OpenFlow Protocol (2-4) reference:\nOpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄:\nOpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 :\n欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。\n"><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow Protocol (2-4) reference: OpenFlow Switch Specification 2-4 OpenFlow Switch Protocol 目錄: OpenFlow Header OpenFlow 交換器協定的三種分群 1. OpenFlow Header 其他 protocol 的 header Version Type Length Transaction ID &hellip;. &hellip;. .. &hellip; &hellip;. 以下分別介紹 : 欄位 長度 (bit) 說明 Version 8 OpenFlow Protocol 的版本 Type 8 Length 16 用來標記 OpenFlow 信令實際內容長度 Transaction ID 32 標記溝通的順序，幫助controller 和 switch 知道溝通的訊息 2. OpenFlow 交換器協定的三種分群 分群的意義就是把 controller 與 switch 的訊息方向。 對稱 (Symmetric) 控制器到交換器 (Controller-to-switch) 非同步 (Asynchronous) 2."><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) referen
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -380,56 +380,56 @@ name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) referen
 <hr>
 <h3 id="1-openflow-header">1. OpenFlow Header
 </h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>其他 protocol 的 header</th>
-          <th>Version</th>
-          <th>Type</th>
-          <th>Length</th>
-          <th>Transaction ID</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>&hellip;.</td>
-          <td>&hellip;.</td>
-          <td>..</td>
-          <td>&hellip;</td>
-          <td>&hellip;.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>其他 protocol 的 header</th>
+<th>Version</th>
+<th>Type</th>
+<th>Length</th>
+<th>Transaction ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&hellip;.</td>
+<td>&hellip;.</td>
+<td>..</td>
+<td>&hellip;</td>
+<td>&hellip;.</td>
+</tr>
+</tbody>
 </table></div>
 <p>以下分別介紹 :</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>欄位</th>
-          <th>長度 (bit)</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Version</td>
-          <td>8</td>
-          <td>OpenFlow Protocol 的<a class="link" href="#OpenFlow-%e7%89%88%e6%9c%ac%e5%8f%8a%e7%89%88%e6%9c%ac%e4%bb%a3%e7%a2%bc%e5%b0%8d%e7%85%a7%e8%a1%a8" >版本</a></td>
-      </tr>
-      <tr>
-          <td>Type</td>
-          <td>8</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Length</td>
-          <td>16</td>
-          <td>用來標記 OpenFlow 信令實際內容長度</td>
-      </tr>
-      <tr>
-          <td>Transaction ID</td>
-          <td>32</td>
-          <td>標記溝通的順序，幫助controller 和 switch 知道溝通的訊息</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>欄位</th>
+<th>長度 (bit)</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version</td>
+<td>8</td>
+<td>OpenFlow Protocol 的<a class="link" href="#OpenFlow-%e7%89%88%e6%9c%ac%e5%8f%8a%e7%89%88%e6%9c%ac%e4%bb%a3%e7%a2%bc%e5%b0%8d%e7%85%a7%e8%a1%a8" >版本</a></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>Length</td>
+<td>16</td>
+<td>用來標記 OpenFlow 信令實際內容長度</td>
+</tr>
+<tr>
+<td>Transaction ID</td>
+<td>32</td>
+<td>標記溝通的順序，幫助controller 和 switch 知道溝通的訊息</td>
+</tr>
+</tbody>
 </table></div>
 <h3 id="2-openflow-交換器協定的三種分群">2. OpenFlow 交換器協定的三種分群
 </h3><p>分群的意義就是把 controller 與 switch 的訊息方向。</p>
@@ -451,38 +451,38 @@ name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) referen
 </h4><p>信令由 <strong>Switch</strong> 發起，通常用於更新 controller 的狀態及更新與 controller 有關的網路事件。</p>
 <h4 id="openflow-版本及版本代碼對照表">OpenFlow 版本及版本代碼對照表
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>OpenFlow 版本</th>
-          <th>版本代碼</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1.0.0</td>
-          <td>0X01</td>
-      </tr>
-      <tr>
-          <td>1.1.0</td>
-          <td>0X02</td>
-      </tr>
-      <tr>
-          <td>1.2.0</td>
-          <td>0X03</td>
-      </tr>
-      <tr>
-          <td>1.3.0</td>
-          <td>0X04</td>
-      </tr>
-      <tr>
-          <td>1.4.0</td>
-          <td>0X05</td>
-      </tr>
-      <tr>
-          <td>1.5.0</td>
-          <td>0X06</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>OpenFlow 版本</th>
+<th>版本代碼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>0X01</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>0X02</td>
+</tr>
+<tr>
+<td>1.2.0</td>
+<td>0X03</td>
+</tr>
+<tr>
+<td>1.3.0</td>
+<td>0X04</td>
+</tr>
+<tr>
+<td>1.4.0</td>
+<td>0X05</td>
+</tr>
+<tr>
+<td>1.5.0</td>
+<td>0X06</td>
+</tr>
+</tbody>
 </table></div>
 <h6 id="tags-sdn">tags: <code>SDN</code>
 </h6>
@@ -708,7 +708,7 @@ name='description' content="軟體定義網路 - OpenFlow Protocol (2-4) referen
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
