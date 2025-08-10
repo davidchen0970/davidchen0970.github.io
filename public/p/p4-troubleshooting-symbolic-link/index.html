@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n"> <title>P4 Troubleshooting - Symbolic Link</title>
+name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是: 1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。 使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。 步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。 切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/ 建立符號連結：使用 ln -s 指令來建立符號連結，語法如下： 1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令："> <title>P4 Troubleshooting - Symbolic Link</title>
 
 <link rel="canonical" href="https://example.com/p/p4-troubleshooting-symbolic-link/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="P4 Troubleshooting - Symbolic Link">
-<meta property='og:description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n">
+<meta property='og:description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是: 1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。 使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。 步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。 切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/ 建立符號連結：使用 ln -s 指令來建立符號連結，語法如下： 1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：">
 <meta property='og:url' content='https://example.com/p/p4-troubleshooting-symbolic-link/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-05T02:35:09&#43;08:00'/><meta property='article:modified_time' content='2024-11-05T02:35:09&#43;08:00'/><meta property='og:image' content='https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg' />
 <meta name="twitter:title" content="P4 Troubleshooting - Symbolic Link">
-<meta name="twitter:description" content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是:\n1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。\n使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。\n步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。\n切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/\n建立符號連結：使用 ln -s 指令來建立符號連結，語法如下：\n1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令：\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="P4 超搞剛 - Symbolic Link 在一般我們使用 P4 當中的 tutorials 文件時，都可以正常使用 make run 這個指令，但當我們離開這個資料夾之後，會發現這個 make run 這個指令會變得沒有用，原因通常都是: 1 2 Makefile:4: ../../utils/Makefile: No such file or directory make: *** No rule to make target &#39;../../utils/Makefile&#39;. Stop 這個問題代表 MakeFile 找不到，所以無法執行 make run ，因此我們要想個辦法。 解決這個問題的辦法之一是利用 symbolic link（符號連結），來建立所需的路徑，讓系統找到目標 Makefile，而無需修改現有的專案結構。 使用 Symbolic Link 解決 Makefile 遺失問題 透過建立 symbolic link，可以指向現有的 Makefile，並解決「找不到檔案」的問題。這種方法相當靈活，可以在保持原專案目錄結構的情況下修復路徑問題。 步驟 確認有效的 Makefile 路徑：首先，找到一份可用的 Makefile，一般是在專案其他路徑下或相關的資料夾中。 切換到預期目錄：進入 make 指令所期望的目錄，例如 ../../utils/ 建立符號連結：使用 ln -s 指令來建立符號連結，語法如下： 1 ln -s /path/to/existing/Makefile Makefile 例如，如果你的有效 Makefile 位於 /home/p4/tutorials/utils，可以執行以下指令："><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://example.com/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg' /><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
@@ -57,7 +57,7 @@ name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -292,8 +292,8 @@ name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P
     <header class="article-header">
         <div class="article-image">
             <a href="/p/p4-troubleshooting-symbolic-link/">
-                <img src="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu_c86b681f3fee94ff.jpg"
-                        srcset="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu_c86b681f3fee94ff.jpg 800w, /p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hu_bea442a1395058f4.jpg 1600w"
+                <img src="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hud7e36f7e20e71be184458283bdae4646_55974_800x0_resize_q75_box.jpg"
+                        srcset="/p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hud7e36f7e20e71be184458283bdae4646_55974_800x0_resize_q75_box.jpg 800w, /p/p4-troubleshooting-symbolic-link/pawel-czerwinski-8uZPynIu-rQ-unsplash_hud7e36f7e20e71be184458283bdae4646_55974_1600x0_resize_q75_box.jpg 1600w"
                         width="800" 
                         height="534" 
                         loading="lazy"
@@ -530,7 +530,7 @@ name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P
         
         
             <div class="article-image">
-                <img src="/p/what-is-p4/pawel-czerwinski-ZJk8NX0aR8s-unsplash.b65ae5e8f22944e62c75c2fffb4f4d97_hu_17801225ce16ecdf.jpg" 
+                <img src="/p/what-is-p4/_hu5459c0360c2b0cb7a147d2df0eb350ca_7868106_ddec335c9b304d41acd2618a1e33333f.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -672,7 +672,7 @@ name='description' content="P4 超搞剛 - Symbolic Link 在一般我們使用 P
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

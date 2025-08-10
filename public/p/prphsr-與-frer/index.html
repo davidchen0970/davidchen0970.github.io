@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中\n在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。\n這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。\nPRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。\nPRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。\n由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。\n"> <title>PRP、HSR 與 FRER</title>
+name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中 在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。 這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。 PRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。 PRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。 由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。"> <title>PRP、HSR 與 FRER</title>
 
 <link rel="canonical" href="https://example.com/p/prphsr-%E8%88%87-frer/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="PRP、HSR 與 FRER">
-<meta property='og:description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中\n在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。\n這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。\nPRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。\nPRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。\n由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。\n">
+<meta property='og:description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中 在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。 這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。 PRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。 PRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。 由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。">
 <meta property='og:url' content='https://example.com/p/prphsr-%E8%88%87-frer/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-08T16:14:38&#43;08:00'/><meta property='article:modified_time' content='2024-11-08T16:14:38&#43;08:00'/><meta property='og:image' content='https://example.com/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg' />
 <meta name="twitter:title" content="PRP、HSR 與 FRER">
-<meta name="twitter:description" content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中\n在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。\n這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。\nPRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。\nPRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。\n由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="深入淺出：PRP、HSR 與 FRER —— 高可靠性網路技術全面解析 這篇文章由 AI 自動產生，尚在整理當中 在現代工業自動化、交通運輸、能源管理和其他關鍵任務系統中，高可靠性網路是實現穩定運行的基石。針對這些需求，平行冗餘協議(PRP)、高可用性無縫冗餘(HSR) 和 幀複製與消除技術(FRER) 成為不可或缺的技術工具。 這篇文章將探討這三種技術的核心機制、優勢、挑戰及應用場景。 PRP：Parallel Redundancy Protocol PRP(Parallel Redundancy Protocol) 是專為容錯而設計的高可靠性協議，定義在 IEC 62439-3 標準當中。主要特點是在 Layer 2 的節點當中進行雙網平行資料傳輸 ，確保在任意網路故障的情況下通訊不會中斷。 PRP 的基本概念 雙網路冗餘：封包在兩個獨立網路(LAN A 和 LAN B)上同步發送。 自動故障隔離：接收端會選擇最先到達的封包並丟棄重複資料。 即時切換：在任何單網故障的情況下，通訊不需等待恢復或切換時間。 PRP 的架構 PRP 在 end nodes 中進行冗餘功能。每個 DAN 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。 由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://example.com/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash.jpg' /><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
@@ -57,7 +57,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -320,8 +320,8 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
     <header class="article-header">
         <div class="article-image">
             <a href="/p/prphsr-%E8%88%87-frer/">
-                <img src="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu_5df8cd1a55500cad.jpg"
-                        srcset="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu_5df8cd1a55500cad.jpg 800w, /p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu_8984d1298b69759d.jpg 1600w"
+                <img src="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu5459c0360c2b0cb7a147d2df0eb350ca_2629290_800x0_resize_q75_box.jpg"
+                        srcset="/p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu5459c0360c2b0cb7a147d2df0eb350ca_2629290_800x0_resize_q75_box.jpg 800w, /p/prphsr-%E8%88%87-frer/pawel-czerwinski-fnLi5j7kPU4-unsplash_hu5459c0360c2b0cb7a147d2df0eb350ca_2629290_1600x0_resize_q75_box.jpg 1600w"
                         width="800" 
                         height="533" 
                         loading="lazy"
@@ -413,9 +413,9 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
 </h3><p>PRP 在 end nodes 中進行冗餘功能。每個 <a class="link" href="./#dan" >DAN</a> 會利用兩個 LAN 進行傳輸，而且這兩個 LAN 不相交且並行運作。當單一介面節點必須連接到兩個網路 (LAN) 時，需使用冗餘盒 (RedBox) 進行資料交換。而 SAN (singly attached node) 則不需連接到兩個 LAN ，只需連接其中一個即可。</p>
 <p>由於 RedBox 後面的節點會出現在其他節點(如 DAN)中，因此稱為虛擬 DAN (VDAN)。 RedBox 本身是一個 DAN，代表其 VDAN 的代理。</p>
 <p>
-<img src="/p/prphsr-%E8%88%87-frer/image002.jpg"
-    width="394"
-    height="272"
+<img src="/image002.jpg"
+    width="800"
+    height="600"
     
     loading="lazy"
     
@@ -423,16 +423,16 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
     
     
         class="gallery-image" 
-        data-flex-grow="144"
-        data-flex-basis="347px"
+        data-flex-grow="133"
+        data-flex-basis="320px"
     
 >
 </p>
 <h4 id="dan">DAN
 </h4><p>
-<img src="/p/prphsr-%E8%88%87-frer/image004.jpg"
-    width="477"
-    height="253"
+<img src="/image004.jpg"
+    width="800"
+    height="600"
     
     loading="lazy"
     
@@ -440,8 +440,8 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
     
     
         class="gallery-image" 
-        data-flex-grow="188"
-        data-flex-basis="452px"
+        data-flex-grow="133"
+        data-flex-basis="320px"
     
 >
 </p>
@@ -525,52 +525,52 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
 <hr>
 <h2 id="prphsr-與-frer-的對比">PRP、HSR 與 FRER 的對比
 </h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>特性</th>
-          <th><strong>PRP</strong></th>
-          <th><strong>HSR</strong></th>
-          <th><strong>FRER</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>標準</strong></td>
-          <td>IEC 62439-3</td>
-          <td>IEC 62439-3</td>
-          <td>IEEE 802.1CB</td>
-      </tr>
-      <tr>
-          <td><strong>運作模式</strong></td>
-          <td>雙網平行冗餘</td>
-          <td>環網冗餘</td>
-          <td>多路徑冗餘</td>
-      </tr>
-      <tr>
-          <td><strong>拓撲要求</strong></td>
-          <td>雙網路</td>
-          <td>環網</td>
-          <td>支持任意拓撲</td>
-      </tr>
-      <tr>
-          <td><strong>恢復時間</strong></td>
-          <td>零恢復時間</td>
-          <td>零恢復時間</td>
-          <td>零恢復時間</td>
-      </tr>
-      <tr>
-          <td><strong>適用場景</strong></td>
-          <td>工業、能源、醫療</td>
-          <td>交通、能源、城市基建</td>
-          <td>車載通信、智慧工廠、音視頻傳輸</td>
-      </tr>
-      <tr>
-          <td><strong>可擴展性</strong></td>
-          <td>中等</td>
-          <td>中等</td>
-          <td>高</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>特性</th>
+<th><strong>PRP</strong></th>
+<th><strong>HSR</strong></th>
+<th><strong>FRER</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>標準</strong></td>
+<td>IEC 62439-3</td>
+<td>IEC 62439-3</td>
+<td>IEEE 802.1CB</td>
+</tr>
+<tr>
+<td><strong>運作模式</strong></td>
+<td>雙網平行冗餘</td>
+<td>環網冗餘</td>
+<td>多路徑冗餘</td>
+</tr>
+<tr>
+<td><strong>拓撲要求</strong></td>
+<td>雙網路</td>
+<td>環網</td>
+<td>支持任意拓撲</td>
+</tr>
+<tr>
+<td><strong>恢復時間</strong></td>
+<td>零恢復時間</td>
+<td>零恢復時間</td>
+<td>零恢復時間</td>
+</tr>
+<tr>
+<td><strong>適用場景</strong></td>
+<td>工業、能源、醫療</td>
+<td>交通、能源、城市基建</td>
+<td>車載通信、智慧工廠、音視頻傳輸</td>
+</tr>
+<tr>
+<td><strong>可擴展性</strong></td>
+<td>中等</td>
+<td>中等</td>
+<td>高</td>
+</tr>
+</tbody>
 </table></div>
 <hr>
 <h2 id="如何選擇適合的技術">如何選擇適合的技術？
@@ -637,7 +637,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
         
         
             <div class="article-image">
-                <img src="/p/mptcp-exp3/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
+                <img src="/p/mptcp-exp3/_hu5459c0360c2b0cb7a147d2df0eb350ca_642091_b0cb0d41425c8be82a4d7cc9f29bcd81.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -661,7 +661,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
         
         
             <div class="article-image">
-                <img src="/p/mptcp-exp2/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
+                <img src="/p/mptcp-exp2/_hu5459c0360c2b0cb7a147d2df0eb350ca_642091_b0cb0d41425c8be82a4d7cc9f29bcd81.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -685,7 +685,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
         
         
             <div class="article-image">
-                <img src="/p/%E8%BB%9F%E9%AB%94%E5%AE%9A%E7%BE%A9%E7%B6%B2%E8%B7%AF-ryu-%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B%E7%A8%8B%E5%BC%8F/pawel-czerwinski-fnLi5j7kPU4-unsplash.f101f0bb5134b4f23ff437eb65610132_hu_50f863c10f255457.jpg" 
+                <img src="/p/%E8%BB%9F%E9%AB%94%E5%AE%9A%E7%BE%A9%E7%B6%B2%E8%B7%AF-ryu-%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B%E7%A8%8B%E5%BC%8F/_hu5459c0360c2b0cb7a147d2df0eb350ca_2629290_7375c9aba7c908c37474d7ba007891e1.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -709,7 +709,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
         
         
             <div class="article-image">
-                <img src="/p/mptcp-exp1/pawel-czerwinski-V10CV7MBdhc-unsplash.51b4740cee32e2397ad09ad2785574f8_hu_8e4eb801e05a26ca.jpg" 
+                <img src="/p/mptcp-exp1/_hu5459c0360c2b0cb7a147d2df0eb350ca_642091_b0cb0d41425c8be82a4d7cc9f29bcd81.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -851,7 +851,7 @@ name='description' content="深入淺出：PRP、HSR 與 FRER —— 高可靠�
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

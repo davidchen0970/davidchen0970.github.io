@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports 圖片 說明 查看交換機連接的port 5. dump 圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs 圖片 說明 列出各個設備所有的網路介面。 7. iperf 圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall 圖片 說明 ping 所有的相連的裝置。 9. pingallfull 圖片 說明 顯示詳細資訊的pingall。 10. exit 圖片 說明 離開mininet。 11. xterm / gterm 使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 "> <title>mininet commands and parameters</title>
+name='description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference: Day10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄: Mininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference) 1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。 在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4."> <title>mininet commands and parameters</title>
 
 <link rel="canonical" href="https://example.com/p/mininet-commands-and-parameters/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="mininet commands and parameters">
-<meta property='og:description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports 圖片 說明 查看交換機連接的port 5. dump 圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs 圖片 說明 列出各個設備所有的網路介面。 7. iperf 圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall 圖片 說明 ping 所有的相連的裝置。 9. pingallfull 圖片 說明 顯示詳細資訊的pingall。 10. exit 圖片 說明 離開mininet。 11. xterm / gterm 使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 ">
+<meta property='og:description' content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference: Day10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄: Mininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference) 1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。 在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4.">
 <meta property='og:url' content='https://example.com/p/mininet-commands-and-parameters/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T13:51:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T13:51:21&#43;08:00'/>
 <meta name="twitter:title" content="mininet commands and parameters">
-<meta name="twitter:description" content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference:\nDay10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄:\nMininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference)\n1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。\n在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4. ports 圖片 說明 查看交換機連接的port 5. dump 圖片 說明 顯示各節點資訊 pid -&gt; process id 6. intfs 圖片 說明 列出各個設備所有的網路介面。 7. iperf 圖片 說明 在兩個節點之間進行 iperf 的測試。 8. pingall 圖片 說明 ping 所有的相連的裝置。 9. pingallfull 圖片 說明 顯示詳細資訊的pingall。 10. exit 圖片 說明 離開mininet。 11. xterm / gterm 使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。 "><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - Mininet 基本指令與參數介紹 (1-4) reference: Day10 菜鳥的Mininet紀錄-Mininet指令 Mininet基本演練 【Mininet指令介紹】 USING GNOME-TERMINAL INSTEAD OF XTERM ON MININET 目錄: Mininet 是甚麼 Mininet 的特性 基本 Mininet 指令 0. Mininet 是甚麼 Mininet是一個網路拓樸模擬器(network emulation orchestration system)，它可以模擬出一整個有路由器、交換器、主機的叢集。 (reference) 1. Mininet 的特性 支援OpenFlow 可以自行定義複雜的拓樸 因為是基於Linux開發的，所以具有高硬體移植性。 具有高拓展性 提供Python API，所以可以方必多人協同開發。 2. 基本 Mininet 指令 1. net 圖片 說明 列出現在所有節點的資訊。 在此可以看到: 有兩台虛擬機h1和h2h1接上的是eth0的網路卡，並對接到交換器 s0 的 eth1上。h2接上的也是自己的eth0的網路卡，並對接到交換器 s0 的 eth2上。 2. nodes 圖片 說明 顯示可用的所有節點。 3. links 圖片 說明 列出目前的節點連接狀態。 後面的OK代表之間的連線正常。 4."><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -407,15 +407,15 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
 <h3 id="2-基本-mininet-指令">2. 基本 Mininet 指令
 </h3><h4 id="1-net">1. net
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/geqpnSh.png"
     width="800"
     height="600"
@@ -429,21 +429,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>列出現在所有節點的資訊。<br> 在此可以看到: <br> <ul style='list-style-position:outside;'><li>有兩台虛擬機h1和h2<li>h1接上的是<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth1上。<li>h2接上的也是自己的<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth2上。</ul></td>
-      </tr>
-  </tbody>
+<td>列出現在所有節點的資訊。<br> 在此可以看到: <br> <ul style='list-style-position:outside;'><li>有兩台虛擬機h1和h2<li>h1接上的是<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth1上。<li>h2接上的也是自己的<strong>eth0</strong>的網路卡，並對接到交換器 s0 的 eth2上。</ul></td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="2-nodes">2. nodes
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/Xw9LPrK.png"
     width="800"
     height="600"
@@ -457,21 +457,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>顯示可用的所有節點。</td>
-      </tr>
-  </tbody>
+<td>顯示可用的所有節點。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="3-links">3. links
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/RBn9O0s.png"
     width="800"
     height="600"
@@ -485,21 +485,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>列出目前的節點連接狀態。 後面的OK代表之間的連線正常。</td>
-      </tr>
-  </tbody>
+<td>列出目前的節點連接狀態。 後面的OK代表之間的連線正常。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="4-ports">4. ports
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/zVQNZvR.png"
     width="800"
     height="600"
@@ -513,21 +513,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>查看交換機連接的port</td>
-      </tr>
-  </tbody>
+<td>查看交換機連接的port</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="5-dump">5. dump
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/WuzcpLo.png"
     width="800"
     height="600"
@@ -541,21 +541,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>顯示各節點資訊 <br> pid -&gt; process id</td>
-      </tr>
-  </tbody>
+<td>顯示各節點資訊 <br> pid -&gt; process id</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="6-intfs">6. intfs
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/qsbP3pb.png"
     width="800"
     height="600"
@@ -569,21 +569,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>列出各個設備所有的網路介面。</td>
-      </tr>
-  </tbody>
+<td>列出各個設備所有的網路介面。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="7-iperf">7. iperf
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/j6e1RR1.png"
     width="800"
     height="600"
@@ -597,21 +597,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>在兩個節點之間進行 iperf 的測試。</td>
-      </tr>
-  </tbody>
+<td>在兩個節點之間進行 iperf 的測試。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="8-pingall">8. pingall
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/EkVaeO5.png"
     width="800"
     height="600"
@@ -625,21 +625,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>ping 所有的相連的裝置。</td>
-      </tr>
-  </tbody>
+<td>ping 所有的相連的裝置。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="9-pingallfull">9. pingallfull
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/1L57NVb.png"
     width="800"
     height="600"
@@ -653,21 +653,21 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>顯示詳細資訊的pingall。</td>
-      </tr>
-  </tbody>
+<td>顯示詳細資訊的pingall。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="10-exit">10. exit
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">圖片</th>
-          <th>說明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">
+<thead>
+<tr>
+<th style="text-align:center">圖片</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
 <img src="https://i.imgur.com/OvN8Jad.png"
     width="800"
     height="600"
@@ -681,9 +681,9 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
     
 >
 </td>
-          <td>離開mininet。</td>
-      </tr>
-  </tbody>
+<td>離開mininet。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="11-xterm--gterm">11. xterm / gterm
 </h4><p>使用 xterm {host/switch} 可以打開虛擬的終端，模擬該 switch 或 host 並對他輸入指令。
@@ -945,7 +945,7 @@ name='description' content="軟體定義網路 - Mininet 基本指令與參數�
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

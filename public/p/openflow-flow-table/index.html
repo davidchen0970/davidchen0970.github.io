@@ -2,17 +2,17 @@
 <html lang="zh-tw" dir="ltr">
     <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
-name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 "> <title>OpenFlow Flow Table</title>
+name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference: OpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄: Open Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1."> <title>OpenFlow Flow Table</title>
 
 <link rel="canonical" href="https://example.com/p/openflow-flow-table/" />
 
 <link rel="stylesheet" href="/scss/style.min.f434d313da649fc0b1a71e21d919392bcd084abff46389bbfb1f82b7f8d130aa.css"><meta property='og:title' content="OpenFlow Flow Table">
-<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 ">
+<meta property='og:description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference: OpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄: Open Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1.">
 <meta property='og:url' content='https://example.com/p/openflow-flow-table/'>
 <meta property='og:site_name' content='歡迎光臨我家'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-16T14:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-11-16T14:00:21&#43;08:00'/>
 <meta name="twitter:title" content="OpenFlow Flow Table">
-<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference:\nOpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄:\nOpen Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 "><script src="/js/external-image-resize.js"></script>
+<meta name="twitter:description" content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 reference: OpenFlow Switch: What Is It and How Does it Work? 圖 : Flow Table Packet Processing Pipeline 2-2 FlowTables OpenFlow Switch Specification 圖 : 各版本openflow 的 header 長相 OpenFlow 交換器規範 1.3.0 (1) Ryubook 1.0 說明文件 目錄: Open Flow 的架構 Flow Table 和 Flow Entry Flow Table 欄位 Action Set 中 Action 的執行順序 1. Open Flow 的架構 在 OpenFlow 的交換器中，最主要的結構就是 Flow Table。Flow Table 彼此具有順序性，封包也被規定不能由後往前傳遞。 1."><script src="/js/external-image-resize.js"></script>
     </head>
     <body class="
     article-page
@@ -56,7 +56,7 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 
                     
                     
                         
-                        <img src="/img/avatar_hu_63954bea4f492758.png" width="300"
+                        <img src="/img/avatar_hu35ffc2776a50ccfef249feb6a09c0315_32228_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -456,28 +456,28 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 
     >2</a> <a class="link" href="https://davidleitw.github.io/posts/sdn2/#flow-table"  target="_blank" rel="noopener"
     >3</a></p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>Match Fields</th>
-          <th>Priority</th>
-          <th>Counter</th>
-          <th>Instructions</th>
-          <th>Timeouts</th>
-          <th>Cookie</th>
-          <th>Flags</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Match Fields</th>
+<th>Priority</th>
+<th>Counter</th>
+<th>Instructions</th>
+<th>Timeouts</th>
+<th>Cookie</th>
+<th>Flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
 </table></div>
 <ul>
 <li>整個表會稱為 Flow Table，裡面的每個 row 稱為 Flow Entry。</li>
@@ -485,44 +485,44 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 
 <h3 id="3-flow-table-的欄位">3 Flow Table 的欄位
 </h3><h4 id="31-各個欄位的作用">3.1 各個欄位的作用:
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">名稱</th>
-          <th>解釋</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#match"  target="_blank" rel="noopener"
+<thead>
+<tr>
+<th style="text-align:center">名稱</th>
+<th>解釋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#match"  target="_blank" rel="noopener"
     >Match Fields</a></td>
-          <td>要去比對 packet 有沒有符合 flow entry，比對的內容至少有以下: <ul style='list-style-position:outside;'><li>ingress port</li><li>packet header</li> <li>optional metadate from previous table</li></ul></td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Priority</td>
-          <td>flow entry 的優先程度，<strong>數字越高越優先</strong>，最小為零。</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Counter</td>
-          <td>紀錄以下資訊(當封包mtach時就更新): <ul style='list-style-position:outside;'><li>Received Packet</li><li>Received Data</li><li>Duration(秒數，<strong>一定要紀錄</strong>，指的是 flow entry 存在多久)</li><li>Duration(奈秒)</li></ul></td>
-      </tr>
-      <tr>
-          <td style="text-align: center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#instruction"  target="_blank" rel="noopener"
+<td>要去比對 packet 有沒有符合 flow entry，比對的內容至少有以下: <ul style='list-style-position:outside;'><li>ingress port</li><li>packet header</li> <li>optional metadate from previous table</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">Priority</td>
+<td>flow entry 的優先程度，<strong>數字越高越優先</strong>，最小為零。</td>
+</tr>
+<tr>
+<td style="text-align:center">Counter</td>
+<td>紀錄以下資訊(當封包mtach時就更新): <ul style='list-style-position:outside;'><li>Received Packet</li><li>Received Data</li><li>Duration(秒數，<strong>一定要紀錄</strong>，指的是 flow entry 存在多久)</li><li>Duration(奈秒)</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center"><a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#instruction"  target="_blank" rel="noopener"
     >Instruction</a></td>
-          <td>當封包符合 flow entry 的條件時，所要做的動作，包括以下:<ul style='list-style-position:outside;'><li>Meter : 要去看符合此 Flow Table 的封包量是否已經太多。</li><li>Apply Actions : 馬上對封包進行動作。例如把封包的header改掉，<strong>但不改變 Action set 的內容。</strong> </li><li>Clear/Write Actions (必須):修改封包中 Action set 的內容。</li><li>Write Metadata : 加入一些 metadata 給後面的 flow table 比對用。</li><li>Goto_Table(必須):指示封包之後要往哪一個 flow table 前進。</li><li>flood : 將接收到的封包廣播(除了輸入的 port 以外)</li></ul></td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Timeouts</td>
-          <td>標記此 flow entry 甚麼時候要被消除，包含以下兩種形式:<ul style='list-style-position:outside;'><li>idle-timeout : 在閒置多久之後要被消除。</li> <li>hard-timeout : 在經過多少時間之後，不管有沒有閒置都要被消除。</li></ul></td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Cookie</td>
-          <td><ul style='list-style-position:outside;'><li> 在處理封包的時候不會使用到此欄位。</li> <li>opaque data value chosen by the controller. May be used by the controller to filter flow entries affected by flow statistics, flow modification and flow deletion requests.  </li></ul></td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Flags</td>
-          <td>用來改變 flow entry 的管理方式，例如 OFPFF_SEND_FLOW_REM 會觸發到刪除此 flow entry 的 message。</td>
-      </tr>
-  </tbody>
+<td>當封包符合 flow entry 的條件時，所要做的動作，包括以下:<ul style='list-style-position:outside;'><li>Meter : 要去看符合此 Flow Table 的封包量是否已經太多。</li><li>Apply Actions : 馬上對封包進行動作。例如把封包的header改掉，<strong>但不改變 Action set 的內容。</strong> </li><li>Clear/Write Actions (必須):修改封包中 Action set 的內容。</li><li>Write Metadata : 加入一些 metadata 給後面的 flow table 比對用。</li><li>Goto_Table(必須):指示封包之後要往哪一個 flow table 前進。</li><li>flood : 將接收到的封包廣播(除了輸入的 port 以外)</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">Timeouts</td>
+<td>標記此 flow entry 甚麼時候要被消除，包含以下兩種形式:<ul style='list-style-position:outside;'><li>idle-timeout : 在閒置多久之後要被消除。</li> <li>hard-timeout : 在經過多少時間之後，不管有沒有閒置都要被消除。</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">Cookie</td>
+<td><ul style='list-style-position:outside;'><li> 在處理封包的時候不會使用到此欄位。</li> <li>opaque data value chosen by the controller. May be used by the controller to filter flow entries affected by flow statistics, flow modification and flow deletion requests.  </li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">Flags</td>
+<td>用來改變 flow entry 的管理方式，例如 OFPFF_SEND_FLOW_REM 會觸發到刪除此 flow entry 的 message。</td>
+</tr>
+</tbody>
 </table></div>
 <h4 id="32-flow-table-管線處理流程">3.2 Flow Table 管線處理流程
 </h4><p>
@@ -548,116 +548,116 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 
 <h4 id="33-table-miss-entry">3.3 Table Miss Entry
 </h4><p>以下是某個 Flow Table :</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>Match Fields</th>
-          <th>Priority</th>
-          <th>Counter</th>
-          <th>Instructions</th>
-          <th>Timeouts</th>
-          <th>Cookie</th>
-          <th>Flags</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-      </tr>
-      <tr>
-          <td>ANY</td>
-          <td>0</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-      </tr>
-      <tr>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-          <td>&hellip;</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Match Fields</th>
+<th>Priority</th>
+<th>Counter</th>
+<th>Instructions</th>
+<th>Timeouts</th>
+<th>Cookie</th>
+<th>Flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>ANY</td>
+<td>0</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
 </table></div>
 <p>由上表可以看到，Table Miss Entry 所使用的 Match Feild 是 ANY，且因為是最後比的，因此 Priority 是最低的 0 。</p>
 <h3 id="4-action-set-中-actionhttpsbookryu-sdnorgzh_twhtmlopenflow_protocolhtmlaction-的執行順序">4. Action Set 中 <a class="link" href="https://book.ryu-sdn.org/zh_tw/html/openflow_protocol.html#action"  target="_blank" rel="noopener"
     >Action</a> 的執行順序
 </h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>順位</th>
-          <th>名稱</th>
-          <th>功能</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1.</td>
-          <td>copy <a class="link" href="" >TTL</a> inwards</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>2.</td>
-          <td>pop</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>3.</td>
-          <td>push-<a class="link" href="https://www.google.com/search?q=MPLS&amp;sourceid=chrome&amp;ie=UTF-8"  target="_blank" rel="noopener"
+<thead>
+<tr>
+<th>順位</th>
+<th>名稱</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>copy <a class="link" href="" >TTL</a> inwards</td>
+<td></td>
+</tr>
+<tr>
+<td>2.</td>
+<td>pop</td>
+<td></td>
+</tr>
+<tr>
+<td>3.</td>
+<td>push-<a class="link" href="https://www.google.com/search?q=MPLS&amp;sourceid=chrome&amp;ie=UTF-8"  target="_blank" rel="noopener"
     >MPLS</a></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>4.</td>
-          <td>push-PBB</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>5.</td>
-          <td>push-VLAN</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>6.</td>
-          <td>copy TTL</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>7.</td>
-          <td>decrement TTL</td>
-          <td>TTL-=1</td>
-      </tr>
-      <tr>
-          <td>8.</td>
-          <td>set (set-field)</td>
-          <td>修改封包內的某些欄位</td>
-      </tr>
-      <tr>
-          <td>9.</td>
-          <td>qos (set-queue)</td>
-          <td>寫入一個 queue id 進到指定封包內</td>
-      </tr>
-      <tr>
-          <td>10.</td>
-          <td>group</td>
-          <td>如果有指定 group action ，就依照 group table 內的指令做</td>
-      </tr>
-      <tr>
-          <td>11.</td>
-          <td>output</td>
-          <td>如果沒有指定 group action，則在 output action 指定的 port 轉發 packet。</td>
-      </tr>
-  </tbody>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>push-PBB</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>push-VLAN</td>
+<td></td>
+</tr>
+<tr>
+<td>6.</td>
+<td>copy TTL</td>
+<td></td>
+</tr>
+<tr>
+<td>7.</td>
+<td>decrement TTL</td>
+<td>TTL-=1</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>set (set-field)</td>
+<td>修改封包內的某些欄位</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>qos (set-queue)</td>
+<td>寫入一個 queue id 進到指定封包內</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>group</td>
+<td>如果有指定 group action ，就依照 group table 內的指令做</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>output</td>
+<td>如果沒有指定 group action，則在 output action 指定的 port 轉發 packet。</td>
+</tr>
+</tbody>
 </table></div>
 <ul>
 <li><span id="TTL"> TTL </span> : Time To Live
@@ -887,7 +887,7 @@ name='description' content="軟體定義網路 - OpenFlow 中 Flow Table 介紹 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c62afdd51fe361dfb039ef861b1aaf96fb49e3650c1e371bb779284632602dcb.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

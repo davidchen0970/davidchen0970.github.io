@@ -138,6 +138,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-tw"
+                href="https://example.com/categories/graphic-programming/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://example.com/en/categories/graphic-programming/"
                 />
