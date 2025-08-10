@@ -48,6 +48,6 @@ If you have any questions or want to know more about me, feel free to contact me
 
 [![Leetcode Stats](https://leetcard.jacoblin.cool/david0970?ext=contest)](https://leetcode.com/david0970)
 
-- **Email**: apple1051629@gmail.com
+- **Email**: gychen05970@gmail.com
 
 Thank you for taking the time to learn about me!

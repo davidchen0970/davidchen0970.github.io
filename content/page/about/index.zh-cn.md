@@ -49,6 +49,6 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 如果你有任何问题或想进一步了解我，请随时联络我！你可以通过以下方式找到我：
 
-- **电子邮件**：apple1051629@gmail.com
+- **电子邮件**：gychen05970@gmail.com
 
 谢谢你花时间了解我！
