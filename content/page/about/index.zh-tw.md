@@ -6,7 +6,7 @@ aliases:
   - about-us
   - contact
 license: CC BY-NC-ND
-lastmod: "2024-11-10 12:35:00"
+lastmod: "2026-05-24 12:35:00"
 menu:
   main:
     weight: -90
@@ -18,7 +18,8 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 ## 關於我
 
-大家好！我是一名畢業於資工所的新鮮人。目前正在補充社會歷練中XD
+- 一位在 OpenBMC 載浮載沉的打工仔，目前主要投入 OpenBMC 開發與相關協定研
+- 過去接觸過 AI 與 Web 開發，對各類未知的技術領域都有興趣。
 
 ## 教育背景
 
@@ -34,6 +35,7 @@ image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 - **程式語言**：熟悉 C++ ，初學 Python、JavaScript 等
 - **網頁開發**：具備 HTML、CSS 和 JavaScript 的基礎知識
+- **OpenBMC**: IPMI, B-Bus, Systemd, Linux Kernel, U-boot
 
 [![Leetcode Stats](https://leetcard.jacoblin.cool/david0970?ext=contest)](https://leetcode.com/david0970)
 
