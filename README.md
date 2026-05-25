@@ -38,5 +38,5 @@ C++ ・ Python ・ P4
 ---
 
 ## Contact
-- LinkedIn: [link](https://www.linkedin.com/in/david-chen-66a834233/)  
+- LinkedIn: [link](https://www.linkedin.com/in/guan-yu-chen-1a0053384/)  
 
