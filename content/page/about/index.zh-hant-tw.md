@@ -1,46 +1,55 @@
 ---
 title: 關於
-description: 關於本站及其作者的一切。
-date: 2026-01-26
-lastmod: 2026-01-26
+description: 我的介紹
+date: "2024-11-04"
+aliases:
+  - about-us
+  - contact
+license: CC BY-NC-ND
 menu:
-    main: 
-        weight: -90
-        params:
-            icon: user
----
-
-## 這是給誰看的？
-
-這是一個示例**關於**頁面。你可以用它來介紹你自己、你的博客或你的項目。
-
-## 關於作者
-
-你好！我是一個熱衷於博客和開源的愛好者。我喜歡探索新技術並向社區分享我的經驗。
-
-### 我的旅程
-
-我在 10 多年前開始了我的 Web 開發之旅。自那以後，我參與了許多項目，從個人博客到大規模企業應用。
-
-### 技能
-
-- **前端**: HTML, CSS, JavaScript, React, Vue
-- **後端**: Node.js, Python, Go
-- **工具**: Git, Docker, Hugo, Neovim
-
-## 聯繫我
-
-如果你有任何問題或只是想打個招呼，請隨時聯繫我！
-
-- **電子郵件**: [hello@example.com](mailto:hello@example.com)
-- **Twitter**: [@example](https://twitter.com/example)
-- **GitHub**: [example](https://github.com/example)
+  main:
+    weight: -90
+    params:
+      icon: user
+image : pawel-czerwinski-ZJk8NX0aR8s-unsplash.jpg
 
 ---
 
-> "Logic will get you from A to B. Imagination will take you everywhere."  
-> — *Albert Einstein*
+## 關於我
 
----
-*此頁面由 AI 生成。*
+- 一位在 OpenBMC 載浮載沉的打工仔，目前主要投入 OpenBMC 開發與相關協定研
+- 過去接觸過 AI 與 Web 開發，對各類未知的技術領域都有興趣。
 
+## 教育背景
+
+- **學位**：國立嘉義大學資工所
+- **在校成就**：
+  - 111年第三屆有事青年行動競賽
+  - [2022 ITSA 全國大專校院程式設計極客挑戰賽 - 佳作](https://www.itsa.org.tw/itsacontest/2022/register/index.php)
+  - [109學年度 - 程式設計競賽, 第三名](https://website.ncyu.edu.tw/csie/Contents?nodeId=27509)
+
+## 技能
+
+我具備以下技能：
+
+- **程式語言**：熟悉 C++ ，初學 Python、JavaScript 等
+- **網頁開發**：具備 HTML、CSS 和 JavaScript 的基礎知識
+- **OpenBMC**: IPMI, B-Bus, Systemd, Linux Kernel, U-boot
+
+[![Leetcode Stats](https://leetcard.jacoblin.cool/david0970?ext=contest)](https://leetcode.com/david0970)
+
+## 各式大小專案與小品
+
+- [Word Converter](https://github.com/davidchen0970/wordConverter) / [網站連結](https://davidchen0970.github.io/wordConverter/) : 英文大小寫轉換器，可以幫助使用者快速轉換文本的大小寫格式
+- [Graphics Programing](https://github.com/davidchen0970/Graphics-Programing) / [Graphic Programming Language](https://github.com/davidchen0970/Graphic-programming-language) : 大二專題 - 計算機圖學
+- [line bot - 資工系帳號](https://github.com/davidchen0970/line-bot) : 第一個 LINE BOT 機器人，以資工系為背景
+- [QRcodeDecoder](https://davidchen0970.github.io/QRcodeDecoder/) / [網站連結](https://davidchen0970.github.io/QRcodeDecoder/)：可以利用此程式碼產生特殊的 QRcode，並且掃描後會解析，將多個連結轉換成單一QRCode。
+- [LeetCode 解題筆記](https://hackmd.io/@DSArecorder/r1TkJ8WFR)：紀錄我和道友的 Leetcode 筆記，期望有一天可以過五關斬六將（？
+
+## 聯絡方式
+
+如果你有任何問題或想進一步了解我，請隨時聯絡我！你可以通過以下方式找到我：
+
+- **電子郵件**: gychen05970@gmail.com
+
+謝謝你花時間了解我！
