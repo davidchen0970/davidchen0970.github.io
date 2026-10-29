@@ -5,35 +5,6 @@ title = 'Operating_System_CH6'
 
 # 作業系統 CH6
 
-- CH6 : Process Synchronization
-    - process Communication 運作的兩種方式
-    - Race Condition Problem
-    - Race Condition 的求解的兩大策略
-        - Disable interrupt
-        - Critical section Design
-    - C.S. Design 基本認知
-    - 正確的 C.S. Design 該滿足的3個 Criteria
-        1. mutual exclusion
-        2. progress
-        3. bounded waiting
-    - C.S. Design 方法
-        - SW solution
-            - 2 processes : peterson's solution/ (Dekker's solution)
-            - n processes : Bakery's algorithm
-        - HW 指令支援
-            - test-and-set 
-            - swap
-            - semaphore
-        - semaphore
-        - monitor
-    - 著名的同步問題的解決方法
-        - Producer - consumer problem
-        - Reader / Writer Problem
-        - The sleeping Barber
-        - The Dinner philosophers
-    - Message Passing 技術
-        - Direct vs. Indirect、send、receive 指令配合 Blocking 
-
 ## Process Communication 運作的兩種方式
 
 1. Shared Memory 
