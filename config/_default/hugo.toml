@@ -19,3 +19,9 @@ hasCJKLanguage         = true
 
 [services.disqus]
     shortname = "hugo-theme-stack"
+
+[params]
+    favicon = "/favicon.png" 
+
+[sidebar]
+    avatar = "img/avatar.png" 
