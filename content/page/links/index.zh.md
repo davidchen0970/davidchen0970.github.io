@@ -1,14 +1,14 @@
 ---
 title: "链接"
 links:
-  - title: GitHub
-    description: GitHub 是世界上最大的软件开发平台。
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript 是 JavaScript 的一个超集，它可以编译成纯 JavaScript。
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+  - title: Redmine Textile Exporter
+    description: 工作每一天的... 工具
+    website: https://davidchen0970.github.io/RedmineTemplateEditor/
+    image: redmine_textile_exporter_icon.png
+  - title: "QR Code Decoder & Generator"
+    description: 把多個網址合併成一個 QR code 的網站, 內附編解碼
+    website: https://github.com/davidchen0970/QRcodeDecoder
+    image: QRCode_decoder_generator.png
 menu:
     main: 
         weight: -50
@@ -17,4 +17,4 @@ menu:
 comments: false
 ---
 
-TBD
+一些我的小作品
