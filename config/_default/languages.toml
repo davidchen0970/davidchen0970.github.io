@@ -1,23 +1,23 @@
 [en]
     label  = "English"
-    title  = "Hugo Theme Stack"
+    title  = "David's Blog"
     weight = 1
 
     [en.params.sidebar]
-        subtitle = "Card-style Hugo theme designed for bloggers"
+        subtitle = "David's card-style Hugo theme website"
 
 [zh]
     label  = "简体中文"
-    title  = "Hugo 主题 Stack"
+    title  = "David's Blog"
     weight = 2
 
     [zh.params.sidebar]
-        subtitle = "为博客设计的卡片式 Hugo 主题"
+        subtitle = "David 的卡片式 Hugo 主题网站"
 
 [zh-hant-tw]
     label  = "正體中文"
-    title  = "Hugo 主題 Stack"
+    title  = "David's Blog"
     weight = 3
 
     [zh-hant-tw.params.sidebar]
-        subtitle = "為博客設計的卡片式 Hugo 主題"
+        subtitle = "David 的卡片式 Hugo 主題網站"
